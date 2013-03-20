@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  RotateMe
+
+  Created by Yunus Eren Guzel on 2/4/13.
+  Copyright (c) 2013 Yunus Eren Guzel. All rights reserved.
+*/
+
+// in app purchases strings
+"BUY_NOW" = "Buy Now";
+"COULD_NOT_MAKE_PURCHASES" = "You need to enable In-App Purchases in the Settings application in order to unlock the full game.";
+"IN_APP_PURCHASES" = "In-App Purchases";
+"OK" = "OK";
+"PRODUCT_PURCHASE_FAILED" = "Error: ";
+
+//Gallery Names
+"DEFAULT_GALLERY" = "Default Gallery";
+"com.halici.RotateMe.yourGallery" = "Your Gallery";
+
+// in app
+"PRODUCT_PURCHASE_COMPLETED" = "Operation is successfully completed";

@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  RotateMe
+
+  Created by Yunus Eren Guzel on 2/4/13.
+  Copyright (c) 2013 Yunus Eren Guzel. All rights reserved.
+*/
+
+// in app purchases strings
+"BUY_NOW" = "Satın Al";
+"COULD_NOT_MAKE_PURCHASES" = "Tam sürümü edinebilmek için Ayarlar uygulamasından Uygulama İçi Alım seçeneğini etkinleştirmeniz gerekmektedir.";
+"IN_APP_PURCHASES" = "Uygulama İçi Alım";
+"OK" = "Tamam";
+"PRODUCT_PURCHASE_FAILED" = "Hata: ";
+
+//Gallery Names
+"DEFAULT_GALLERY" = "Default Gallery";
+"com.halici.RotateMe.yourGallery" = "Senin Galerin";
+
+// in app
+"PRODUCT_PURCHASE_COMPLETED" = "İşlem başarı ile gerçekleştirildi";

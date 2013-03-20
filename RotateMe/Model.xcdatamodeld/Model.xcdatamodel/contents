@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C60" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Gallery" representedClassName="Gallery" syncable="YES">
+        <attribute name="isPurchased" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="photos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Photo" inverseName="gallery" inverseEntity="Photo" syncable="YES"/>
+    </entity>
+    <entity name="Photo" representedClassName="PhotoManagedObject" syncable="YES">
+        <attribute name="filename" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="gallery" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Gallery" inverseName="photos" inverseEntity="Gallery" syncable="YES"/>
+        <relationship name="score" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Score" inverseName="photo" inverseEntity="Score" syncable="YES"/>
+    </entity>
+    <entity name="Score" representedClassName="Score" syncable="YES">
+        <attribute name="difficulty" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="elapsedSeconds" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="photo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Photo" inverseName="score" inverseEntity="Photo" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Gallery" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="Photo" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="Score" positionX="160" positionY="192" width="128" height="90"/>
+    </elements>
+</model>
