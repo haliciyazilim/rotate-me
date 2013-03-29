@@ -9,6 +9,9 @@
 #ifndef RotateMe_Config_h
 #define RotateMe_Config_h
 
+//add id
+#define APP_NAME @"RotateMe"
+
 //Bundle initialization
 #define DEFAULT_GALLERY_NAME @"DEFAULT_GALLERY"
 #define USER_GALLERY_NAME @"com.halici.RotateMe.yourGallery"

@@ -7,19 +7,17 @@
 //
 
 #import "MoreGamesView.h"
-#import "MKNetworkEngine.h"
-#import <QuartzCore/QuartzCore.h>
 
 #define DI @"downloaded_image"
 #define logo1x @"logo1x"
 #define logo2x @"logo2x"
 #define logo4x @"logo4x"
+#define APP_NAME_KEY @"app_name"
 
 static MKNetworkEngine* networkEngine;
 
 @implementation MoreGamesView
 {
-    NSString* currentAppId;
     UIButton *leftLeftView, *leftView, *centerView, *rightView, *rightRightView;
     UIImageView* backgroundView;
     NSArray* games;
@@ -38,7 +36,7 @@ static MKNetworkEngine* networkEngine;
     
 }
 
-- (id) initWithCurrentGameAppId:(NSString*) appId
+- (id) init
 {
     if(self = [super init]){
         [self setFrame];
@@ -49,7 +47,6 @@ static MKNetworkEngine* networkEngine;
             [self setAlpha:1.0];
         }];
         
-        currentAppId = appId;
         currentIndex = 0;
         movementAmount = 0;
         startingXLocation = 0;
@@ -76,7 +73,7 @@ static MKNetworkEngine* networkEngine;
         }
         MKNetworkOperation* operation = [[MKNetworkOperation alloc]
                                          initWithURLString:@"http://brainquire.herokuapp.com/games.json"
-                                         params:@{@"appId":currentAppId}
+                                         params:@{APP_NAME_KEY:APP_NAME}
                                          httpMethod:@"GET"];
         [operation addCompletionHandler:^(MKNetworkOperation *completedOperation) {
             NSData *responseJSON = [[completedOperation responseString] dataUsingEncoding:NSUTF8StringEncoding];
@@ -271,7 +268,7 @@ static MKNetworkEngine* networkEngine;
 
 - (void) redirectToGamePage
 {
-    NSString* url = [@"itms-apps://itunes.com/apps/" stringByAppendingString:[[games objectAtIndex:currentIndex] objectForKey:@"appId"]];
+    NSString* url = [@"itms-apps://itunes.com/apps/" stringByAppendingString:[[games objectAtIndex:currentIndex] objectForKey:APP_NAME_KEY]];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
 }
 

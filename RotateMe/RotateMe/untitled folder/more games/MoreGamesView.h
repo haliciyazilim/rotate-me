@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MKNetworkEngine.h"
+#import <QuartzCore/QuartzCore.h>
 
-@interface GameView : UIImageView
+#import "Config.h"
 
-@end
+
 @interface MoreGamesView : UIView
 
-- (id) initWithCurrentGameAppId:(NSString*) appId;
+- (id) init;
 
 @end

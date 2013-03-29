@@ -114,7 +114,7 @@
 
 -(void) openMoreGames
 {
-    [self addSubview:[[MoreGamesView alloc] initWithCurrentGameAppId:@""]];
+    [self addSubview:[[MoreGamesView alloc] init	]];
 }
 
 - (void) openAboutUs
