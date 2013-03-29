@@ -41,4 +41,6 @@
 -(void)resumeGame:(UIButton*)button;
 
 -(void) returnToMainMenu:(UIButton*)button;
+
+-(void) pauseGame;
 @end

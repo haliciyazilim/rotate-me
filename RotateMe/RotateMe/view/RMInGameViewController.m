@@ -87,6 +87,7 @@ static RMInGameViewController* lastInstance = nil;
 
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
     [self setBackground];
     if ([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)] &&
@@ -122,7 +123,7 @@ static RMInGameViewController* lastInstance = nil;
     }
     [self.stopWatchLabel setFont:[UIFont fontWithName:@"TRMcLean" size:[self timerFontSize]]];
     [self.stopWatchLabel setText:@"00:00"];
-    
+    setCurrentGameState(GAME_STATE_PLAYING);
 }
 
 
@@ -180,6 +181,7 @@ static RMInGameViewController* lastInstance = nil;
 {
     isGameFinished = YES;
     [self.stopWatch stopTimer];
+    setCurrentGameState(GAME_STATE_STOPPED);
     [currentImage.owner setScore:[self.stopWatch getElapsedSeconds] forDifficulty:getCurrentDifficulty()];
     
     for(RMCroppedImageView* croppedImage in self.croppedImages){
@@ -255,13 +257,23 @@ static RMInGameViewController* lastInstance = nil;
     [self setMenuButton:nil];
     [super viewDidUnload];
 }
+
+
 - (IBAction)displayMenu:(id)sender
 {
+    [self.stopWatch pauseTimer];
+    setCurrentGameState(GAME_STATE_PAUSED);
     [self.menuButton setEnabled:NO];
     
     UIView* view = [[RMInGameMenuView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width)];
     view.tag = 1234;
     [self.view addSubview:view];
+    
+}
+
+- (void) pauseGame
+{
+    [self displayMenu:nil];
 }
 
 -(void) returnToMainMenu:(UIButton*)button
@@ -273,6 +285,8 @@ static RMInGameViewController* lastInstance = nil;
 
 -(void)resumeGame:(UIButton*)button
 {
+    setCurrentGameState(GAME_STATE_PLAYING);
+    [self.stopWatch resumeTimer];
     [(RMInGameMenuView*)[self.view viewWithTag:1234] removeFromSuperviewOnCompletion:^{
         [self.menuButton setEnabled:YES];
     }];

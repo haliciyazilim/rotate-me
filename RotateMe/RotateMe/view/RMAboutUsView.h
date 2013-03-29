@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RMAboutUsView : UIView
+@interface RMAboutUsView : UIView <UIScrollViewDelegate>
 
 @end

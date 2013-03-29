@@ -105,6 +105,17 @@
 		AE841D5916D4FD1600C6F946 /* ingame_btn_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE841D5516D4FD1600C6F946 /* ingame_btn_bg@2x.png */; };
 		AE841D5D16D5027200C6F946 /* icon_locked.png in Resources */ = {isa = PBXBuildFile; fileRef = AE841D5B16D5027200C6F946 /* icon_locked.png */; };
 		AE841D5E16D5027200C6F946 /* icon_locked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE841D5C16D5027200C6F946 /* icon_locked@2x.png */; };
+		AE8B24C317030BA000B4EDE2 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8B24B217030BA000B4EDE2 /* NSData+Base64.m */; };
+		AE8B24C417030BA000B4EDE2 /* NSDate+RFC1123.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8B24B417030BA000B4EDE2 /* NSDate+RFC1123.m */; };
+		AE8B24C517030BA000B4EDE2 /* NSDictionary+RequestEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8B24B617030BA000B4EDE2 /* NSDictionary+RequestEncoding.m */; };
+		AE8B24C617030BA000B4EDE2 /* NSString+MKNetworkKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8B24B817030BA000B4EDE2 /* NSString+MKNetworkKitAdditions.m */; };
+		AE8B24C717030BA000B4EDE2 /* UIAlertView+MKNetworkKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8B24BA17030BA000B4EDE2 /* UIAlertView+MKNetworkKitAdditions.m */; };
+		AE8B24C817030BA000B4EDE2 /* MKNetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8B24BC17030BA000B4EDE2 /* MKNetworkEngine.m */; };
+		AE8B24C917030BA000B4EDE2 /* MKNetworkOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8B24BF17030BA000B4EDE2 /* MKNetworkOperation.m */; };
+		AE8B24CA17030BA000B4EDE2 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8B24C217030BA000B4EDE2 /* Reachability.m */; };
+		AE8B24CC17030BEA00B4EDE2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE8B24CB17030BEA00B4EDE2 /* CFNetwork.framework */; };
+		AE8B24CE17030C1E00B4EDE2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE8B24CD17030C1D00B4EDE2 /* Security.framework */; };
+		AE8B24D017030C2800B4EDE2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE8B24CF17030C2800B4EDE2 /* SystemConfiguration.framework */; };
 		AE99D34E16DF878900E1BD69 /* selection_bg_ipad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE99D34C16DF878900E1BD69 /* selection_bg_ipad.jpg */; };
 		AE99D34F16DF878900E1BD69 /* selection_bg_ipad@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE99D34D16DF878900E1BD69 /* selection_bg_ipad@2x.jpg */; };
 		AE99D35316DF95F800E1BD69 /* rotate_me_logo_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = AE99D35116DF95F800E1BD69 /* rotate_me_logo_ipad.png */; };
@@ -322,6 +333,26 @@
 		AE841D5516D4FD1600C6F946 /* ingame_btn_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ingame_btn_bg@2x.png"; sourceTree = "<group>"; };
 		AE841D5B16D5027200C6F946 /* icon_locked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_locked.png; path = images/gallery_selection/icon_locked.png; sourceTree = "<group>"; };
 		AE841D5C16D5027200C6F946 /* icon_locked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_locked@2x.png"; path = "images/gallery_selection/icon_locked@2x.png"; sourceTree = "<group>"; };
+		AE8B24B117030BA000B4EDE2 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		AE8B24B217030BA000B4EDE2 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		AE8B24B317030BA000B4EDE2 /* NSDate+RFC1123.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+RFC1123.h"; sourceTree = "<group>"; };
+		AE8B24B417030BA000B4EDE2 /* NSDate+RFC1123.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+RFC1123.m"; sourceTree = "<group>"; };
+		AE8B24B517030BA000B4EDE2 /* NSDictionary+RequestEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+RequestEncoding.h"; sourceTree = "<group>"; };
+		AE8B24B617030BA000B4EDE2 /* NSDictionary+RequestEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+RequestEncoding.m"; sourceTree = "<group>"; };
+		AE8B24B717030BA000B4EDE2 /* NSString+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
+		AE8B24B817030BA000B4EDE2 /* NSString+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
+		AE8B24B917030BA000B4EDE2 /* UIAlertView+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
+		AE8B24BA17030BA000B4EDE2 /* UIAlertView+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
+		AE8B24BB17030BA000B4EDE2 /* MKNetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkEngine.h; sourceTree = "<group>"; };
+		AE8B24BC17030BA000B4EDE2 /* MKNetworkEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNetworkEngine.m; sourceTree = "<group>"; };
+		AE8B24BD17030BA000B4EDE2 /* MKNetworkKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkKit.h; sourceTree = "<group>"; };
+		AE8B24BE17030BA000B4EDE2 /* MKNetworkOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkOperation.h; sourceTree = "<group>"; };
+		AE8B24BF17030BA000B4EDE2 /* MKNetworkOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNetworkOperation.m; sourceTree = "<group>"; };
+		AE8B24C117030BA000B4EDE2 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		AE8B24C217030BA000B4EDE2 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		AE8B24CB17030BEA00B4EDE2 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		AE8B24CD17030C1D00B4EDE2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		AE8B24CF17030C2800B4EDE2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AE99D34C16DF878900E1BD69 /* selection_bg_ipad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = selection_bg_ipad.jpg; path = images/gallery_selection/selection_bg_ipad.jpg; sourceTree = "<group>"; };
 		AE99D34D16DF878900E1BD69 /* selection_bg_ipad@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "selection_bg_ipad@2x.jpg"; path = "images/gallery_selection/selection_bg_ipad@2x.jpg"; sourceTree = "<group>"; };
 		AE99D35116DF95F800E1BD69 /* rotate_me_logo_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rotate_me_logo_ipad.png; path = images/gallery_selection/rotate_me_logo_ipad.png; sourceTree = "<group>"; };
@@ -437,6 +468,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE8B24D017030C2800B4EDE2 /* SystemConfiguration.framework in Frameworks */,
+				AE8B24CE17030C1E00B4EDE2 /* Security.framework in Frameworks */,
+				AE8B24CC17030BEA00B4EDE2 /* CFNetwork.framework in Frameworks */,
 				05F6E0D216CBDC4300543444 /* StoreKit.framework in Frameworks */,
 				AEFF1B8516C4E7FC00922A25 /* GameKit.framework in Frameworks */,
 				AED932BF16BFAD0400DD9D30 /* CoreData.framework in Frameworks */,
@@ -639,6 +673,46 @@
 			name = Manager;
 			sourceTree = "<group>";
 		};
+		AE8B24AF17030BA000B4EDE2 /* MKNetworkKit */ = {
+			isa = PBXGroup;
+			children = (
+				AE8B24B017030BA000B4EDE2 /* Categories */,
+				AE8B24BB17030BA000B4EDE2 /* MKNetworkEngine.h */,
+				AE8B24BC17030BA000B4EDE2 /* MKNetworkEngine.m */,
+				AE8B24BD17030BA000B4EDE2 /* MKNetworkKit.h */,
+				AE8B24BE17030BA000B4EDE2 /* MKNetworkOperation.h */,
+				AE8B24BF17030BA000B4EDE2 /* MKNetworkOperation.m */,
+				AE8B24C017030BA000B4EDE2 /* Reachability */,
+			);
+			path = MKNetworkKit;
+			sourceTree = SOURCE_ROOT;
+		};
+		AE8B24B017030BA000B4EDE2 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				AE8B24B117030BA000B4EDE2 /* NSData+Base64.h */,
+				AE8B24B217030BA000B4EDE2 /* NSData+Base64.m */,
+				AE8B24B317030BA000B4EDE2 /* NSDate+RFC1123.h */,
+				AE8B24B417030BA000B4EDE2 /* NSDate+RFC1123.m */,
+				AE8B24B517030BA000B4EDE2 /* NSDictionary+RequestEncoding.h */,
+				AE8B24B617030BA000B4EDE2 /* NSDictionary+RequestEncoding.m */,
+				AE8B24B717030BA000B4EDE2 /* NSString+MKNetworkKitAdditions.h */,
+				AE8B24B817030BA000B4EDE2 /* NSString+MKNetworkKitAdditions.m */,
+				AE8B24B917030BA000B4EDE2 /* UIAlertView+MKNetworkKitAdditions.h */,
+				AE8B24BA17030BA000B4EDE2 /* UIAlertView+MKNetworkKitAdditions.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		AE8B24C017030BA000B4EDE2 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				AE8B24C117030BA000B4EDE2 /* Reachability.h */,
+				AE8B24C217030BA000B4EDE2 /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
 		AE99D36016DFADAF00E1BD69 /* iPad extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -671,6 +745,9 @@
 		AED218BF16BA934000271930 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AE8B24CF17030C2800B4EDE2 /* SystemConfiguration.framework */,
+				AE8B24CD17030C1D00B4EDE2 /* Security.framework */,
+				AE8B24CB17030BEA00B4EDE2 /* CFNetwork.framework */,
 				05F6E0D116CBDC4300543444 /* StoreKit.framework */,
 				AEFF1B8416C4E7FC00922A25 /* GameKit.framework */,
 				AED932BE16BFAD0400DD9D30 /* CoreData.framework */,
@@ -685,6 +762,7 @@
 		AED218C616BA934000271930 /* RotateMe */ = {
 			isa = PBXGroup;
 			children = (
+				AE8B24AF17030BA000B4EDE2 /* MKNetworkKit */,
 				AE2278C316F0975000318A86 /* More Games */,
 				05F6E0C716CBD3BF00543444 /* in_app_purchase */,
 				AE7CBED616BFF80E001BAF3D /* Manager */,
@@ -1136,6 +1214,14 @@
 				AEF1766416E890DC0027A8CB /* RMDifficultySelectorView.m in Sources */,
 				AE2278C116F06BDA00318A86 /* RMAboutUsView.m in Sources */,
 				AE2278C616F0978700318A86 /* MoreGamesView.m in Sources */,
+				AE8B24C317030BA000B4EDE2 /* NSData+Base64.m in Sources */,
+				AE8B24C417030BA000B4EDE2 /* NSDate+RFC1123.m in Sources */,
+				AE8B24C517030BA000B4EDE2 /* NSDictionary+RequestEncoding.m in Sources */,
+				AE8B24C617030BA000B4EDE2 /* NSString+MKNetworkKitAdditions.m in Sources */,
+				AE8B24C717030BA000B4EDE2 /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
+				AE8B24C817030BA000B4EDE2 /* MKNetworkEngine.m in Sources */,
+				AE8B24C917030BA000B4EDE2 /* MKNetworkOperation.m in Sources */,
+				AE8B24CA17030BA000B4EDE2 /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

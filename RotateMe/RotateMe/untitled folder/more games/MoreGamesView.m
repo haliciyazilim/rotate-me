@@ -7,33 +7,34 @@
 //
 
 #import "MoreGamesView.h"
+#import "MKNetworkEngine.h"
 #import <QuartzCore/QuartzCore.h>
+
+#define DI @"downloaded_image"
+
+
+static MKNetworkEngine* networkEngine;
 
 @implementation MoreGamesView
 {
     NSString* currentAppId;
-    NSArray* gameImages;
-    NSMutableArray* gameViews;
     int currentIndex;
     UIButton *leftLeftView, *leftView, *centerView, *rightView, *rightRightView;
     UIImageView* backgroundView;
     NSArray* games;
     BOOL isAnimating;
     CGSize gameViewSize;
-    int horizontalMargin;
-    int x;
-    int xConstant;
-    int y;
-    CGFloat animationDuration;
-    int movementAmount;
-    int startingXLocation;
+    int horizontalMargin, x, xConstant, y, movementAmount, startingXLocation;
+    CGFloat animationDuration;  
     BOOL isTouchDown;
     UIView* hittedView;
     CGSize closeButtonSize;
     UIButton* closeButton;
+    UIActivityIndicatorView* activityIndicator;
     
-    UISwipeGestureRecognizer *swipeLeftGesture;
-    UISwipeGestureRecognizer *swipeRightGesture;
+//    UISwipeGestureRecognizer *swipeLeftGesture;
+//    UISwipeGestureRecognizer *swipeRightGesture;
+    
 }
 
 - (id) initWithCurrentGameAppId:(NSString*) appId
@@ -41,6 +42,12 @@
     if(self = [super init]){
         [self setFrame];
         [self setBackground];
+        
+        [self setAlpha:0.0];
+        [UIView animateWithDuration:0.5 animations:^{
+            [self setAlpha:1.0];
+        }];
+        
         currentAppId = appId;
         currentIndex = 0;
         movementAmount = 0;
@@ -48,33 +55,72 @@
         animationDuration = 0.2;
         isTouchDown = NO;
         
-        [self setUserInteractionEnabled:YES];
-//        [self setExclusiveTouch:YES];
-        [self getGames];
-        
-//        [self initializeGestures];
-
+        [self setLayoutParameters];
+        [self downloadGames];
+        [self appendCloseButton];
     }
     return self;
 }
 
-//- (void) initializeGestures
-//{
-//    
-//    swipeRightGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self
-//                                                                  action:@selector(animateRight)];
-//    swipeRightGesture.direction = UISwipeGestureRecognizerDirectionRight;
-//    [self addGestureRecognizer:swipeRightGesture];
-//    
-//    swipeLeftGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self
-//                                                                 action:@selector(animateLeft)];
-//    swipeLeftGesture.direction = UISwipeGestureRecognizerDirectionLeft;
-//    [self addGestureRecognizer:swipeLeftGesture];
-//}
+- (void) downloadGames
+{
+    activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    [activityIndicator setFrame:self.frame];
+    [self addSubview:activityIndicator];
+    [activityIndicator startAnimating];
+    if(games == nil){
+        if(networkEngine == nil){
+            networkEngine = [[MKNetworkEngine alloc] initWithHostName:@""];
+            [networkEngine useCache];
+        }
+        MKNetworkOperation* operation = [[MKNetworkOperation alloc]
+                                         initWithURLString:@"http://brainquire.herokuapp.com/games.json"
+                                         params:@{@"appId":currentAppId}
+                                         httpMethod:@"GET"];
+        [operation addCompletionHandler:^(MKNetworkOperation *completedOperation) {
+            NSData *responseJSON = [[completedOperation responseString] dataUsingEncoding:NSUTF8StringEncoding];
+            NSArray* response = [NSJSONSerialization JSONObjectWithData:responseJSON options:0 error:nil];
+            NSLog(@"%@",response);
+            NSMutableArray* gamesMutable = [[NSMutableArray alloc] init];
+            for (NSDictionary* game in response) {
+                [gamesMutable addObject:[NSMutableDictionary dictionaryWithDictionary:game]];
+            }
+            games = gamesMutable;
+            [self initializeGameImages];
+            
+        } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
+            [self closeView];
+        }];
+        [[[MKNetworkEngine alloc] initWithHostName:@""] enqueueOperation:operation];
+    }
+}
+
+- (void) initializeGameImages
+{
+    __block int index = 0;
+    for (NSMutableDictionary* game in games) {
+        index++;
+        MKNetworkOperation *op = [[MKNetworkOperation alloc]
+                                   initWithURLString:[game objectForKey:@"logo"]
+                                   params:nil
+                                   httpMethod:@"GET"];
+        [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
+            [game setObject:[completedOperation responseImage] forKey:DI];
+            index--;
+            if(index <= 0){
+                [activityIndicator removeFromSuperview];
+                [self configureView];
+            }
+        } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
+            [self closeView];
+        }];
+        [networkEngine enqueueOperation:op];
+    }
+}
+
 
 - (void) setBackground
 {
-//    [self setBackgroundColor:[UIColor redColor]];
     backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"moregames_bg.jpg"]];
     backgroundView.frame = self.frame;
     [backgroundView setContentMode:UIViewContentModeScaleToFill];
@@ -85,25 +131,10 @@
 {
     self.frame = CGRectMake(0.0, 0.0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width);
 }
-- (void) getGames
-{
-    games = [NSArray arrayWithObjects:
-             @"",
-             @"",
-             @"",
-             @"",
-             @"", nil];
-    gameImages = [NSArray arrayWithObjects:
-                  [UIImage imageNamed:@"banana_1.jpg"],
-                  [UIImage imageNamed:@"banana_2.jpg"],
-                  [UIImage imageNamed:@"banana_4.jpg"],
-                  [UIImage imageNamed:@"banana_5.jpg"],
-             [UIImage imageNamed:@"banana_3.jpg"], nil];
-    [self configureView];
-}
+
 - (void) configureView
 {
-    [self setLayoutParameters];
+    [self setUserInteractionEnabled:YES];
     
     centerView      = [UIButton buttonWithType:UIButtonTypeCustom];
     
@@ -116,7 +147,6 @@
         leftView        = [UIButton buttonWithType:UIButtonTypeCustom];
         rightRightView  = [UIButton buttonWithType:UIButtonTypeCustom];
     }
-    
     
     [self stylizeButton:leftLeftView];
     [self stylizeButton:leftView];
@@ -133,15 +163,10 @@
     [self setPositions];
     [self fillButtons];
     
-    [self appendCloseButton];
-    [self presentButtonsWithAnimation];
-    
-    
 }
 - (void) setLayoutParameters
 {
-    NSString* deviceModel = [[UIDevice currentDevice] model];
-    if([deviceModel rangeOfString:@"iPad"].length > 0){
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
         gameViewSize = CGSizeMake(560, 400);
         horizontalMargin = 160.0;
         closeButtonSize  = CGSizeMake(40, 40);
@@ -164,42 +189,16 @@
     [closeButton setFrame:CGRectMake(self.frame.size.width - closeButtonSize.width, 0, closeButtonSize.width, closeButtonSize.height)];
     [closeButton setContentMode:UIViewContentModeCenter];
     [self addSubview:closeButton];
-    
 }
-
-- (void) presentButtonsWithAnimation
-{
-    isAnimating = YES;
-    
-//    for(UIButton* button in @[leftLeftView,leftView,centerView,rightView,rightRightView]){
-//        button.frame = CGRectMake(button.frame.origin.x, 0, button.frame.size.width, 0);
-//    }
-    [self setAlpha:0.0];
-    [UIView animateWithDuration:0.5 animations:^{
-        [self setAlpha:1.0];
-//        [leftLeftView   setFrame:[self frameForIndex:-2]];
-//        [leftView       setFrame:[self frameForIndex:-1]];
-//        [centerView     setFrame:[self frameForIndex: 0]];
-//        [rightView      setFrame:[self frameForIndex:+1]];
-//        [rightRightView setFrame:[self frameForIndex:+2]];
-//        leftLeftView.alpha = 1.0;
-//        rightRightView.alpha = 1.0;
-    } completion:^(BOOL finished) {
-        isAnimating = NO;
-    }];
-}
-
 
 - (void) stylizeButton:(UIButton*)button
 {
-//    [button setClipsToBounds:YES];
     [button.layer setBorderColor:[UIColor whiteColor].CGColor];
     [button.layer setBorderWidth:2.0];
     [button.layer setShadowRadius:5.0];
     [button.layer setShadowOffset:CGSizeMake(1, 2)];
     [button.layer setShadowColor:[UIColor blackColor].CGColor];
     [button.layer setShadowOpacity:0.4];
-//    [button.layer set]
 }
 
 - (void) fillButtons
@@ -222,41 +221,41 @@
     while(rightRightIndex >= [games count])
         rightRightIndex = rightRightIndex - [games count];
     
-    [centerView setImage:[gameImages objectAtIndex:centerIndex] forState:UIControlStateNormal];
+    [centerView setImage:[self imageForGameAtIndex:centerIndex] forState:UIControlStateNormal];
     
     if([games count] >= 2){
-        [rightView setImage:[gameImages objectAtIndex:rightIndex] forState:UIControlStateNormal];
+        [rightView setImage:[self imageForGameAtIndex:rightIndex]  forState:UIControlStateNormal];
     }
     
     if([games count] >= 3){
-        [rightRightView setImage:[gameImages objectAtIndex:rightRightIndex] forState:UIControlStateNormal];
-        [leftLeftView setImage:[gameImages objectAtIndex:leftLeftIndex] forState:UIControlStateNormal];
-        [leftView setImage:[gameImages objectAtIndex:leftIndex] forState:UIControlStateNormal];
+        [rightRightView setImage:[self imageForGameAtIndex:rightRightIndex] forState:UIControlStateNormal];
+        [leftLeftView setImage:[self imageForGameAtIndex:leftLeftIndex] forState:UIControlStateNormal];
+        [leftView setImage:[self imageForGameAtIndex:leftIndex] forState:UIControlStateNormal];
     }
     [leftView removeTarget:nil action:NULL forControlEvents:UIControlEventAllEvents];
     [rightView removeTarget:nil action:NULL forControlEvents:UIControlEventAllEvents];
     [centerView removeTarget:nil action:NULL forControlEvents:UIControlEventAllEvents];
-       
     
     [leftView  addTarget:self action:@selector(animateRight) forControlEvents:UIControlEventTouchUpInside];
     [rightView addTarget:self action:@selector(animateLeft) forControlEvents:UIControlEventTouchUpInside];
     [centerView addTarget:self action:@selector(redirectToGamePage) forControlEvents:UIControlEventTouchUpInside];
        
-    
     [self becomeFirstResponder];
     [self resignFirstResponder];
     [self reloadInputViews];
     
-    if([games count] < 2)
-        isAnimating = YES;
-    else
-        isAnimating = NO;
+    isAnimating = NO;
 }
 
+- (UIImage *) imageForGameAtIndex:(int) i
+{
+    return [[games objectAtIndex:i] objectForKey:DI];
+}
 
 - (void) redirectToGamePage
 {
-    NSLog(@"redirect To Game Page");
+    NSString* url = [@"itms-apps://itunes.com/apps/" stringByAppendingString:[[games objectAtIndex:currentIndex] objectForKey:@"appId"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
 }
 
 -(void) closeView
@@ -268,7 +267,6 @@
         
     }];
 }
-
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
@@ -289,7 +287,6 @@
         [centerView.layer setBorderWidth:3.0];
     }
 }
-
 
 - (void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
@@ -323,12 +320,18 @@
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
 {
     isTouchDown = NO;
-    if(abs(movementAmount) > gameViewSize.width*0.5){
+    if(abs(movementAmount) > gameViewSize.width*0.3){
         if(movementAmount < 0){
-            [self animateLeft];
+            if([rightView imageForState:UIControlStateNormal] != nil)
+                [self animateLeft];
+            else
+                [self animateBack];
         }
         else{
-            [self animateRight];
+            if([leftView imageForState:UIControlStateNormal] != nil)
+                [self animateRight];
+            else
+                [self animateBack];
         }
     }else{
         [self animateBack];
@@ -369,7 +372,6 @@
 
 - (void) setPositions
 {
-    
     [leftLeftView   setFrame:[self frameForIndex:-2]];
     [leftView       setFrame:[self frameForIndex:-1]];
     [centerView     setFrame:[self frameForIndex: 0]];
@@ -395,7 +397,6 @@
     if(scale < 1.0){
         [[NSException exceptionWithName:@"scale is not acceptable" reason:@"" userInfo:nil] raise];
     }
-//    NSLog(@"scale: %f",scale);
     return CGRectMake(
                       x + xConstant * index - gameViewSize.width * (scale - 1.0) * 0.5 + movementAmount,
                       y - gameViewSize.height * (scale - 1.0) * 0.5,
@@ -435,9 +436,7 @@
     } completion:^(BOOL finished) {
         [self movePointersLeft];
     }];
-
 }
-
 
 - (void) movePointersLeft
 {
@@ -470,9 +469,5 @@
     [self setPositions];
     [self fillButtons];
 }
-
-
-
-
 
 @end

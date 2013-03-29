@@ -51,3 +51,12 @@ DIFFICULTY getCurrentDifficulty(){
     difficulty = difficultyFromString(result);
     return difficulty;
 }
+
+
+static GAME_STATE CURRENT_GAME_STATE = GAME_STATE_STOPPED;
+GAME_STATE getCurrentGameState(){
+    return CURRENT_GAME_STATE;
+}
+void setCurrentGameState(GAME_STATE state){
+    CURRENT_GAME_STATE = state;
+}
