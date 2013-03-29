@@ -54,30 +54,30 @@
     UIButton* button;
     
     button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setTitle:@"Return" forState:UIControlStateNormal];
+    [button setTitle:NSLocalizedString(@"RETURN",nil) forState:UIControlStateNormal];
     [button addTarget:self action:@selector(closeSettings) forControlEvents:UIControlEventTouchUpInside];
     [buttons addObject:button];
     button = nil;
     
     button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button addTarget:self action:@selector(openAboutUs) forControlEvents:UIControlEventTouchUpInside];
-    [button setTitle:@"About Us" forState:UIControlStateNormal];
+    [button setTitle:NSLocalizedString(@"ABOUT_US",nil) forState:UIControlStateNormal];
     [buttons addObject:button];
     button = nil;
     
     button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setTitle:@"Reset Scores" forState:UIControlStateNormal];
+    [button setTitle:NSLocalizedString(@"RESET_SCORES",nil) forState:UIControlStateNormal];
     [button addTarget:self action:@selector(resetScores) forControlEvents:UIControlEventTouchUpInside];
     [buttons addObject:button];
     button = nil;
     
     button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setTitle:@"More Games" forState:UIControlStateNormal];
+    [button setTitle:NSLocalizedString(@"MORE_GAMES",nil) forState:UIControlStateNormal];
     [button addTarget:self action:@selector(openMoreGames) forControlEvents:UIControlEventTouchUpInside];
     [buttons addObject:button];
     
     button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setTitle:@"Restore Purchases" forState:UIControlStateNormal];
+    [button setTitle:NSLocalizedString(@"RESTORE_PURCHASES",nil) forState:UIControlStateNormal];
     [button addTarget:self action:@selector(restorePurchases) forControlEvents:UIControlEventTouchUpInside];
     [buttons addObject:button];
     restoreButton = button;
@@ -161,13 +161,13 @@
 
 - (void) resetScores
 {
-    [[[UIAlertView alloc] initWithTitle:@"Reset Scores" message:@"Are you sure you want to reset scores?"  delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Sure",nil] show];
+    [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"RESET_SCORES",nil) message:NSLocalizedString(@"RESET_SCORES_APPROVE_QUESTION",nil)  delegate:self cancelButtonTitle:NSLocalizedString(@"CANCEL",nil) otherButtonTitles:NSLocalizedString(@"SURE",nil),nil] show];
 }
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if(buttonIndex == 1){
         [Score cleanAllScores];
-        [[[UIAlertView alloc] initWithTitle:@"Scores cleaned" message:@"Your all scores were cleaned"  delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"RESET_SCORES_CLEANED",nil) message:NSLocalizedString(@"RESET_SCORES_NOTIFICATION",nil)  delegate:self cancelButtonTitle:NSLocalizedString(@"OK",nil) otherButtonTitles:nil] show];
     }
     
 }

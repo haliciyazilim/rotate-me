@@ -19,3 +19,22 @@
 
 // in app
 "PRODUCT_PURCHASE_COMPLETED" = "Operation is successfully completed";
+
+//In Game Menu
+"MAIN_MENU" = "Main Menu";
+"RESTART" = "Restart";
+"RESUME" = "Resume";
+
+//Settings
+"RETURN" = "Return";
+"RESET_SCORES" = "Reset Scores";
+"ABOUT_US" = "About Us";
+"RESTORE_PURCHASES" = "Restore Purchases";
+"MORE_GAMES" = "More Games";
+
+"RESET_SCORES_APPROVE_QUESTION" = "Are you sure you want to reset scores?";
+"RESET_SCORES_NOTIFICATION" = "Your all scores were cleaned";
+"RESET_SCORES_CLEANED" = "Scores Cleaned";
+"CANCEL" = "Cancel";
+"SURE" = "Sure";
+

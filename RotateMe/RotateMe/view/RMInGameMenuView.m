@@ -45,9 +45,9 @@
     UIButton* restart = [UIButton buttonWithType:UIButtonTypeCustom];
     UIButton* resume = [UIButton buttonWithType:UIButtonTypeCustom];
     
-    [mainMenu setTitle:@"Main Menu" forState:UIControlStateNormal];
-    [restart setTitle:@"Restart" forState:UIControlStateNormal];
-    [resume setTitle:@"Resume" forState:UIControlStateNormal];
+    [mainMenu setTitle:NSLocalizedString(@"MAIN_MENU", nil) forState:UIControlStateNormal];
+    [restart  setTitle:NSLocalizedString(@"RESTART", nil) forState:UIControlStateNormal];
+    [resume   setTitle:NSLocalizedString(@"RESUME", nil) forState:UIControlStateNormal];
     	
     NSArray* buttons = [NSArray arrayWithObjects:resume,restart,mainMenu,nil];
     

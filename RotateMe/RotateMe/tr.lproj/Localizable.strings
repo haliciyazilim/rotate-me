@@ -19,3 +19,22 @@
 
 // in app
 "PRODUCT_PURCHASE_COMPLETED" = "İşlem başarı ile gerçekleştirildi";
+
+
+//In Game Menu
+"MAIN_MENU" = "Ana Menü";
+"RESTART" = "Yeniden Başlat";
+"RESUME" = "Devam Et";
+
+//Settings
+"RETURN" = "Geri Dön";
+"RESET_SCORES" = "Skorları Sıfırla";
+"ABOUT_US" = "Hakkımızda";
+"RESTORE_PURCHASES" = "Alınanları Yükle";
+"MORE_GAMES" = "Daha Fazla Oyun";
+
+"RESET_SCORES_APPROVE_QUESTION" = "Skorları sıfırlamak istediğinize emin misiniz?";
+"RESET_SCORES_NOTIFICATION" = "Bütün skorlarınız temizlenmiştir.";
+"RESET_SCORES_CLEANED" = "Skorlar Temizlendi";
+"CANCEL" = "İptal";
+"SURE" = "Eminim";
