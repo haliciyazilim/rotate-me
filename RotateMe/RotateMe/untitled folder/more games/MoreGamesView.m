@@ -11,20 +11,21 @@
 #import <QuartzCore/QuartzCore.h>
 
 #define DI @"downloaded_image"
-
+#define logo1x @"logo1x"
+#define logo2x @"logo2x"
+#define logo4x @"logo4x"
 
 static MKNetworkEngine* networkEngine;
 
 @implementation MoreGamesView
 {
     NSString* currentAppId;
-    int currentIndex;
     UIButton *leftLeftView, *leftView, *centerView, *rightView, *rightRightView;
     UIImageView* backgroundView;
     NSArray* games;
     BOOL isAnimating;
     CGSize gameViewSize;
-    int horizontalMargin, x, xConstant, y, movementAmount, startingXLocation;
+    int currentIndex,horizontalMargin, x, xConstant, y, movementAmount, startingXLocation;
     CGFloat animationDuration;  
     BOOL isTouchDown;
     UIView* hittedView;
@@ -98,10 +99,26 @@ static MKNetworkEngine* networkEngine;
 - (void) initializeGameImages
 {
     __block int index = 0;
+    NSString* logoKey;
+    if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)] == YES && [[UIScreen mainScreen] scale] == 2.00) {
+        if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
+            logoKey = logo4x;
+        }else{
+            logoKey = logo2x;
+        }
+    }
+    else{
+        if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
+            logoKey = logo2x;
+        }else{
+            logoKey = logo1x;
+        }
+    }
     for (NSMutableDictionary* game in games) {
         index++;
+        
         MKNetworkOperation *op = [[MKNetworkOperation alloc]
-                                   initWithURLString:[game objectForKey:@"logo"]
+                                   initWithURLString:[game objectForKey:logoKey]
                                    params:nil
                                    httpMethod:@"GET"];
         [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
