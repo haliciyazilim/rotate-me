@@ -71,7 +71,6 @@ static MKNetworkEngine* networkEngine;
 
 @implementation MoreGamesView
 {
-//    UIButton *leftLeftView, *leftView, *centerView, *rightView, *rightRightView;
     MGGameView *leftLeftView, *leftView, *centerView, *rightView, *rightRightView;
     UIImageView* backgroundView;
     NSArray* games;
@@ -85,6 +84,7 @@ static MKNetworkEngine* networkEngine;
     UIButton* closeButton;
     UIActivityIndicatorView* activityIndicator;
     CGFloat closeButtonXMargin, closeButtonYMargin;
+    NSDate* touchStartedTime;
     
 }
 
@@ -351,6 +351,7 @@ static MKNetworkEngine* networkEngine;
     if([centerView hitTest:[[touches anyObject] locationInView:centerView] withEvent:event] == centerView ){
         [self performSelector:@selector(highlightCenterView) withObject:nil afterDelay:0.1];
     }
+    touchStartedTime = [NSDate date];
 }
 
 - (void) highlightCenterView
@@ -390,9 +391,12 @@ static MKNetworkEngine* networkEngine;
 }
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    double executionTime = (double)[[NSDate date] timeIntervalSinceDate:touchStartedTime];
+    NSLog(@"%f", executionTime);
+    
     isTouchDown = NO;
     [centerView.layer setBorderWidth:2.0];
-    if(abs(movementAmount) > gameViewSize.width*0.3){
+    if(abs(movementAmount) > gameViewSize.width*0.3 || (executionTime < 0.4 && abs(movementAmount) > 0) ){
         if(movementAmount < 0){
             if([rightView image] != nil)
                 [self animateLeft];
@@ -415,11 +419,13 @@ static MKNetworkEngine* networkEngine;
 {
     if([centerView hitTest:[[touches anyObject] locationInView:centerView] withEvent:event] == centerView && abs(movementAmount) <= 1 ){
         [self redirectToGamePage];
+        return;
     }
-    [self touchesCancelled:touches withEvent:event];
     if([closeButton hitTest:[[touches anyObject] locationInView:closeButton] withEvent:event] == closeButton && abs(movementAmount) <= 1 ){
         [self closeView];
+        return;
     }
+    [self touchesCancelled:touches withEvent:event];
     
 }
 
