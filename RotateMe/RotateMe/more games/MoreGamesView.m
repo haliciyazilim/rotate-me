@@ -14,15 +14,69 @@
 #define logo4x @"logo4x"
 #define APP_NAME_KEY @"app_name"
 
+@implementation MGGameView
+{
+    UIImageView* shadowView;
+    CGFloat wScaleFactor, hScaleFactor;
+}
+- (id) init
+{
+    if(self = [super init]){
+        wScaleFactor = 59.0 / 1568.0;
+        hScaleFactor = 59.0 / 1120.0;
+        self.imageView = [[UIImageView alloc] init];
+        self.imageView.contentScaleFactor = [UIScreen mainScreen].scale;
+        [self.imageView setContentMode:UIViewContentModeScaleAspectFill];
+        [self.imageView setClipsToBounds:YES];
+        [self addSubview:self.imageView];
+        [self initializeLayerAndShadow];
+        
+    }
+    return self;
+}
+
+- (void) initializeLayerAndShadow
+{
+    [self.layer setBorderColor:[UIColor whiteColor].CGColor];
+    [self.layer setBorderWidth:2.0];
+    shadowView = [[UIImageView alloc] initWithFrame:self.frame];
+    [shadowView setImage:[UIImage imageNamed:@"mg_shadow_.png"]];
+    [shadowView setClipsToBounds:YES];
+    [shadowView setContentMode:UIViewContentModeScaleAspectFill];
+    [self insertSubview:shadowView belowSubview:self.imageView];
+}
+
+- (void) setImage:(UIImage *)image
+{
+    _image = image;
+    [self.imageView setImage:_image];
+}
+
+-(void) setFrame:(CGRect)frame
+{
+    [super setFrame:frame];
+    
+    [self.imageView setFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
+    [shadowView setFrame:CGRectMake(
+                                    - frame.size.width * wScaleFactor * 0.5,
+                                    - frame.size.height* hScaleFactor * 0.5,
+                                    frame.size.width * (1.0 + wScaleFactor),
+                                    frame.size.height* (1.0 + hScaleFactor)
+                                    )];
+}
+
+@end
+
 static MKNetworkEngine* networkEngine;
 
 @implementation MoreGamesView
 {
-    UIButton *leftLeftView, *leftView, *centerView, *rightView, *rightRightView;
+//    UIButton *leftLeftView, *leftView, *centerView, *rightView, *rightRightView;
+    MGGameView *leftLeftView, *leftView, *centerView, *rightView, *rightRightView;
     UIImageView* backgroundView;
     NSArray* games;
     BOOL isAnimating;
-    CGSize gameViewSize;
+    CGSize gameViewSize, gameViewShadowSize;
     int currentIndex,horizontalMargin, x, xConstant, y, movementAmount, startingXLocation;
     CGFloat animationDuration;  
     BOOL isTouchDown;
@@ -30,9 +84,6 @@ static MKNetworkEngine* networkEngine;
     CGSize closeButtonSize;
     UIButton* closeButton;
     UIActivityIndicatorView* activityIndicator;
-    
-//    UISwipeGestureRecognizer *swipeLeftGesture;
-//    UISwipeGestureRecognizer *swipeRightGesture;
     
 }
 
@@ -62,7 +113,8 @@ static MKNetworkEngine* networkEngine;
 
 - (void) downloadGames
 {
-    activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [activityIndicator setColor:[UIColor blackColor]];
     [activityIndicator setFrame:self.frame];
     [self addSubview:activityIndicator];
     [activityIndicator startAnimating];
@@ -78,14 +130,18 @@ static MKNetworkEngine* networkEngine;
         [operation addCompletionHandler:^(MKNetworkOperation *completedOperation) {
             NSData *responseJSON = [[completedOperation responseString] dataUsingEncoding:NSUTF8StringEncoding];
             NSArray* response = [NSJSONSerialization JSONObjectWithData:responseJSON options:0 error:nil];
-            NSLog(@"%@",response);
+//            NSLog(@"%@",response);
             NSMutableArray* gamesMutable = [[NSMutableArray alloc] init];
             for (NSDictionary* game in response) {
                 [gamesMutable addObject:[NSMutableDictionary dictionaryWithDictionary:game]];
             }
             games = gamesMutable;
-            [self initializeGameImages];
-            
+            if([games count] == 0){
+                [self closeView];
+            }
+            else{
+                [self initializeGameImages];
+            }
         } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
             [self closeView];
         }];
@@ -99,13 +155,14 @@ static MKNetworkEngine* networkEngine;
     NSString* logoKey;
     if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)] == YES && [[UIScreen mainScreen] scale] == 2.00) {
         if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
+//            logoKey = logo2x;
             logoKey = logo4x;
         }else{
             logoKey = logo2x;
         }
     }
     else{
-        if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
+        if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone){
             logoKey = logo2x;
         }else{
             logoKey = logo1x;
@@ -119,7 +176,9 @@ static MKNetworkEngine* networkEngine;
                                    params:nil
                                    httpMethod:@"GET"];
         [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
-            [game setObject:[completedOperation responseImage] forKey:DI];
+            UIImage* resultImage = [completedOperation responseImage];
+            
+            [game setObject:resultImage forKey:DI];
             index--;
             if(index <= 0){
                 [activityIndicator removeFromSuperview];
@@ -149,24 +208,32 @@ static MKNetworkEngine* networkEngine;
 - (void) configureView
 {
     [self setUserInteractionEnabled:YES];
-    
-    centerView      = [UIButton buttonWithType:UIButtonTypeCustom];
-    
+//    centerView      = [UIButton buttonWithType:UIButtonTypeCustom];
+//    if([games count] >= 2) {
+//        rightView       = [UIButton buttonWithType:UIButtonTypeCustom];
+//    }
+//    if([games count] >= 3){
+//        leftLeftView    = [UIButton buttonWithType:UIButtonTypeCustom];
+//        leftView        = [UIButton buttonWithType:UIButtonTypeCustom];
+//        rightRightView  = [UIButton buttonWithType:UIButtonTypeCustom];
+//    }
+    centerView      = [[MGGameView alloc] init];
+
     if([games count] >= 2) {
-        rightView       = [UIButton buttonWithType:UIButtonTypeCustom];
+        rightView       = [[MGGameView alloc] init];
     }
-    
+
     if([games count] >= 3){
-        leftLeftView    = [UIButton buttonWithType:UIButtonTypeCustom];
-        leftView        = [UIButton buttonWithType:UIButtonTypeCustom];
-        rightRightView  = [UIButton buttonWithType:UIButtonTypeCustom];
+        leftLeftView    = [[MGGameView alloc] init];
+        leftView        = [[MGGameView alloc] init];
+        rightRightView  = [[MGGameView alloc] init];
     }
     
-    [self stylizeButton:leftLeftView];
-    [self stylizeButton:leftView];
-    [self stylizeButton:centerView];
-    [self stylizeButton:rightView];
-    [self stylizeButton:rightRightView];
+//    [self stylizeButton:leftLeftView];
+//    [self stylizeButton:leftView];
+//    [self stylizeButton:centerView];
+//    [self stylizeButton:rightView];
+//    [self stylizeButton:rightRightView];
     
     [self addSubview:centerView];
     [self addSubview:rightView];
@@ -183,12 +250,12 @@ static MKNetworkEngine* networkEngine;
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
         gameViewSize = CGSizeMake(560, 400);
         horizontalMargin = 160.0;
-        closeButtonSize  = CGSizeMake(40, 40);
+        closeButtonSize  = CGSizeMake(37, 37);
     }
     else{
         gameViewSize = CGSizeMake(280, 200);
         horizontalMargin = 80.0;
-        closeButtonSize  = CGSizeMake(40, 30);
+        closeButtonSize  = CGSizeMake(23, 24);
     }
     y = self.frame.size.height * 0.5 -  gameViewSize.height * 0.5;
     x = self.frame.size.width * 0.5 -  gameViewSize.width * 0.5;
@@ -198,9 +265,11 @@ static MKNetworkEngine* networkEngine;
 - (void) appendCloseButton
 {
     closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [closeButton setImage:[UIImage imageNamed:@"more_games_close_btn.png"] forState:UIControlStateNormal];
+    [closeButton setImage:[UIImage imageNamed:@"mg_close_btn.png"] forState:UIControlStateNormal];
     [closeButton addTarget:self action:@selector(closeView) forControlEvents:UIControlEventTouchUpInside];
-    [closeButton setFrame:CGRectMake(self.frame.size.width - closeButtonSize.width, 0, closeButtonSize.width, closeButtonSize.height)];
+//    [closeButton setFrame:CGRectMake(self.frame.size.width - closeButtonSize.width, 0, closeButtonSize.width, closeButtonSize.height)];
+//    [closeButton.layer setBounds:CGRectMake(self.frame.size.width - closeButtonSize.width, 0, closeButtonSize.width, closeButtonSize.height)];
+    [closeButton.layer setFrame:CGRectMake(self.frame.size.width - closeButtonSize.width, 0, closeButtonSize.width, closeButtonSize.height)];
     [closeButton setContentMode:UIViewContentModeCenter];
     [self addSubview:closeButton];
 }
@@ -209,10 +278,16 @@ static MKNetworkEngine* networkEngine;
 {
     [button.layer setBorderColor:[UIColor whiteColor].CGColor];
     [button.layer setBorderWidth:2.0];
-    [button.layer setShadowRadius:5.0];
-    [button.layer setShadowOffset:CGSizeMake(1, 2)];
-    [button.layer setShadowColor:[UIColor blackColor].CGColor];
-    [button.layer setShadowOpacity:0.4];
+//    [button.imageView setFrame:CGRectMake(0, 0, button.frame.size.width, button.frame.size.height)];
+//    [button setContentMode:UIViewContentModeScaleAspectFill];
+//    [button.imageView setContentMode:UIViewContentModeScaleAspectFill];
+//    [button.layer setShadowRadius:8.0];
+//    [button.layer setShadowOffset:CGSizeMake(3, 7)];
+//    [button.layer setShadowColor:[UIColor blackColor].CGColor];
+//    [button.layer setShadowOpacity:0.6];
+//    [button.layer setRasterizationScale:2.0];
+//    [button.layer setShouldRasterize:YES];
+//    [button.layer setShadowPath:[[UIBezierPath bezierPathWithRect:CGRectMake(-5, -5, gameViewSize.width+10, gameViewSize.height+10)] CGPath]];
 }
 
 - (void) fillButtons
@@ -235,25 +310,30 @@ static MKNetworkEngine* networkEngine;
     while(rightRightIndex >= [games count])
         rightRightIndex = rightRightIndex - [games count];
     
-    [centerView setImage:[self imageForGameAtIndex:centerIndex] forState:UIControlStateNormal];
+//    [centerView setImage:[self imageForGameAtIndex:centerIndex] forState:UIControlStateNormal];
+    [centerView setImage:[self imageForGameAtIndex:centerIndex]];
     
     if([games count] >= 2){
-        [rightView setImage:[self imageForGameAtIndex:rightIndex]  forState:UIControlStateNormal];
+//        [rightView setImage:[self imageForGameAtIndex:rightIndex]  forState:UIControlStateNormal];
+        [rightView setImage:[self imageForGameAtIndex:rightIndex]];
     }
     
     if([games count] >= 3){
-        [rightRightView setImage:[self imageForGameAtIndex:rightRightIndex] forState:UIControlStateNormal];
-        [leftLeftView setImage:[self imageForGameAtIndex:leftLeftIndex] forState:UIControlStateNormal];
-        [leftView setImage:[self imageForGameAtIndex:leftIndex] forState:UIControlStateNormal];
+//        [rightRightView setImage:[self imageForGameAtIndex:rightRightIndex] forState:UIControlStateNormal];
+//        [leftLeftView setImage:[self imageForGameAtIndex:leftLeftIndex] forState:UIControlStateNormal];
+//        [leftView setImage:[self imageForGameAtIndex:leftIndex] forState:UIControlStateNormal];
+        [rightRightView setImage:[self imageForGameAtIndex:rightRightIndex]];
+        [leftLeftView setImage:[self imageForGameAtIndex:leftLeftIndex]];
+        [leftView setImage:[self imageForGameAtIndex:leftIndex]];
     }
-    [leftView removeTarget:nil action:NULL forControlEvents:UIControlEventAllEvents];
-    [rightView removeTarget:nil action:NULL forControlEvents:UIControlEventAllEvents];
-    [centerView removeTarget:nil action:NULL forControlEvents:UIControlEventAllEvents];
+//    [leftView removeTarget:nil action:NULL forControlEvents:UIControlEventAllEvents];
+//    [rightView removeTarget:nil action:NULL forControlEvents:UIControlEventAllEvents];
+//    [centerView removeTarget:nil action:NULL forControlEvents:UIControlEventAllEvents];
     
-    [leftView  addTarget:self action:@selector(animateRight) forControlEvents:UIControlEventTouchUpInside];
-    [rightView addTarget:self action:@selector(animateLeft) forControlEvents:UIControlEventTouchUpInside];
-    [centerView addTarget:self action:@selector(redirectToGamePage) forControlEvents:UIControlEventTouchUpInside];
-       
+//    [leftView  addTarget:self action:@selector(animateRight) forControlEvents:UIControlEventTouchUpInside];
+//    [rightView addTarget:self action:@selector(animateLeft) forControlEvents:UIControlEventTouchUpInside];
+//    [centerView addTarget:self action:@selector(redirectToGamePage) forControlEvents:UIControlEventTouchUpInside];
+    
     [self becomeFirstResponder];
     [self resignFirstResponder];
     [self reloadInputViews];
@@ -268,6 +348,9 @@ static MKNetworkEngine* networkEngine;
 
 - (void) redirectToGamePage
 {
+//    if([centerView imageForState:UIControlStateNormal] == nil)
+    if([centerView image] == nil)
+        return;
     NSString* url = [@"itms-apps://itunes.com/apps/" stringByAppendingString:[[games objectAtIndex:currentIndex] objectForKey:APP_NAME_KEY]];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
 }
@@ -324,7 +407,6 @@ static MKNetworkEngine* networkEngine;
     }
     [centerView setFrame:[self frameForIndex:0  withScale:0.4-movementRatio+1.0]];
     
-    
 }
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
 {
@@ -334,15 +416,18 @@ static MKNetworkEngine* networkEngine;
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
 {
     isTouchDown = NO;
+    [centerView.layer setBorderWidth:2.0];
     if(abs(movementAmount) > gameViewSize.width*0.3){
         if(movementAmount < 0){
-            if([rightView imageForState:UIControlStateNormal] != nil)
+//            if([rightView imageForState:UIControlStateNormal] != nil)
+            if([rightView image] != nil)
                 [self animateLeft];
             else
                 [self animateBack];
         }
         else{
-            if([leftView imageForState:UIControlStateNormal] != nil)
+//            if([leftView imageForState:UIControlStateNormal] != nil)
+            if([leftView image] != nil)
                 [self animateRight];
             else
                 [self animateBack];
@@ -351,7 +436,6 @@ static MKNetworkEngine* networkEngine;
         [self animateBack];
         
     }
-    [centerView.layer setBorderWidth:2.0];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
@@ -372,6 +456,7 @@ static MKNetworkEngine* networkEngine;
         return;
     isAnimating = YES;
     movementAmount = 0;
+
     [UIView animateWithDuration:animationDuration animations:^{
         [leftLeftView   setFrame:[self frameForIndex:-2]];
         [leftView       setFrame:[self frameForIndex:-1]];
@@ -381,7 +466,6 @@ static MKNetworkEngine* networkEngine;
     } completion:^(BOOL finished) {
         isAnimating = NO;
     }];
-    
 }
 
 - (void) setPositions
@@ -391,7 +475,6 @@ static MKNetworkEngine* networkEngine;
     [centerView     setFrame:[self frameForIndex: 0]];
     [rightView      setFrame:[self frameForIndex:+1]];
     [rightRightView setFrame:[self frameForIndex:+2]];
-    
     leftLeftView.alpha = 1.0;
     rightRightView.alpha = 1.0;
 }
@@ -424,12 +507,14 @@ static MKNetworkEngine* networkEngine;
         return;
     isAnimating = YES;
     movementAmount = 0;
+
     [UIView animateWithDuration:animationDuration animations:^{
         [leftLeftView   setFrame:[self frameForIndex:-3]];
         [leftView       setFrame:[self frameForIndex:-2]];
         [centerView     setFrame:[self frameForIndex:-1]];
         [rightView      setFrame:[self frameForIndex: 0]];
         [rightRightView setFrame:[self frameForIndex:+1]];
+
     } completion:^(BOOL finished) {
         [self movePointersRight];
     }];
@@ -441,20 +526,23 @@ static MKNetworkEngine* networkEngine;
         return;
     isAnimating = YES;
     movementAmount = 0;
+
     [UIView animateWithDuration:animationDuration animations:^{
         [leftLeftView   setFrame:[self frameForIndex:-1]];
         [leftView       setFrame:[self frameForIndex: 0]];
         [centerView     setFrame:[self frameForIndex:+1]];
         [rightView      setFrame:[self frameForIndex:+2]];
         [rightRightView setFrame:[self frameForIndex:+3]];
+
     } completion:^(BOOL finished) {
+        
         [self movePointersLeft];
     }];
 }
 
 - (void) movePointersLeft
 {
-    UIButton* jumpingView = rightRightView;
+    MGGameView* jumpingView = rightRightView;
     rightRightView = rightView;
     rightView = centerView;
     centerView = leftView;
@@ -470,7 +558,7 @@ static MKNetworkEngine* networkEngine;
 
 - (void) movePointersRight
 {
-    UIButton* jumpingView = leftLeftView;
+    MGGameView* jumpingView = leftLeftView;
     leftLeftView = leftView;
     leftView = centerView;
     centerView = rightView;
@@ -483,5 +571,6 @@ static MKNetworkEngine* networkEngine;
     [self setPositions];
     [self fillButtons];
 }
+
 
 @end

@@ -13,6 +13,12 @@
 #import "Config.h"
 
 
+@interface MGGameView : UIView
+@property (nonatomic) UIImage* image;
+@property UIImageView* imageView;
+- (id) init;
+@end
+
 @interface MoreGamesView : UIView
 
 - (id) init;
