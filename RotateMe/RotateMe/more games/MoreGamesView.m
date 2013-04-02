@@ -12,7 +12,9 @@
 #define logo1x @"logo1x"
 #define logo2x @"logo2x"
 #define logo4x @"logo4x"
-#define APP_NAME_KEY @"for_app_name"
+#define APP_NAME_PARAM @"for_app_name"
+#define APP_NAME_KEY @"app_name"
+#define LANG_PARAM @"lang"
 
 @implementation MGGameView
 {
@@ -127,7 +129,10 @@ static MKNetworkEngine* networkEngine;
         }
         MKNetworkOperation* operation = [[MKNetworkOperation alloc]
                                          initWithURLString:@"http://brainquire.herokuapp.com/games.json"
-                                         params:@{APP_NAME_KEY:APP_NAME}
+                                         params:@{
+                                            APP_NAME_PARAM:APP_NAME,
+                                            LANG_PARAM:(NSString*)[[NSLocale preferredLanguages] objectAtIndex:0]
+                                         }
                                          httpMethod:@"GET"];
         [operation addCompletionHandler:^(MKNetworkOperation *completedOperation) {
             NSData *responseJSON = [[completedOperation responseString] dataUsingEncoding:NSUTF8StringEncoding];
