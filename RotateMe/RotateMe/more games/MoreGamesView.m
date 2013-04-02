@@ -12,7 +12,7 @@
 #define logo1x @"logo1x"
 #define logo2x @"logo2x"
 #define logo4x @"logo4x"
-#define APP_NAME_KEY @"app_name"
+#define APP_NAME_KEY @"for_app_name"
 
 @implementation MGGameView
 {
