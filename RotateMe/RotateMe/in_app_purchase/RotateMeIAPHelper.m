@@ -30,7 +30,10 @@
     static RotateMeIAPHelper * sharedInstance;
     dispatch_once(&once, ^{
         NSDictionary *products = @{iYourGalleryKey : iYourGallerySecret,
-                                   iSportsGalleryKey : iSportsGallerySecret};
+                                   iArchitectureGalleryKey : iArchitectureGallerySecret,
+                                   iWaterGalleryKey : iWaterGallerySecret,
+                                   iMiscellaneousGalleryKey : iMiscellaneousGallerySecret,
+                                   iPatternGalleryKey : iPatternGallerySecret};
         sharedInstance = [[self alloc] initWithProductsDictionary:products];
         [[NSNotificationCenter defaultCenter] addObserver:sharedInstance selector:@selector(productPurchaseCompleted:) name:IAPHelperProductPurchasedNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:sharedInstance selector:@selector(enableBuyButton) name:IAPHelperEnableBuyButtonNotification object:nil];
