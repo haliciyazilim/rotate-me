@@ -87,7 +87,6 @@
             case SKPaymentTransactionStateRestored:
                 [self restoreTransaction:transaction];
             default:
-                [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
                 break;
         }
     };

@@ -109,7 +109,7 @@
 - (void) restorePurchases {
     [self disableRestore];
     [[RotateMeIAPHelper sharedInstance] addActivityToView:restoreButton withFrame:CGRectMake(0.0, 0.0, restoreButton.frame.size.width, restoreButton.frame.size.height)];
-    [[RotateMeIAPHelper sharedInstance] restoreCompletedTransactions];
+    [[RotateMeIAPHelper sharedInstance] restorePurchases];
 }
 
 -(void) openMoreGames

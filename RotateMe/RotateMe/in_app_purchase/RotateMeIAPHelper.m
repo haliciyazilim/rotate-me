@@ -162,11 +162,8 @@
     
     if (!self.products) {
         [self requestProductsWithCompletionHandler:^(BOOL success, NSArray *products) {
-            NSLog(@"%d products found",[products count]);
             if ([self isPro]) {
-                NSLog(@"yes it is pro!");
             } else {
-                NSLog(@"no it is not pro!");
             }
             self.products = products;
             [self productBlock];
@@ -193,7 +190,6 @@
 }
 - (SKProduct *) getProductWithProductIdentifier:(NSString *)productIdentifier {
     for (SKProduct* product in self.products) {
-//        NSLog(@"%@, and %@",productIdentifier, product.productIdentifier);
         if ([product.productIdentifier isEqualToString:productIdentifier]) {
             return product;
         }
