@@ -88,8 +88,7 @@ static RMPhotoSelectionViewController* lastInstance = nil;
     self.difficultySelectorView.frame = [self difficultySelectorViewFrame];
     [self.view addSubview:self.difficultySelectorView];
 
-    imageThreads = [[NSMutableArray alloc] init];
-    [self configureView];
+    
     
 }
 
@@ -118,10 +117,30 @@ static RMPhotoSelectionViewController* lastInstance = nil;
     return YES;
 }
 
+- (void) viewDidAppear:(BOOL)animated
+{
+    if(imageThreads == nil){
+        imageThreads = [[NSMutableArray alloc] init];
+        [self configureView];
+    }else{
+        [self refreshPhotos];
+    }
+}
+
+- (void) processImageThreads
+{
+    for(NSThread* thread in imageThreads){
+        [thread start];
+    }
+    imageThreads = [[NSMutableArray alloc] init];
+}
+
+
 - (void)viewWillAppear:(BOOL)animated
 {
+    
+    
     setCurrentGameState(GAME_STATE_STOPPED);
-    [self refreshPhotos];
 }
 
 - (void) refreshPhotos
@@ -395,18 +414,6 @@ static RMPhotoSelectionViewController* lastInstance = nil;
     [self refreshPhotos];
 }
 
-- (void) processImageThreads
-{
-    for(NSThread* thread in imageThreads){
-        [thread start];
-    }
-    imageThreads = [[NSMutableArray alloc] init];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [self processImageThreads];
-}
 
 - (void)didReceiveMemoryWarning
 {
