@@ -14,9 +14,11 @@
 "PRODUCT_PURCHASE_FAILED" = "Error: ";
 
 //Gallery Names
-"DEFAULT_GALLERY" = "Default Gallery";
+"com.halici.RotateMe.miscellaneousGallery" = "Miscellaneous";
 "com.halici.RotateMe.yourGallery" = "Your Gallery";
-
+"com.halici.RotateMe.architectureGallery" = "Architecture";
+"com.halici.RotateMe.patternGallery" = "Pattern";
+"com.halici.RotateMe.waterGallery" = "Water";
 // in app
 "PRODUCT_PURCHASE_COMPLETED" = "Operation is successfully completed";
 

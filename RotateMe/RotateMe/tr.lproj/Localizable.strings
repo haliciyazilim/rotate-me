@@ -14,8 +14,11 @@
 "PRODUCT_PURCHASE_FAILED" = "Hata: ";
 
 //Gallery Names
-"DEFAULT_GALLERY" = "Default Gallery";
 "com.halici.RotateMe.yourGallery" = "Senin Galerin";
+"com.halici.RotateMe.miscellaneousGallery" = "Çeşitli";
+"com.halici.RotateMe.architectureGallery" = "Mimari";
+"com.halici.RotateMe.patternGallery" = "Desen";
+"com.halici.RotateMe.waterGallery" = "Su";
 
 // in app
 "PRODUCT_PURCHASE_COMPLETED" = "İşlem başarı ile gerçekleştirildi";

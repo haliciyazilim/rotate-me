@@ -13,9 +13,11 @@
 #define APP_NAME @"RotateMe"
 
 //Bundle initialization
-#define DEFAULT_GALLERY_NAME @"DEFAULT_GALLERY"
+#define DEFAULT_GALLERY_NAME @"com.halici.RotateMe.miscellaneousGallery"
 #define USER_GALLERY_NAME @"com.halici.RotateMe.yourGallery"
-#define BANANA_GALLERY_NAME @"com.halici.RotateMe.bananaGallery"
+#define ARCHITECTURE_GALLERY_NAME @"com.halici.RotateMe.architectureGallery"
+#define PATTERN_GALLERY_NAME @"com.halici.RotateMe.patternGallery"
+#define WATER_GALLERY_NAME @"com.halici.RotateMe.waterGallery"
 
 #define PHOTO_SELECTION_IMAGEVIEW_TAG 123
 #define PHOTO_SELECTION_IMAGEVIEW_LABEL_TAG 101

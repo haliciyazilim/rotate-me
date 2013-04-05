@@ -42,8 +42,8 @@
                   @"22-12-Ugur-HALICI-09-(3).jpg",
                   @"23-12-Ugur-HALICI-24-(16).jpg",
                   nil];
-    [RMBundleInitializer copyImages:imageNames forGallery:@"default gallery"];
-    gallery = [Gallery createGalleryWithName:@"default gallery"];
+    [RMBundleInitializer copyImages:imageNames forGallery:DEFAULT_GALLERY_NAME];
+    gallery = [Gallery createGalleryWithName:DEFAULT_GALLERY_NAME];
     gallery.isPurchased = YES;
     [[RMDatabaseManager sharedInstance] saveContext];
     [RMBundleInitializer insertImages:imageNames forGallery:gallery];
@@ -73,9 +73,9 @@
                     @"22-12-Ugur-HALICI-20-(20).jpg",
                     @"23-DSC_5950.JPG",
                   nil];
-    [RMBundleInitializer copyImages:imageNames forGallery:@"architecture"];
-    gallery = [Gallery createGalleryWithName:@"architecture"];
-    gallery.isPurchased = YES;
+    [RMBundleInitializer copyImages:imageNames forGallery:ARCHITECTURE_GALLERY_NAME];
+    gallery = [Gallery createGalleryWithName:ARCHITECTURE_GALLERY_NAME];
+    gallery.isPurchased = NO;
     [[RMDatabaseManager sharedInstance] saveContext];
     [RMBundleInitializer insertImages:imageNames forGallery:gallery];
 
@@ -101,12 +101,11 @@
                     @"17-12-Ugur-HALICI-19-(15).jpg",
                     @"18-12-Ugur-HALICI-10-(2).jpg",
                     @"19-12-Ugur-HALICI-08-(10).jpg",
-                    @"20-12 Ugur HALICI 01 (17).jpg",
                     @"20-12-Ugur-HALICI-01-(17).jpg",
                                      nil];
-    [RMBundleInitializer copyImages:imageNames forGallery:@"pattern"];
-    gallery = [Gallery createGalleryWithName:@"pattern"];
-    gallery.isPurchased = YES;
+    [RMBundleInitializer copyImages:imageNames forGallery:PATTERN_GALLERY_NAME];
+    gallery = [Gallery createGalleryWithName:PATTERN_GALLERY_NAME];
+    gallery.isPurchased = NO;
     [[RMDatabaseManager sharedInstance] saveContext];
     [RMBundleInitializer insertImages:imageNames forGallery:gallery];
 
@@ -135,16 +134,16 @@
                         @"19-12-Ugur-HALICI-06-(28).jpg",
                         @"20-12-Ugur-HALICI-13-(26).jpg",
                         nil];
-    [RMBundleInitializer copyImages:imageNames forGallery:@"water"];
-    gallery = [Gallery createGalleryWithName:@"water"];
-    gallery.isPurchased = YES;
+    [RMBundleInitializer copyImages:imageNames forGallery:WATER_GALLERY_NAME];
+    gallery = [Gallery createGalleryWithName:WATER_GALLERY_NAME];
+    gallery.isPurchased = NO;
     [[RMDatabaseManager sharedInstance] saveContext];
     [RMBundleInitializer insertImages:imageNames forGallery:gallery];
     
     
     
     gallery = [Gallery createGalleryWithName:USER_GALLERY_NAME];
-    gallery.isPurchased = YES;
+    gallery.isPurchased = NO;
     [[RMDatabaseManager sharedInstance] saveContext];
 }
 
