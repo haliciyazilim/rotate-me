@@ -27,23 +27,9 @@
     //GameCenter
     [[GameCenterManager sharedInstance] authenticateLocalUser];
     
-//    [[RotateMeIAPHelper sharedInstance] requestProductsWithCompletionHandler:^(BOOL success, NSArray *products) {
-//        if (!success) {
-//            NSLog(@"problem when getting products");
-//        }
-//        for (SKProduct* product in products) {
-//            [[RotateMeIAPHelper sharedInstance] setProducts:products];
-//            NSLog(@"found product, \ntitle: %@, \nid: %@, \nlocalized description: %@\n----------------------\n", product.localizedTitle ,product.productIdentifier,product.localizedDescription);
-//            NSLog(@"%@",[[RotateMeIAPHelper sharedInstance] getProductWithProductIdentifier:product.productIdentifier]);
-////            [self buyYourGallery];
-//        }
-//    }];
-    
+
     return YES;
 }
-//- (void) buyYourGallery {
-//    [[RotateMeIAPHelper sharedInstance] buySelectedProduct:0];
-//}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

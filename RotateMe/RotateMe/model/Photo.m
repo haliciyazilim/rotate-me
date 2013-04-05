@@ -68,9 +68,6 @@
     }
     [[GameCenterManager sharedInstance] submitScore:elapsedTime category:[NSString stringWithFormat:@"%@_mode",stringOfDifficulty(difficulty)]];
     
-    //TEST
-    [[GameCenterManager sharedInstance] getScores];
-
     [[RMDatabaseManager sharedInstance] saveContext];
 
 }

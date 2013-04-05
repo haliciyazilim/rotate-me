@@ -126,7 +126,7 @@ static RMPhotoSelectionViewController* lastInstance = nil;
 
 - (void) refreshPhotos
 {
-    [RMPhotoSelectionViewController setLastScroll:self.scrollView.contentOffset.x];
+    [currentGallery setLastScroll:self.scrollView.contentOffset.x];
     NSArray* imageViews = [self.scrollView viewsByTag:PHOTO_SELECTION_IMAGEVIEW_TAG];
     for(UIImageView* imageView in imageViews ){
         [imageView removeFromSuperview];
@@ -179,7 +179,7 @@ static RMPhotoSelectionViewController* lastInstance = nil;
         photos = [NSMutableArray arrayWithArray:[currentGallery allPhotos]];
     }
     NSMutableArray* subViews = [[NSMutableArray alloc] init];
-    [self.scrollView setContentOffset:CGPointMake([RMPhotoSelectionViewController getLastScroll], 0.0)];
+    [self.scrollView setContentOffset:CGPointMake([currentGallery lastScroll], 0.0)];
     if([currentGallery.name compare:USER_GALLERY_NAME] == 0){
         RMCustomImageView* addFromGallery = [self addFromGalleryView];
         RMCustomImageView* addFromCamera = [self addFromCameraView];
@@ -438,16 +438,16 @@ static RMPhotoSelectionViewController* lastInstance = nil;
 
 }
 
-static int __lastScroll = 0;
-
-+(int)getLastScroll
-{
-    return __lastScroll;
-}
-
-+(void)setLastScroll:(int)scroll{
-    __lastScroll = scroll;
-}
+//static int __lastScroll = 0;
+//
+//+(int)getLastScroll
+//{
+//    return __lastScroll;
+//}
+//
+//+(void)setLastScroll:(int)scroll{
+//    __lastScroll = scroll;
+//}
 
 
 - (void)viewDidUnload {

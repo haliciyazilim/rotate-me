@@ -15,6 +15,8 @@
 @property NSSet* photos;
 @property BOOL isPurchased;
 
+@property int lastScroll;
+
 + (NSMutableArray*) allGalleries;
 
 + (Gallery*) createGalleryWithName:(NSString*)name;

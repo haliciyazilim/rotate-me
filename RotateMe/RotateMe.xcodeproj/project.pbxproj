@@ -57,26 +57,6 @@
 		AE2BE2C716C3D18700A0335D /* photo_holder_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE2BE2C316C3D18700A0335D /* photo_holder_normal@2x.png */; };
 		AE2BE2CA16C3ED4600A0335D /* RMPhotoSelectionImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2BE2C916C3ED4600A0335D /* RMPhotoSelectionImageView.m */; };
 		AE34E6BC16D4C11A006836B8 /* RMInGameMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE34E6BB16D4C11A006836B8 /* RMInGameMenuView.m */; };
-		AE4933B416E60E0B00D9A151 /* banana_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE49339F16E60E0B00D9A151 /* banana_1.jpg */; };
-		AE4933B516E60E0B00D9A151 /* banana_10.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = AE4933A016E60E0B00D9A151 /* banana_10.jpeg */; };
-		AE4933B616E60E0B00D9A151 /* banana_11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE4933A116E60E0B00D9A151 /* banana_11.jpg */; };
-		AE4933B716E60E0B00D9A151 /* banana_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE4933A216E60E0B00D9A151 /* banana_2.jpg */; };
-		AE4933B816E60E0B00D9A151 /* banana_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE4933A316E60E0B00D9A151 /* banana_3.jpg */; };
-		AE4933B916E60E0B00D9A151 /* banana_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE4933A416E60E0B00D9A151 /* banana_4.jpg */; };
-		AE4933BA16E60E0B00D9A151 /* banana_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE4933A516E60E0B00D9A151 /* banana_5.jpg */; };
-		AE4933BB16E60E0B00D9A151 /* banana_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE4933A616E60E0B00D9A151 /* banana_6.jpg */; };
-		AE4933BC16E60E0B00D9A151 /* banana_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE4933A716E60E0B00D9A151 /* banana_7.jpg */; };
-		AE4933BD16E60E0B00D9A151 /* banana_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE4933A816E60E0B00D9A151 /* banana_8.jpg */; };
-		AE4933BE16E60E0B00D9A151 /* banana_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE4933A916E60E0B00D9A151 /* banana_9.jpg */; };
-		AE4933BF16E60E0B00D9A151 /* test001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE4933AB16E60E0B00D9A151 /* test001.jpg */; };
-		AE4933C016E60E0B00D9A151 /* test002.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE4933AC16E60E0B00D9A151 /* test002.jpg */; };
-		AE4933C116E60E0B00D9A151 /* test003.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE4933AD16E60E0B00D9A151 /* test003.jpg */; };
-		AE4933C216E60E0B00D9A151 /* test004.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE4933AE16E60E0B00D9A151 /* test004.jpg */; };
-		AE4933C316E60E0B00D9A151 /* test005.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE4933AF16E60E0B00D9A151 /* test005.jpg */; };
-		AE4933C416E60E0B00D9A151 /* test1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE4933B016E60E0B00D9A151 /* test1.jpg */; };
-		AE4933C516E60E0B00D9A151 /* test2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE4933B116E60E0B00D9A151 /* test2.jpg */; };
-		AE4933C616E60E0B00D9A151 /* test3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE4933B216E60E0B00D9A151 /* test3.jpg */; };
-		AE4933C716E60E0B00D9A151 /* test4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE4933B316E60E0B00D9A151 /* test4.jpg */; };
 		AE4933CA16E61D5B00D9A151 /* RotateMeIpadIAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AE4933C916E61D5B00D9A151 /* RotateMeIpadIAPHelper.m */; };
 		AE4933CD16E62C7500D9A151 /* ingame_btn_bg_hover_ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE4933CB16E62C7500D9A151 /* ingame_btn_bg_hover_ipad@2x.png */; };
 		AE4933CE16E62C7500D9A151 /* ingame_btn_bg_ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE4933CC16E62C7500D9A151 /* ingame_btn_bg_ipad@2x.png */; };
@@ -94,6 +74,93 @@
 		AE53ABC0170AEF49007F5B10 /* mg_brainquire@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE53ABBE170AEF49007F5B10 /* mg_brainquire@2x.png */; };
 		AE53ABC3170AF0FB007F5B10 /* mg_close_btn~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = AE53ABC1170AF0FB007F5B10 /* mg_close_btn~ipad.png */; };
 		AE53ABC4170AF0FB007F5B10 /* mg_close_btn~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE53ABC2170AF0FB007F5B10 /* mg_close_btn~ipad@2x.png */; };
+		AE5B8AEC170EAB53007441DE /* 01-12-Ugur-HALICI-20-(11).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8A92170EAB53007441DE /* 01-12-Ugur-HALICI-20-(11).jpg */; };
+		AE5B8AED170EAB53007441DE /* 02-12-Ugur-HALICI-01-(22).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8A93170EAB53007441DE /* 02-12-Ugur-HALICI-01-(22).jpg */; };
+		AE5B8AEE170EAB53007441DE /* 03-venedik.JPG in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8A94170EAB53007441DE /* 03-venedik.JPG */; };
+		AE5B8AEF170EAB53007441DE /* 04-underground.JPG in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8A95170EAB53007441DE /* 04-underground.JPG */; };
+		AE5B8AF0170EAB53007441DE /* 05-12-Ugur-HALICI-21-(16).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8A96170EAB53007441DE /* 05-12-Ugur-HALICI-21-(16).jpg */; };
+		AE5B8AF1170EAB53007441DE /* 06-12-Ugur-HALICI-23-(11).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8A97170EAB53007441DE /* 06-12-Ugur-HALICI-23-(11).jpg */; };
+		AE5B8AF2170EAB53007441DE /* 07-12-Ugur-HALICI-20-(13).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8A98170EAB53007441DE /* 07-12-Ugur-HALICI-20-(13).jpg */; };
+		AE5B8AF3170EAB53007441DE /* 08-12-Ugur-HALICI-20-(21).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8A99170EAB53007441DE /* 08-12-Ugur-HALICI-20-(21).jpg */; };
+		AE5B8AF4170EAB53007441DE /* 09-12-Ugur-HALICI-17-(12).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8A9A170EAB53007441DE /* 09-12-Ugur-HALICI-17-(12).jpg */; };
+		AE5B8AF5170EAB53007441DE /* 10-12-Ugur-HALICI-17-(26).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8A9B170EAB53007441DE /* 10-12-Ugur-HALICI-17-(26).jpg */; };
+		AE5B8AF6170EAB53007441DE /* 11-12-Ugur-HALICI-01-(2).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8A9C170EAB53007441DE /* 11-12-Ugur-HALICI-01-(2).jpg */; };
+		AE5B8AF7170EAB53007441DE /* 12-12-Ugur-HALICI-01-(11).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8A9D170EAB53007441DE /* 12-12-Ugur-HALICI-01-(11).jpg */; };
+		AE5B8AF8170EAB53007441DE /* 13-12-Ugur-HALICI-01-(1).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8A9E170EAB53007441DE /* 13-12-Ugur-HALICI-01-(1).jpg */; };
+		AE5B8AF9170EAB53007441DE /* 14-12-Ugur-HALICI-14-(2).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8A9F170EAB53007441DE /* 14-12-Ugur-HALICI-14-(2).jpg */; };
+		AE5B8AFA170EAB53007441DE /* 15-12-Ugur-HALICI-14-(17).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AA0170EAB53007441DE /* 15-12-Ugur-HALICI-14-(17).jpg */; };
+		AE5B8AFB170EAB53007441DE /* 16-12-Ugur-HALICI-14-(25).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AA1170EAB53007441DE /* 16-12-Ugur-HALICI-14-(25).jpg */; };
+		AE5B8AFC170EAB53007441DE /* 17-12-Ugur-HALICI-14-(15).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AA2170EAB53007441DE /* 17-12-Ugur-HALICI-14-(15).jpg */; };
+		AE5B8AFD170EAB53007441DE /* 18-12-Ugur-HALICI-11-(28).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AA3170EAB53007441DE /* 18-12-Ugur-HALICI-11-(28).jpg */; };
+		AE5B8AFE170EAB53007441DE /* 19-12-Ugur-HALICI-11-(35).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AA4170EAB53007441DE /* 19-12-Ugur-HALICI-11-(35).jpg */; };
+		AE5B8AFF170EAB53007441DE /* 20-12-Ugur-HALICI-20-(26).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AA5170EAB53007441DE /* 20-12-Ugur-HALICI-20-(26).jpg */; };
+		AE5B8B00170EAB53007441DE /* 21-koc.JPG in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AA6170EAB53007441DE /* 21-koc.JPG */; };
+		AE5B8B01170EAB53007441DE /* 22-12-Ugur-HALICI-20-(20).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AA7170EAB53007441DE /* 22-12-Ugur-HALICI-20-(20).jpg */; };
+		AE5B8B02170EAB53007441DE /* 23-DSC_5950.JPG in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AA8170EAB53007441DE /* 23-DSC_5950.JPG */; };
+		AE5B8B03170EAB53007441DE /* 01-volls-woyce---büyük.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AAA170EAB53007441DE /* 01-volls-woyce---büyük.jpg */; };
+		AE5B8B04170EAB53007441DE /* 02-12-Ugur-HALICI-01-(29).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AAB170EAB53007441DE /* 02-12-Ugur-HALICI-01-(29).jpg */; };
+		AE5B8B05170EAB53007441DE /* 03-DSC00485.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AAC170EAB53007441DE /* 03-DSC00485.jpg */; };
+		AE5B8B06170EAB53007441DE /* 04-12-Ugur-HALICI-15-(4).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AAD170EAB53007441DE /* 04-12-Ugur-HALICI-15-(4).jpg */; };
+		AE5B8B07170EAB53007441DE /* 05-12-Ugur-HALICI-20-(7).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AAE170EAB53007441DE /* 05-12-Ugur-HALICI-20-(7).jpg */; };
+		AE5B8B08170EAB53007441DE /* 06-12-Ugur-HALICI-07-(30).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AAF170EAB53007441DE /* 06-12-Ugur-HALICI-07-(30).jpg */; };
+		AE5B8B09170EAB53007441DE /* 07-12-Ugur-HALICI-07-(24).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AB0170EAB53007441DE /* 07-12-Ugur-HALICI-07-(24).jpg */; };
+		AE5B8B0A170EAB53007441DE /* 08-12-Ugur-HALICI-13-(29).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AB1170EAB53007441DE /* 08-12-Ugur-HALICI-13-(29).jpg */; };
+		AE5B8B0B170EAB53007441DE /* 09-12-Ugur-HALICI-11-(5).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AB2170EAB53007441DE /* 09-12-Ugur-HALICI-11-(5).jpg */; };
+		AE5B8B0C170EAB53007441DE /* 10-12-Ugur-HALICI-18-(12).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AB3170EAB53007441DE /* 10-12-Ugur-HALICI-18-(12).jpg */; };
+		AE5B8B0D170EAB53007441DE /* 11-12-Ugur-HALICI-10-(22).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AB4170EAB53007441DE /* 11-12-Ugur-HALICI-10-(22).jpg */; };
+		AE5B8B0E170EAB53007441DE /* 12-12-Ugur-HALICI-02-(1).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AB5170EAB53007441DE /* 12-12-Ugur-HALICI-02-(1).jpg */; };
+		AE5B8B0F170EAB53007441DE /* 13-ugur-kanarya-(32).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AB6170EAB53007441DE /* 13-ugur-kanarya-(32).jpg */; };
+		AE5B8B10170EAB53007441DE /* 14-12-Ugur-HALICI-16-(1).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AB7170EAB53007441DE /* 14-12-Ugur-HALICI-16-(1).jpg */; };
+		AE5B8B11170EAB53007441DE /* 15-kafes-(23).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AB8170EAB53007441DE /* 15-kafes-(23).jpg */; };
+		AE5B8B12170EAB53007441DE /* 16-12-Ugur-HALICI-23-(32).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AB9170EAB53007441DE /* 16-12-Ugur-HALICI-23-(32).jpg */; };
+		AE5B8B13170EAB53007441DE /* 17-12-Ugur-HALICI-06-(6).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8ABA170EAB53007441DE /* 17-12-Ugur-HALICI-06-(6).jpg */; };
+		AE5B8B14170EAB53007441DE /* 18-12-Ugur-HALICI-12-(1).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8ABB170EAB53007441DE /* 18-12-Ugur-HALICI-12-(1).jpg */; };
+		AE5B8B15170EAB53007441DE /* 19-DSC09706.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8ABC170EAB53007441DE /* 19-DSC09706.jpg */; };
+		AE5B8B16170EAB53007441DE /* 20-DSC_2728.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8ABD170EAB53007441DE /* 20-DSC_2728.jpg */; };
+		AE5B8B17170EAB53007441DE /* 21-yakin-(8).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8ABE170EAB53007441DE /* 21-yakin-(8).jpg */; };
+		AE5B8B18170EAB53007441DE /* 22-12-Ugur-HALICI-09-(3).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8ABF170EAB53007441DE /* 22-12-Ugur-HALICI-09-(3).jpg */; };
+		AE5B8B19170EAB53007441DE /* 23-12-Ugur-HALICI-24-(16).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AC0170EAB53007441DE /* 23-12-Ugur-HALICI-24-(16).jpg */; };
+		AE5B8B1A170EAB53007441DE /* 01-12-Ugur-HALICI-01-(3).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AC2170EAB53007441DE /* 01-12-Ugur-HALICI-01-(3).jpg */; };
+		AE5B8B1B170EAB53007441DE /* 02-12-Ugur-HALICI-20-(10).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AC3170EAB53007441DE /* 02-12-Ugur-HALICI-20-(10).jpg */; };
+		AE5B8B1C170EAB53007441DE /* 03-12-Ugur-HALICI-14-(3).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AC4170EAB53007441DE /* 03-12-Ugur-HALICI-14-(3).jpg */; };
+		AE5B8B1D170EAB53007441DE /* 04-12-Ugur-HALICI-10-(4).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AC5170EAB53007441DE /* 04-12-Ugur-HALICI-10-(4).jpg */; };
+		AE5B8B1E170EAB53007441DE /* 05-12-Ugur-HALICI-10-(35).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AC6170EAB53007441DE /* 05-12-Ugur-HALICI-10-(35).jpg */; };
+		AE5B8B1F170EAB53007441DE /* 06-12-Ugur-HALICI-18-(22).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AC7170EAB53007441DE /* 06-12-Ugur-HALICI-18-(22).jpg */; };
+		AE5B8B20170EAB53007441DE /* 07-12-Ugur-HALICI-23-(28).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AC8170EAB53007441DE /* 07-12-Ugur-HALICI-23-(28).jpg */; };
+		AE5B8B21170EAB53007441DE /* 08-12-Ugur-HALICI-22-(14).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AC9170EAB53007441DE /* 08-12-Ugur-HALICI-22-(14).jpg */; };
+		AE5B8B22170EAB53007441DE /* 09-12-Ugur-HALICI-02-(6).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8ACA170EAB53007441DE /* 09-12-Ugur-HALICI-02-(6).jpg */; };
+		AE5B8B23170EAB53007441DE /* 10-12-Ugur-HALICI-02-(22).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8ACB170EAB53007441DE /* 10-12-Ugur-HALICI-02-(22).jpg */; };
+		AE5B8B24170EAB53007441DE /* 11-12-Ugur-HALICI-02-(34).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8ACC170EAB53007441DE /* 11-12-Ugur-HALICI-02-(34).jpg */; };
+		AE5B8B25170EAB53007441DE /* 12-12-Ugur-HALICI-18-(25).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8ACD170EAB53007441DE /* 12-12-Ugur-HALICI-18-(25).jpg */; };
+		AE5B8B26170EAB53007441DE /* 13-12-Ugur-HALICI-19-(2).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8ACE170EAB53007441DE /* 13-12-Ugur-HALICI-19-(2).jpg */; };
+		AE5B8B27170EAB53007441DE /* 14-12-Ugur-HALICI-16-(21).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8ACF170EAB53007441DE /* 14-12-Ugur-HALICI-16-(21).jpg */; };
+		AE5B8B28170EAB53007441DE /* 15-12-Ugur-HALICI-15-(16).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AD0170EAB53007441DE /* 15-12-Ugur-HALICI-15-(16).jpg */; };
+		AE5B8B29170EAB53007441DE /* 16-12-Ugur-HALICI-08-(15).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AD1170EAB53007441DE /* 16-12-Ugur-HALICI-08-(15).jpg */; };
+		AE5B8B2A170EAB53007441DE /* 17-12-Ugur-HALICI-19-(15).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AD2170EAB53007441DE /* 17-12-Ugur-HALICI-19-(15).jpg */; };
+		AE5B8B2B170EAB53007441DE /* 18-12-Ugur-HALICI-10-(2).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AD3170EAB53007441DE /* 18-12-Ugur-HALICI-10-(2).jpg */; };
+		AE5B8B2C170EAB53007441DE /* 19-12-Ugur-HALICI-08-(10).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AD4170EAB53007441DE /* 19-12-Ugur-HALICI-08-(10).jpg */; };
+		AE5B8B2D170EAB53007441DE /* 20-12 Ugur HALICI 01 (17).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AD5170EAB53007441DE /* 20-12 Ugur HALICI 01 (17).jpg */; };
+		AE5B8B2E170EAB53007441DE /* 20-12-Ugur-HALICI-01-(17).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AD6170EAB53007441DE /* 20-12-Ugur-HALICI-01-(17).jpg */; };
+		AE5B8B2F170EAB53007441DE /* 01-08.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AD8170EAB53007441DE /* 01-08.jpg */; };
+		AE5B8B30170EAB53007441DE /* 02-12-Ugur-HALICI-01-(5).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AD9170EAB53007441DE /* 02-12-Ugur-HALICI-01-(5).jpg */; };
+		AE5B8B31170EAB53007441DE /* 03-12-Ugur-HALICI-22-(10).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8ADA170EAB53007441DE /* 03-12-Ugur-HALICI-22-(10).jpg */; };
+		AE5B8B32170EAB53007441DE /* 04-12-Ugur-HALICI-17-(15).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8ADB170EAB53007441DE /* 04-12-Ugur-HALICI-17-(15).jpg */; };
+		AE5B8B33170EAB53007441DE /* 05-12-Ugur-HALICI-01-(20).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8ADC170EAB53007441DE /* 05-12-Ugur-HALICI-01-(20).jpg */; };
+		AE5B8B34170EAB53007441DE /* 06-12-Ugur-HALICI-17-(14).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8ADD170EAB53007441DE /* 06-12-Ugur-HALICI-17-(14).jpg */; };
+		AE5B8B35170EAB53007441DE /* 07-12-Ugur-HALICI-17-(23).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8ADE170EAB53007441DE /* 07-12-Ugur-HALICI-17-(23).jpg */; };
+		AE5B8B36170EAB53007441DE /* 08-12-Ugur-HALICI-01-(4).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8ADF170EAB53007441DE /* 08-12-Ugur-HALICI-01-(4).jpg */; };
+		AE5B8B37170EAB53007441DE /* 09-12-Ugur-HALICI-17-(19).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AE0170EAB53007441DE /* 09-12-Ugur-HALICI-17-(19).jpg */; };
+		AE5B8B38170EAB53007441DE /* 10-12-Ugur-HALICI-17-(21).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AE1170EAB53007441DE /* 10-12-Ugur-HALICI-17-(21).jpg */; };
+		AE5B8B39170EAB53007441DE /* 11-12-Ugur-HALICI-17-(17).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AE2170EAB53007441DE /* 11-12-Ugur-HALICI-17-(17).jpg */; };
+		AE5B8B3A170EAB53007441DE /* 12-12-Ugur-HALICI-17-(18).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AE3170EAB53007441DE /* 12-12-Ugur-HALICI-17-(18).jpg */; };
+		AE5B8B3B170EAB53007441DE /* 13-12-Ugur-HALICI-20-(9).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AE4170EAB53007441DE /* 13-12-Ugur-HALICI-20-(9).jpg */; };
+		AE5B8B3C170EAB53007441DE /* 14-12-Ugur-HALICI-17-(20).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AE5170EAB53007441DE /* 14-12-Ugur-HALICI-17-(20).jpg */; };
+		AE5B8B3D170EAB53007441DE /* 15-test002.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AE6170EAB53007441DE /* 15-test002.jpg */; };
+		AE5B8B3E170EAB53007441DE /* 16-12-Ugur-HALICI-23-(41).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AE7170EAB53007441DE /* 16-12-Ugur-HALICI-23-(41).jpg */; };
+		AE5B8B3F170EAB53007441DE /* 17-12-Ugur-HALICI-23-(40).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AE8170EAB53007441DE /* 17-12-Ugur-HALICI-23-(40).jpg */; };
+		AE5B8B40170EAB53007441DE /* 18-12-Ugur-HALICI-23-(18).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AE9170EAB53007441DE /* 18-12-Ugur-HALICI-23-(18).jpg */; };
+		AE5B8B41170EAB53007441DE /* 19-12-Ugur-HALICI-06-(28).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AEA170EAB53007441DE /* 19-12-Ugur-HALICI-06-(28).jpg */; };
+		AE5B8B42170EAB53007441DE /* 20-12-Ugur-HALICI-13-(26).jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5B8AEB170EAB53007441DE /* 20-12-Ugur-HALICI-13-(26).jpg */; };
 		AE72DBBB16BBAABA00C12D6C /* RMPhotoSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE72DBBA16BBAABA00C12D6C /* RMPhotoSelectionViewController.m */; };
 		AE72DBC016BBB13D00C12D6C /* RMCustomImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE72DBBF16BBB13D00C12D6C /* RMCustomImageView.m */; };
 		AE72DBC616BBB5BE00C12D6C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE72DBC516BBB5BE00C12D6C /* QuartzCore.framework */; };
@@ -280,26 +347,6 @@
 		AE2BE2C916C3ED4600A0335D /* RMPhotoSelectionImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMPhotoSelectionImageView.m; path = view/RMPhotoSelectionImageView.m; sourceTree = "<group>"; };
 		AE34E6BA16D4C11A006836B8 /* RMInGameMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMInGameMenuView.h; path = view/RMInGameMenuView.h; sourceTree = "<group>"; };
 		AE34E6BB16D4C11A006836B8 /* RMInGameMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMInGameMenuView.m; path = view/RMInGameMenuView.m; sourceTree = "<group>"; };
-		AE49339F16E60E0B00D9A151 /* banana_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banana_1.jpg; sourceTree = "<group>"; };
-		AE4933A016E60E0B00D9A151 /* banana_10.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banana_10.jpeg; sourceTree = "<group>"; };
-		AE4933A116E60E0B00D9A151 /* banana_11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banana_11.jpg; sourceTree = "<group>"; };
-		AE4933A216E60E0B00D9A151 /* banana_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banana_2.jpg; sourceTree = "<group>"; };
-		AE4933A316E60E0B00D9A151 /* banana_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banana_3.jpg; sourceTree = "<group>"; };
-		AE4933A416E60E0B00D9A151 /* banana_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banana_4.jpg; sourceTree = "<group>"; };
-		AE4933A516E60E0B00D9A151 /* banana_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banana_5.jpg; sourceTree = "<group>"; };
-		AE4933A616E60E0B00D9A151 /* banana_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banana_6.jpg; sourceTree = "<group>"; };
-		AE4933A716E60E0B00D9A151 /* banana_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banana_7.jpg; sourceTree = "<group>"; };
-		AE4933A816E60E0B00D9A151 /* banana_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banana_8.jpg; sourceTree = "<group>"; };
-		AE4933A916E60E0B00D9A151 /* banana_9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banana_9.jpg; sourceTree = "<group>"; };
-		AE4933AB16E60E0B00D9A151 /* test001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test001.jpg; sourceTree = "<group>"; };
-		AE4933AC16E60E0B00D9A151 /* test002.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test002.jpg; sourceTree = "<group>"; };
-		AE4933AD16E60E0B00D9A151 /* test003.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test003.jpg; sourceTree = "<group>"; };
-		AE4933AE16E60E0B00D9A151 /* test004.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test004.jpg; sourceTree = "<group>"; };
-		AE4933AF16E60E0B00D9A151 /* test005.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test005.jpg; sourceTree = "<group>"; };
-		AE4933B016E60E0B00D9A151 /* test1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test1.jpg; sourceTree = "<group>"; };
-		AE4933B116E60E0B00D9A151 /* test2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test2.jpg; sourceTree = "<group>"; };
-		AE4933B216E60E0B00D9A151 /* test3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test3.jpg; sourceTree = "<group>"; };
-		AE4933B316E60E0B00D9A151 /* test4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test4.jpg; sourceTree = "<group>"; };
 		AE4933C816E61D5B00D9A151 /* RotateMeIpadIAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotateMeIpadIAPHelper.h; sourceTree = "<group>"; };
 		AE4933C916E61D5B00D9A151 /* RotateMeIpadIAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotateMeIpadIAPHelper.m; sourceTree = "<group>"; };
 		AE4933CB16E62C7500D9A151 /* ingame_btn_bg_hover_ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ingame_btn_bg_hover_ipad@2x.png"; sourceTree = "<group>"; };
@@ -320,6 +367,93 @@
 		AE53ABBE170AEF49007F5B10 /* mg_brainquire@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mg_brainquire@2x.png"; sourceTree = "<group>"; };
 		AE53ABC1170AF0FB007F5B10 /* mg_close_btn~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mg_close_btn~ipad.png"; sourceTree = "<group>"; };
 		AE53ABC2170AF0FB007F5B10 /* mg_close_btn~ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mg_close_btn~ipad@2x.png"; sourceTree = "<group>"; };
+		AE5B8A92170EAB53007441DE /* 01-12-Ugur-HALICI-20-(11).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "01-12-Ugur-HALICI-20-(11).jpg"; sourceTree = "<group>"; };
+		AE5B8A93170EAB53007441DE /* 02-12-Ugur-HALICI-01-(22).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "02-12-Ugur-HALICI-01-(22).jpg"; sourceTree = "<group>"; };
+		AE5B8A94170EAB53007441DE /* 03-venedik.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "03-venedik.JPG"; sourceTree = "<group>"; };
+		AE5B8A95170EAB53007441DE /* 04-underground.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "04-underground.JPG"; sourceTree = "<group>"; };
+		AE5B8A96170EAB53007441DE /* 05-12-Ugur-HALICI-21-(16).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "05-12-Ugur-HALICI-21-(16).jpg"; sourceTree = "<group>"; };
+		AE5B8A97170EAB53007441DE /* 06-12-Ugur-HALICI-23-(11).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "06-12-Ugur-HALICI-23-(11).jpg"; sourceTree = "<group>"; };
+		AE5B8A98170EAB53007441DE /* 07-12-Ugur-HALICI-20-(13).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "07-12-Ugur-HALICI-20-(13).jpg"; sourceTree = "<group>"; };
+		AE5B8A99170EAB53007441DE /* 08-12-Ugur-HALICI-20-(21).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "08-12-Ugur-HALICI-20-(21).jpg"; sourceTree = "<group>"; };
+		AE5B8A9A170EAB53007441DE /* 09-12-Ugur-HALICI-17-(12).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "09-12-Ugur-HALICI-17-(12).jpg"; sourceTree = "<group>"; };
+		AE5B8A9B170EAB53007441DE /* 10-12-Ugur-HALICI-17-(26).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "10-12-Ugur-HALICI-17-(26).jpg"; sourceTree = "<group>"; };
+		AE5B8A9C170EAB53007441DE /* 11-12-Ugur-HALICI-01-(2).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "11-12-Ugur-HALICI-01-(2).jpg"; sourceTree = "<group>"; };
+		AE5B8A9D170EAB53007441DE /* 12-12-Ugur-HALICI-01-(11).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "12-12-Ugur-HALICI-01-(11).jpg"; sourceTree = "<group>"; };
+		AE5B8A9E170EAB53007441DE /* 13-12-Ugur-HALICI-01-(1).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "13-12-Ugur-HALICI-01-(1).jpg"; sourceTree = "<group>"; };
+		AE5B8A9F170EAB53007441DE /* 14-12-Ugur-HALICI-14-(2).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "14-12-Ugur-HALICI-14-(2).jpg"; sourceTree = "<group>"; };
+		AE5B8AA0170EAB53007441DE /* 15-12-Ugur-HALICI-14-(17).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "15-12-Ugur-HALICI-14-(17).jpg"; sourceTree = "<group>"; };
+		AE5B8AA1170EAB53007441DE /* 16-12-Ugur-HALICI-14-(25).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "16-12-Ugur-HALICI-14-(25).jpg"; sourceTree = "<group>"; };
+		AE5B8AA2170EAB53007441DE /* 17-12-Ugur-HALICI-14-(15).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "17-12-Ugur-HALICI-14-(15).jpg"; sourceTree = "<group>"; };
+		AE5B8AA3170EAB53007441DE /* 18-12-Ugur-HALICI-11-(28).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "18-12-Ugur-HALICI-11-(28).jpg"; sourceTree = "<group>"; };
+		AE5B8AA4170EAB53007441DE /* 19-12-Ugur-HALICI-11-(35).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "19-12-Ugur-HALICI-11-(35).jpg"; sourceTree = "<group>"; };
+		AE5B8AA5170EAB53007441DE /* 20-12-Ugur-HALICI-20-(26).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "20-12-Ugur-HALICI-20-(26).jpg"; sourceTree = "<group>"; };
+		AE5B8AA6170EAB53007441DE /* 21-koc.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "21-koc.JPG"; sourceTree = "<group>"; };
+		AE5B8AA7170EAB53007441DE /* 22-12-Ugur-HALICI-20-(20).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "22-12-Ugur-HALICI-20-(20).jpg"; sourceTree = "<group>"; };
+		AE5B8AA8170EAB53007441DE /* 23-DSC_5950.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "23-DSC_5950.JPG"; sourceTree = "<group>"; };
+		AE5B8AAA170EAB53007441DE /* 01-volls-woyce---büyük.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "01-volls-woyce---büyük.jpg"; sourceTree = "<group>"; };
+		AE5B8AAB170EAB53007441DE /* 02-12-Ugur-HALICI-01-(29).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "02-12-Ugur-HALICI-01-(29).jpg"; sourceTree = "<group>"; };
+		AE5B8AAC170EAB53007441DE /* 03-DSC00485.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "03-DSC00485.jpg"; sourceTree = "<group>"; };
+		AE5B8AAD170EAB53007441DE /* 04-12-Ugur-HALICI-15-(4).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "04-12-Ugur-HALICI-15-(4).jpg"; sourceTree = "<group>"; };
+		AE5B8AAE170EAB53007441DE /* 05-12-Ugur-HALICI-20-(7).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "05-12-Ugur-HALICI-20-(7).jpg"; sourceTree = "<group>"; };
+		AE5B8AAF170EAB53007441DE /* 06-12-Ugur-HALICI-07-(30).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "06-12-Ugur-HALICI-07-(30).jpg"; sourceTree = "<group>"; };
+		AE5B8AB0170EAB53007441DE /* 07-12-Ugur-HALICI-07-(24).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "07-12-Ugur-HALICI-07-(24).jpg"; sourceTree = "<group>"; };
+		AE5B8AB1170EAB53007441DE /* 08-12-Ugur-HALICI-13-(29).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "08-12-Ugur-HALICI-13-(29).jpg"; sourceTree = "<group>"; };
+		AE5B8AB2170EAB53007441DE /* 09-12-Ugur-HALICI-11-(5).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "09-12-Ugur-HALICI-11-(5).jpg"; sourceTree = "<group>"; };
+		AE5B8AB3170EAB53007441DE /* 10-12-Ugur-HALICI-18-(12).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "10-12-Ugur-HALICI-18-(12).jpg"; sourceTree = "<group>"; };
+		AE5B8AB4170EAB53007441DE /* 11-12-Ugur-HALICI-10-(22).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "11-12-Ugur-HALICI-10-(22).jpg"; sourceTree = "<group>"; };
+		AE5B8AB5170EAB53007441DE /* 12-12-Ugur-HALICI-02-(1).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "12-12-Ugur-HALICI-02-(1).jpg"; sourceTree = "<group>"; };
+		AE5B8AB6170EAB53007441DE /* 13-ugur-kanarya-(32).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "13-ugur-kanarya-(32).jpg"; sourceTree = "<group>"; };
+		AE5B8AB7170EAB53007441DE /* 14-12-Ugur-HALICI-16-(1).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "14-12-Ugur-HALICI-16-(1).jpg"; sourceTree = "<group>"; };
+		AE5B8AB8170EAB53007441DE /* 15-kafes-(23).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "15-kafes-(23).jpg"; sourceTree = "<group>"; };
+		AE5B8AB9170EAB53007441DE /* 16-12-Ugur-HALICI-23-(32).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "16-12-Ugur-HALICI-23-(32).jpg"; sourceTree = "<group>"; };
+		AE5B8ABA170EAB53007441DE /* 17-12-Ugur-HALICI-06-(6).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "17-12-Ugur-HALICI-06-(6).jpg"; sourceTree = "<group>"; };
+		AE5B8ABB170EAB53007441DE /* 18-12-Ugur-HALICI-12-(1).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "18-12-Ugur-HALICI-12-(1).jpg"; sourceTree = "<group>"; };
+		AE5B8ABC170EAB53007441DE /* 19-DSC09706.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "19-DSC09706.jpg"; sourceTree = "<group>"; };
+		AE5B8ABD170EAB53007441DE /* 20-DSC_2728.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "20-DSC_2728.jpg"; sourceTree = "<group>"; };
+		AE5B8ABE170EAB53007441DE /* 21-yakin-(8).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "21-yakin-(8).jpg"; sourceTree = "<group>"; };
+		AE5B8ABF170EAB53007441DE /* 22-12-Ugur-HALICI-09-(3).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "22-12-Ugur-HALICI-09-(3).jpg"; sourceTree = "<group>"; };
+		AE5B8AC0170EAB53007441DE /* 23-12-Ugur-HALICI-24-(16).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "23-12-Ugur-HALICI-24-(16).jpg"; sourceTree = "<group>"; };
+		AE5B8AC2170EAB53007441DE /* 01-12-Ugur-HALICI-01-(3).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "01-12-Ugur-HALICI-01-(3).jpg"; sourceTree = "<group>"; };
+		AE5B8AC3170EAB53007441DE /* 02-12-Ugur-HALICI-20-(10).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "02-12-Ugur-HALICI-20-(10).jpg"; sourceTree = "<group>"; };
+		AE5B8AC4170EAB53007441DE /* 03-12-Ugur-HALICI-14-(3).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "03-12-Ugur-HALICI-14-(3).jpg"; sourceTree = "<group>"; };
+		AE5B8AC5170EAB53007441DE /* 04-12-Ugur-HALICI-10-(4).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "04-12-Ugur-HALICI-10-(4).jpg"; sourceTree = "<group>"; };
+		AE5B8AC6170EAB53007441DE /* 05-12-Ugur-HALICI-10-(35).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "05-12-Ugur-HALICI-10-(35).jpg"; sourceTree = "<group>"; };
+		AE5B8AC7170EAB53007441DE /* 06-12-Ugur-HALICI-18-(22).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "06-12-Ugur-HALICI-18-(22).jpg"; sourceTree = "<group>"; };
+		AE5B8AC8170EAB53007441DE /* 07-12-Ugur-HALICI-23-(28).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "07-12-Ugur-HALICI-23-(28).jpg"; sourceTree = "<group>"; };
+		AE5B8AC9170EAB53007441DE /* 08-12-Ugur-HALICI-22-(14).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "08-12-Ugur-HALICI-22-(14).jpg"; sourceTree = "<group>"; };
+		AE5B8ACA170EAB53007441DE /* 09-12-Ugur-HALICI-02-(6).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "09-12-Ugur-HALICI-02-(6).jpg"; sourceTree = "<group>"; };
+		AE5B8ACB170EAB53007441DE /* 10-12-Ugur-HALICI-02-(22).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "10-12-Ugur-HALICI-02-(22).jpg"; sourceTree = "<group>"; };
+		AE5B8ACC170EAB53007441DE /* 11-12-Ugur-HALICI-02-(34).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "11-12-Ugur-HALICI-02-(34).jpg"; sourceTree = "<group>"; };
+		AE5B8ACD170EAB53007441DE /* 12-12-Ugur-HALICI-18-(25).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "12-12-Ugur-HALICI-18-(25).jpg"; sourceTree = "<group>"; };
+		AE5B8ACE170EAB53007441DE /* 13-12-Ugur-HALICI-19-(2).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "13-12-Ugur-HALICI-19-(2).jpg"; sourceTree = "<group>"; };
+		AE5B8ACF170EAB53007441DE /* 14-12-Ugur-HALICI-16-(21).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "14-12-Ugur-HALICI-16-(21).jpg"; sourceTree = "<group>"; };
+		AE5B8AD0170EAB53007441DE /* 15-12-Ugur-HALICI-15-(16).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "15-12-Ugur-HALICI-15-(16).jpg"; sourceTree = "<group>"; };
+		AE5B8AD1170EAB53007441DE /* 16-12-Ugur-HALICI-08-(15).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "16-12-Ugur-HALICI-08-(15).jpg"; sourceTree = "<group>"; };
+		AE5B8AD2170EAB53007441DE /* 17-12-Ugur-HALICI-19-(15).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "17-12-Ugur-HALICI-19-(15).jpg"; sourceTree = "<group>"; };
+		AE5B8AD3170EAB53007441DE /* 18-12-Ugur-HALICI-10-(2).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "18-12-Ugur-HALICI-10-(2).jpg"; sourceTree = "<group>"; };
+		AE5B8AD4170EAB53007441DE /* 19-12-Ugur-HALICI-08-(10).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "19-12-Ugur-HALICI-08-(10).jpg"; sourceTree = "<group>"; };
+		AE5B8AD5170EAB53007441DE /* 20-12 Ugur HALICI 01 (17).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "20-12 Ugur HALICI 01 (17).jpg"; sourceTree = "<group>"; };
+		AE5B8AD6170EAB53007441DE /* 20-12-Ugur-HALICI-01-(17).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "20-12-Ugur-HALICI-01-(17).jpg"; sourceTree = "<group>"; };
+		AE5B8AD8170EAB53007441DE /* 01-08.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "01-08.jpg"; sourceTree = "<group>"; };
+		AE5B8AD9170EAB53007441DE /* 02-12-Ugur-HALICI-01-(5).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "02-12-Ugur-HALICI-01-(5).jpg"; sourceTree = "<group>"; };
+		AE5B8ADA170EAB53007441DE /* 03-12-Ugur-HALICI-22-(10).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "03-12-Ugur-HALICI-22-(10).jpg"; sourceTree = "<group>"; };
+		AE5B8ADB170EAB53007441DE /* 04-12-Ugur-HALICI-17-(15).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "04-12-Ugur-HALICI-17-(15).jpg"; sourceTree = "<group>"; };
+		AE5B8ADC170EAB53007441DE /* 05-12-Ugur-HALICI-01-(20).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "05-12-Ugur-HALICI-01-(20).jpg"; sourceTree = "<group>"; };
+		AE5B8ADD170EAB53007441DE /* 06-12-Ugur-HALICI-17-(14).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "06-12-Ugur-HALICI-17-(14).jpg"; sourceTree = "<group>"; };
+		AE5B8ADE170EAB53007441DE /* 07-12-Ugur-HALICI-17-(23).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "07-12-Ugur-HALICI-17-(23).jpg"; sourceTree = "<group>"; };
+		AE5B8ADF170EAB53007441DE /* 08-12-Ugur-HALICI-01-(4).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "08-12-Ugur-HALICI-01-(4).jpg"; sourceTree = "<group>"; };
+		AE5B8AE0170EAB53007441DE /* 09-12-Ugur-HALICI-17-(19).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "09-12-Ugur-HALICI-17-(19).jpg"; sourceTree = "<group>"; };
+		AE5B8AE1170EAB53007441DE /* 10-12-Ugur-HALICI-17-(21).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "10-12-Ugur-HALICI-17-(21).jpg"; sourceTree = "<group>"; };
+		AE5B8AE2170EAB53007441DE /* 11-12-Ugur-HALICI-17-(17).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "11-12-Ugur-HALICI-17-(17).jpg"; sourceTree = "<group>"; };
+		AE5B8AE3170EAB53007441DE /* 12-12-Ugur-HALICI-17-(18).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "12-12-Ugur-HALICI-17-(18).jpg"; sourceTree = "<group>"; };
+		AE5B8AE4170EAB53007441DE /* 13-12-Ugur-HALICI-20-(9).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "13-12-Ugur-HALICI-20-(9).jpg"; sourceTree = "<group>"; };
+		AE5B8AE5170EAB53007441DE /* 14-12-Ugur-HALICI-17-(20).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "14-12-Ugur-HALICI-17-(20).jpg"; sourceTree = "<group>"; };
+		AE5B8AE6170EAB53007441DE /* 15-test002.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "15-test002.jpg"; sourceTree = "<group>"; };
+		AE5B8AE7170EAB53007441DE /* 16-12-Ugur-HALICI-23-(41).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "16-12-Ugur-HALICI-23-(41).jpg"; sourceTree = "<group>"; };
+		AE5B8AE8170EAB53007441DE /* 17-12-Ugur-HALICI-23-(40).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "17-12-Ugur-HALICI-23-(40).jpg"; sourceTree = "<group>"; };
+		AE5B8AE9170EAB53007441DE /* 18-12-Ugur-HALICI-23-(18).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "18-12-Ugur-HALICI-23-(18).jpg"; sourceTree = "<group>"; };
+		AE5B8AEA170EAB53007441DE /* 19-12-Ugur-HALICI-06-(28).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "19-12-Ugur-HALICI-06-(28).jpg"; sourceTree = "<group>"; };
+		AE5B8AEB170EAB53007441DE /* 20-12-Ugur-HALICI-13-(26).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "20-12-Ugur-HALICI-13-(26).jpg"; sourceTree = "<group>"; };
 		AE72DBB916BBAABA00C12D6C /* RMPhotoSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMPhotoSelectionViewController.h; sourceTree = "<group>"; };
 		AE72DBBA16BBAABA00C12D6C /* RMPhotoSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMPhotoSelectionViewController.m; sourceTree = "<group>"; };
 		AE72DBBE16BBB13D00C12D6C /* RMCustomImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMCustomImageView.h; path = view/RMCustomImageView.h; sourceTree = "<group>"; };
@@ -549,8 +683,10 @@
 		AE09C30816C24AA100F634CB /* gallery */ = {
 			isa = PBXGroup;
 			children = (
-				AE49339E16E60E0B00D9A151 /* com.halici.RotateMe.bananaGallery */,
-				AE4933AA16E60E0B00D9A151 /* DEFAULT_GALLERY */,
+				AE5B8A91170EAB53007441DE /* Architecture */,
+				AE5B8AA9170EAB53007441DE /* Miscellaneous */,
+				AE5B8AC1170EAB53007441DE /* Pattern */,
+				AE5B8AD7170EAB53007441DE /* Water */,
 			);
 			name = gallery;
 			path = images/gallery;
@@ -596,40 +732,6 @@
 			name = "Database Model Objects";
 			sourceTree = "<group>";
 		};
-		AE49339E16E60E0B00D9A151 /* com.halici.RotateMe.bananaGallery */ = {
-			isa = PBXGroup;
-			children = (
-				AE49339F16E60E0B00D9A151 /* banana_1.jpg */,
-				AE4933A016E60E0B00D9A151 /* banana_10.jpeg */,
-				AE4933A116E60E0B00D9A151 /* banana_11.jpg */,
-				AE4933A216E60E0B00D9A151 /* banana_2.jpg */,
-				AE4933A316E60E0B00D9A151 /* banana_3.jpg */,
-				AE4933A416E60E0B00D9A151 /* banana_4.jpg */,
-				AE4933A516E60E0B00D9A151 /* banana_5.jpg */,
-				AE4933A616E60E0B00D9A151 /* banana_6.jpg */,
-				AE4933A716E60E0B00D9A151 /* banana_7.jpg */,
-				AE4933A816E60E0B00D9A151 /* banana_8.jpg */,
-				AE4933A916E60E0B00D9A151 /* banana_9.jpg */,
-			);
-			path = com.halici.RotateMe.bananaGallery;
-			sourceTree = "<group>";
-		};
-		AE4933AA16E60E0B00D9A151 /* DEFAULT_GALLERY */ = {
-			isa = PBXGroup;
-			children = (
-				AE4933AB16E60E0B00D9A151 /* test001.jpg */,
-				AE4933AC16E60E0B00D9A151 /* test002.jpg */,
-				AE4933AD16E60E0B00D9A151 /* test003.jpg */,
-				AE4933AE16E60E0B00D9A151 /* test004.jpg */,
-				AE4933AF16E60E0B00D9A151 /* test005.jpg */,
-				AE4933B016E60E0B00D9A151 /* test1.jpg */,
-				AE4933B116E60E0B00D9A151 /* test2.jpg */,
-				AE4933B216E60E0B00D9A151 /* test3.jpg */,
-				AE4933B316E60E0B00D9A151 /* test4.jpg */,
-			);
-			path = DEFAULT_GALLERY;
-			sourceTree = "<group>";
-		};
 		AE53AB99170ACC98007F5B10 /* more games */ = {
 			isa = PBXGroup;
 			children = (
@@ -647,6 +749,121 @@
 				AE53AB9F170ACC98007F5B10 /* moregames_bg.jpg */,
 			);
 			path = "more games";
+			sourceTree = "<group>";
+		};
+		AE5B8A91170EAB53007441DE /* Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				AE5B8A92170EAB53007441DE /* 01-12-Ugur-HALICI-20-(11).jpg */,
+				AE5B8A93170EAB53007441DE /* 02-12-Ugur-HALICI-01-(22).jpg */,
+				AE5B8A94170EAB53007441DE /* 03-venedik.JPG */,
+				AE5B8A95170EAB53007441DE /* 04-underground.JPG */,
+				AE5B8A96170EAB53007441DE /* 05-12-Ugur-HALICI-21-(16).jpg */,
+				AE5B8A97170EAB53007441DE /* 06-12-Ugur-HALICI-23-(11).jpg */,
+				AE5B8A98170EAB53007441DE /* 07-12-Ugur-HALICI-20-(13).jpg */,
+				AE5B8A99170EAB53007441DE /* 08-12-Ugur-HALICI-20-(21).jpg */,
+				AE5B8A9A170EAB53007441DE /* 09-12-Ugur-HALICI-17-(12).jpg */,
+				AE5B8A9B170EAB53007441DE /* 10-12-Ugur-HALICI-17-(26).jpg */,
+				AE5B8A9C170EAB53007441DE /* 11-12-Ugur-HALICI-01-(2).jpg */,
+				AE5B8A9D170EAB53007441DE /* 12-12-Ugur-HALICI-01-(11).jpg */,
+				AE5B8A9E170EAB53007441DE /* 13-12-Ugur-HALICI-01-(1).jpg */,
+				AE5B8A9F170EAB53007441DE /* 14-12-Ugur-HALICI-14-(2).jpg */,
+				AE5B8AA0170EAB53007441DE /* 15-12-Ugur-HALICI-14-(17).jpg */,
+				AE5B8AA1170EAB53007441DE /* 16-12-Ugur-HALICI-14-(25).jpg */,
+				AE5B8AA2170EAB53007441DE /* 17-12-Ugur-HALICI-14-(15).jpg */,
+				AE5B8AA3170EAB53007441DE /* 18-12-Ugur-HALICI-11-(28).jpg */,
+				AE5B8AA4170EAB53007441DE /* 19-12-Ugur-HALICI-11-(35).jpg */,
+				AE5B8AA5170EAB53007441DE /* 20-12-Ugur-HALICI-20-(26).jpg */,
+				AE5B8AA6170EAB53007441DE /* 21-koc.JPG */,
+				AE5B8AA7170EAB53007441DE /* 22-12-Ugur-HALICI-20-(20).jpg */,
+				AE5B8AA8170EAB53007441DE /* 23-DSC_5950.JPG */,
+			);
+			path = Architecture;
+			sourceTree = "<group>";
+		};
+		AE5B8AA9170EAB53007441DE /* Miscellaneous */ = {
+			isa = PBXGroup;
+			children = (
+				AE5B8AAA170EAB53007441DE /* 01-volls-woyce---büyük.jpg */,
+				AE5B8AAB170EAB53007441DE /* 02-12-Ugur-HALICI-01-(29).jpg */,
+				AE5B8AAC170EAB53007441DE /* 03-DSC00485.jpg */,
+				AE5B8AAD170EAB53007441DE /* 04-12-Ugur-HALICI-15-(4).jpg */,
+				AE5B8AAE170EAB53007441DE /* 05-12-Ugur-HALICI-20-(7).jpg */,
+				AE5B8AAF170EAB53007441DE /* 06-12-Ugur-HALICI-07-(30).jpg */,
+				AE5B8AB0170EAB53007441DE /* 07-12-Ugur-HALICI-07-(24).jpg */,
+				AE5B8AB1170EAB53007441DE /* 08-12-Ugur-HALICI-13-(29).jpg */,
+				AE5B8AB2170EAB53007441DE /* 09-12-Ugur-HALICI-11-(5).jpg */,
+				AE5B8AB3170EAB53007441DE /* 10-12-Ugur-HALICI-18-(12).jpg */,
+				AE5B8AB4170EAB53007441DE /* 11-12-Ugur-HALICI-10-(22).jpg */,
+				AE5B8AB5170EAB53007441DE /* 12-12-Ugur-HALICI-02-(1).jpg */,
+				AE5B8AB6170EAB53007441DE /* 13-ugur-kanarya-(32).jpg */,
+				AE5B8AB7170EAB53007441DE /* 14-12-Ugur-HALICI-16-(1).jpg */,
+				AE5B8AB8170EAB53007441DE /* 15-kafes-(23).jpg */,
+				AE5B8AB9170EAB53007441DE /* 16-12-Ugur-HALICI-23-(32).jpg */,
+				AE5B8ABA170EAB53007441DE /* 17-12-Ugur-HALICI-06-(6).jpg */,
+				AE5B8ABB170EAB53007441DE /* 18-12-Ugur-HALICI-12-(1).jpg */,
+				AE5B8ABC170EAB53007441DE /* 19-DSC09706.jpg */,
+				AE5B8ABD170EAB53007441DE /* 20-DSC_2728.jpg */,
+				AE5B8ABE170EAB53007441DE /* 21-yakin-(8).jpg */,
+				AE5B8ABF170EAB53007441DE /* 22-12-Ugur-HALICI-09-(3).jpg */,
+				AE5B8AC0170EAB53007441DE /* 23-12-Ugur-HALICI-24-(16).jpg */,
+			);
+			path = Miscellaneous;
+			sourceTree = "<group>";
+		};
+		AE5B8AC1170EAB53007441DE /* Pattern */ = {
+			isa = PBXGroup;
+			children = (
+				AE5B8AC2170EAB53007441DE /* 01-12-Ugur-HALICI-01-(3).jpg */,
+				AE5B8AC3170EAB53007441DE /* 02-12-Ugur-HALICI-20-(10).jpg */,
+				AE5B8AC4170EAB53007441DE /* 03-12-Ugur-HALICI-14-(3).jpg */,
+				AE5B8AC5170EAB53007441DE /* 04-12-Ugur-HALICI-10-(4).jpg */,
+				AE5B8AC6170EAB53007441DE /* 05-12-Ugur-HALICI-10-(35).jpg */,
+				AE5B8AC7170EAB53007441DE /* 06-12-Ugur-HALICI-18-(22).jpg */,
+				AE5B8AC8170EAB53007441DE /* 07-12-Ugur-HALICI-23-(28).jpg */,
+				AE5B8AC9170EAB53007441DE /* 08-12-Ugur-HALICI-22-(14).jpg */,
+				AE5B8ACA170EAB53007441DE /* 09-12-Ugur-HALICI-02-(6).jpg */,
+				AE5B8ACB170EAB53007441DE /* 10-12-Ugur-HALICI-02-(22).jpg */,
+				AE5B8ACC170EAB53007441DE /* 11-12-Ugur-HALICI-02-(34).jpg */,
+				AE5B8ACD170EAB53007441DE /* 12-12-Ugur-HALICI-18-(25).jpg */,
+				AE5B8ACE170EAB53007441DE /* 13-12-Ugur-HALICI-19-(2).jpg */,
+				AE5B8ACF170EAB53007441DE /* 14-12-Ugur-HALICI-16-(21).jpg */,
+				AE5B8AD0170EAB53007441DE /* 15-12-Ugur-HALICI-15-(16).jpg */,
+				AE5B8AD1170EAB53007441DE /* 16-12-Ugur-HALICI-08-(15).jpg */,
+				AE5B8AD2170EAB53007441DE /* 17-12-Ugur-HALICI-19-(15).jpg */,
+				AE5B8AD3170EAB53007441DE /* 18-12-Ugur-HALICI-10-(2).jpg */,
+				AE5B8AD4170EAB53007441DE /* 19-12-Ugur-HALICI-08-(10).jpg */,
+				AE5B8AD5170EAB53007441DE /* 20-12 Ugur HALICI 01 (17).jpg */,
+				AE5B8AD6170EAB53007441DE /* 20-12-Ugur-HALICI-01-(17).jpg */,
+			);
+			path = Pattern;
+			sourceTree = "<group>";
+		};
+		AE5B8AD7170EAB53007441DE /* Water */ = {
+			isa = PBXGroup;
+			children = (
+				AE5B8AD8170EAB53007441DE /* 01-08.jpg */,
+				AE5B8AD9170EAB53007441DE /* 02-12-Ugur-HALICI-01-(5).jpg */,
+				AE5B8ADA170EAB53007441DE /* 03-12-Ugur-HALICI-22-(10).jpg */,
+				AE5B8ADB170EAB53007441DE /* 04-12-Ugur-HALICI-17-(15).jpg */,
+				AE5B8ADC170EAB53007441DE /* 05-12-Ugur-HALICI-01-(20).jpg */,
+				AE5B8ADD170EAB53007441DE /* 06-12-Ugur-HALICI-17-(14).jpg */,
+				AE5B8ADE170EAB53007441DE /* 07-12-Ugur-HALICI-17-(23).jpg */,
+				AE5B8ADF170EAB53007441DE /* 08-12-Ugur-HALICI-01-(4).jpg */,
+				AE5B8AE0170EAB53007441DE /* 09-12-Ugur-HALICI-17-(19).jpg */,
+				AE5B8AE1170EAB53007441DE /* 10-12-Ugur-HALICI-17-(21).jpg */,
+				AE5B8AE2170EAB53007441DE /* 11-12-Ugur-HALICI-17-(17).jpg */,
+				AE5B8AE3170EAB53007441DE /* 12-12-Ugur-HALICI-17-(18).jpg */,
+				AE5B8AE4170EAB53007441DE /* 13-12-Ugur-HALICI-20-(9).jpg */,
+				AE5B8AE5170EAB53007441DE /* 14-12-Ugur-HALICI-17-(20).jpg */,
+				AE5B8AE6170EAB53007441DE /* 15-test002.jpg */,
+				AE5B8AE7170EAB53007441DE /* 16-12-Ugur-HALICI-23-(41).jpg */,
+				AE5B8AE8170EAB53007441DE /* 17-12-Ugur-HALICI-23-(40).jpg */,
+				AE5B8AE9170EAB53007441DE /* 18-12-Ugur-HALICI-23-(18).jpg */,
+				AE5B8AEA170EAB53007441DE /* 19-12-Ugur-HALICI-06-(28).jpg */,
+				AE5B8AEB170EAB53007441DE /* 20-12-Ugur-HALICI-13-(26).jpg */,
+			);
+			path = Water;
 			sourceTree = "<group>";
 		};
 		AE72DBBD16BBB0FA00C12D6C /* SpecialViews */ = {
@@ -1117,26 +1334,6 @@
 				AE2AA7F616E0974C00D3148C /* inapp_bg_ipad@2x.jpg in Resources */,
 				AE2AA7FF16E0F20000D3148C /* icon_locked_ipad.png in Resources */,
 				AE2AA80016E0F20000D3148C /* icon_locked_ipad@2x.png in Resources */,
-				AE4933B416E60E0B00D9A151 /* banana_1.jpg in Resources */,
-				AE4933B516E60E0B00D9A151 /* banana_10.jpeg in Resources */,
-				AE4933B616E60E0B00D9A151 /* banana_11.jpg in Resources */,
-				AE4933B716E60E0B00D9A151 /* banana_2.jpg in Resources */,
-				AE4933B816E60E0B00D9A151 /* banana_3.jpg in Resources */,
-				AE4933B916E60E0B00D9A151 /* banana_4.jpg in Resources */,
-				AE4933BA16E60E0B00D9A151 /* banana_5.jpg in Resources */,
-				AE4933BB16E60E0B00D9A151 /* banana_6.jpg in Resources */,
-				AE4933BC16E60E0B00D9A151 /* banana_7.jpg in Resources */,
-				AE4933BD16E60E0B00D9A151 /* banana_8.jpg in Resources */,
-				AE4933BE16E60E0B00D9A151 /* banana_9.jpg in Resources */,
-				AE4933BF16E60E0B00D9A151 /* test001.jpg in Resources */,
-				AE4933C016E60E0B00D9A151 /* test002.jpg in Resources */,
-				AE4933C116E60E0B00D9A151 /* test003.jpg in Resources */,
-				AE4933C216E60E0B00D9A151 /* test004.jpg in Resources */,
-				AE4933C316E60E0B00D9A151 /* test005.jpg in Resources */,
-				AE4933C416E60E0B00D9A151 /* test1.jpg in Resources */,
-				AE4933C516E60E0B00D9A151 /* test2.jpg in Resources */,
-				AE4933C616E60E0B00D9A151 /* test3.jpg in Resources */,
-				AE4933C716E60E0B00D9A151 /* test4.jpg in Resources */,
 				AE4933CD16E62C7500D9A151 /* ingame_btn_bg_hover_ipad@2x.png in Resources */,
 				AE4933CE16E62C7500D9A151 /* ingame_btn_bg_ipad@2x.png in Resources */,
 				AE4933D116E62DE900D9A151 /* menu_btn_ipad.png in Resources */,
@@ -1177,6 +1374,93 @@
 				AE53ABC0170AEF49007F5B10 /* mg_brainquire@2x.png in Resources */,
 				AE53ABC3170AF0FB007F5B10 /* mg_close_btn~ipad.png in Resources */,
 				AE53ABC4170AF0FB007F5B10 /* mg_close_btn~ipad@2x.png in Resources */,
+				AE5B8AEC170EAB53007441DE /* 01-12-Ugur-HALICI-20-(11).jpg in Resources */,
+				AE5B8AED170EAB53007441DE /* 02-12-Ugur-HALICI-01-(22).jpg in Resources */,
+				AE5B8AEE170EAB53007441DE /* 03-venedik.JPG in Resources */,
+				AE5B8AEF170EAB53007441DE /* 04-underground.JPG in Resources */,
+				AE5B8AF0170EAB53007441DE /* 05-12-Ugur-HALICI-21-(16).jpg in Resources */,
+				AE5B8AF1170EAB53007441DE /* 06-12-Ugur-HALICI-23-(11).jpg in Resources */,
+				AE5B8AF2170EAB53007441DE /* 07-12-Ugur-HALICI-20-(13).jpg in Resources */,
+				AE5B8AF3170EAB53007441DE /* 08-12-Ugur-HALICI-20-(21).jpg in Resources */,
+				AE5B8AF4170EAB53007441DE /* 09-12-Ugur-HALICI-17-(12).jpg in Resources */,
+				AE5B8AF5170EAB53007441DE /* 10-12-Ugur-HALICI-17-(26).jpg in Resources */,
+				AE5B8AF6170EAB53007441DE /* 11-12-Ugur-HALICI-01-(2).jpg in Resources */,
+				AE5B8AF7170EAB53007441DE /* 12-12-Ugur-HALICI-01-(11).jpg in Resources */,
+				AE5B8AF8170EAB53007441DE /* 13-12-Ugur-HALICI-01-(1).jpg in Resources */,
+				AE5B8AF9170EAB53007441DE /* 14-12-Ugur-HALICI-14-(2).jpg in Resources */,
+				AE5B8AFA170EAB53007441DE /* 15-12-Ugur-HALICI-14-(17).jpg in Resources */,
+				AE5B8AFB170EAB53007441DE /* 16-12-Ugur-HALICI-14-(25).jpg in Resources */,
+				AE5B8AFC170EAB53007441DE /* 17-12-Ugur-HALICI-14-(15).jpg in Resources */,
+				AE5B8AFD170EAB53007441DE /* 18-12-Ugur-HALICI-11-(28).jpg in Resources */,
+				AE5B8AFE170EAB53007441DE /* 19-12-Ugur-HALICI-11-(35).jpg in Resources */,
+				AE5B8AFF170EAB53007441DE /* 20-12-Ugur-HALICI-20-(26).jpg in Resources */,
+				AE5B8B00170EAB53007441DE /* 21-koc.JPG in Resources */,
+				AE5B8B01170EAB53007441DE /* 22-12-Ugur-HALICI-20-(20).jpg in Resources */,
+				AE5B8B02170EAB53007441DE /* 23-DSC_5950.JPG in Resources */,
+				AE5B8B03170EAB53007441DE /* 01-volls-woyce---büyük.jpg in Resources */,
+				AE5B8B04170EAB53007441DE /* 02-12-Ugur-HALICI-01-(29).jpg in Resources */,
+				AE5B8B05170EAB53007441DE /* 03-DSC00485.jpg in Resources */,
+				AE5B8B06170EAB53007441DE /* 04-12-Ugur-HALICI-15-(4).jpg in Resources */,
+				AE5B8B07170EAB53007441DE /* 05-12-Ugur-HALICI-20-(7).jpg in Resources */,
+				AE5B8B08170EAB53007441DE /* 06-12-Ugur-HALICI-07-(30).jpg in Resources */,
+				AE5B8B09170EAB53007441DE /* 07-12-Ugur-HALICI-07-(24).jpg in Resources */,
+				AE5B8B0A170EAB53007441DE /* 08-12-Ugur-HALICI-13-(29).jpg in Resources */,
+				AE5B8B0B170EAB53007441DE /* 09-12-Ugur-HALICI-11-(5).jpg in Resources */,
+				AE5B8B0C170EAB53007441DE /* 10-12-Ugur-HALICI-18-(12).jpg in Resources */,
+				AE5B8B0D170EAB53007441DE /* 11-12-Ugur-HALICI-10-(22).jpg in Resources */,
+				AE5B8B0E170EAB53007441DE /* 12-12-Ugur-HALICI-02-(1).jpg in Resources */,
+				AE5B8B0F170EAB53007441DE /* 13-ugur-kanarya-(32).jpg in Resources */,
+				AE5B8B10170EAB53007441DE /* 14-12-Ugur-HALICI-16-(1).jpg in Resources */,
+				AE5B8B11170EAB53007441DE /* 15-kafes-(23).jpg in Resources */,
+				AE5B8B12170EAB53007441DE /* 16-12-Ugur-HALICI-23-(32).jpg in Resources */,
+				AE5B8B13170EAB53007441DE /* 17-12-Ugur-HALICI-06-(6).jpg in Resources */,
+				AE5B8B14170EAB53007441DE /* 18-12-Ugur-HALICI-12-(1).jpg in Resources */,
+				AE5B8B15170EAB53007441DE /* 19-DSC09706.jpg in Resources */,
+				AE5B8B16170EAB53007441DE /* 20-DSC_2728.jpg in Resources */,
+				AE5B8B17170EAB53007441DE /* 21-yakin-(8).jpg in Resources */,
+				AE5B8B18170EAB53007441DE /* 22-12-Ugur-HALICI-09-(3).jpg in Resources */,
+				AE5B8B19170EAB53007441DE /* 23-12-Ugur-HALICI-24-(16).jpg in Resources */,
+				AE5B8B1A170EAB53007441DE /* 01-12-Ugur-HALICI-01-(3).jpg in Resources */,
+				AE5B8B1B170EAB53007441DE /* 02-12-Ugur-HALICI-20-(10).jpg in Resources */,
+				AE5B8B1C170EAB53007441DE /* 03-12-Ugur-HALICI-14-(3).jpg in Resources */,
+				AE5B8B1D170EAB53007441DE /* 04-12-Ugur-HALICI-10-(4).jpg in Resources */,
+				AE5B8B1E170EAB53007441DE /* 05-12-Ugur-HALICI-10-(35).jpg in Resources */,
+				AE5B8B1F170EAB53007441DE /* 06-12-Ugur-HALICI-18-(22).jpg in Resources */,
+				AE5B8B20170EAB53007441DE /* 07-12-Ugur-HALICI-23-(28).jpg in Resources */,
+				AE5B8B21170EAB53007441DE /* 08-12-Ugur-HALICI-22-(14).jpg in Resources */,
+				AE5B8B22170EAB53007441DE /* 09-12-Ugur-HALICI-02-(6).jpg in Resources */,
+				AE5B8B23170EAB53007441DE /* 10-12-Ugur-HALICI-02-(22).jpg in Resources */,
+				AE5B8B24170EAB53007441DE /* 11-12-Ugur-HALICI-02-(34).jpg in Resources */,
+				AE5B8B25170EAB53007441DE /* 12-12-Ugur-HALICI-18-(25).jpg in Resources */,
+				AE5B8B26170EAB53007441DE /* 13-12-Ugur-HALICI-19-(2).jpg in Resources */,
+				AE5B8B27170EAB53007441DE /* 14-12-Ugur-HALICI-16-(21).jpg in Resources */,
+				AE5B8B28170EAB53007441DE /* 15-12-Ugur-HALICI-15-(16).jpg in Resources */,
+				AE5B8B29170EAB53007441DE /* 16-12-Ugur-HALICI-08-(15).jpg in Resources */,
+				AE5B8B2A170EAB53007441DE /* 17-12-Ugur-HALICI-19-(15).jpg in Resources */,
+				AE5B8B2B170EAB53007441DE /* 18-12-Ugur-HALICI-10-(2).jpg in Resources */,
+				AE5B8B2C170EAB53007441DE /* 19-12-Ugur-HALICI-08-(10).jpg in Resources */,
+				AE5B8B2D170EAB53007441DE /* 20-12 Ugur HALICI 01 (17).jpg in Resources */,
+				AE5B8B2E170EAB53007441DE /* 20-12-Ugur-HALICI-01-(17).jpg in Resources */,
+				AE5B8B2F170EAB53007441DE /* 01-08.jpg in Resources */,
+				AE5B8B30170EAB53007441DE /* 02-12-Ugur-HALICI-01-(5).jpg in Resources */,
+				AE5B8B31170EAB53007441DE /* 03-12-Ugur-HALICI-22-(10).jpg in Resources */,
+				AE5B8B32170EAB53007441DE /* 04-12-Ugur-HALICI-17-(15).jpg in Resources */,
+				AE5B8B33170EAB53007441DE /* 05-12-Ugur-HALICI-01-(20).jpg in Resources */,
+				AE5B8B34170EAB53007441DE /* 06-12-Ugur-HALICI-17-(14).jpg in Resources */,
+				AE5B8B35170EAB53007441DE /* 07-12-Ugur-HALICI-17-(23).jpg in Resources */,
+				AE5B8B36170EAB53007441DE /* 08-12-Ugur-HALICI-01-(4).jpg in Resources */,
+				AE5B8B37170EAB53007441DE /* 09-12-Ugur-HALICI-17-(19).jpg in Resources */,
+				AE5B8B38170EAB53007441DE /* 10-12-Ugur-HALICI-17-(21).jpg in Resources */,
+				AE5B8B39170EAB53007441DE /* 11-12-Ugur-HALICI-17-(17).jpg in Resources */,
+				AE5B8B3A170EAB53007441DE /* 12-12-Ugur-HALICI-17-(18).jpg in Resources */,
+				AE5B8B3B170EAB53007441DE /* 13-12-Ugur-HALICI-20-(9).jpg in Resources */,
+				AE5B8B3C170EAB53007441DE /* 14-12-Ugur-HALICI-17-(20).jpg in Resources */,
+				AE5B8B3D170EAB53007441DE /* 15-test002.jpg in Resources */,
+				AE5B8B3E170EAB53007441DE /* 16-12-Ugur-HALICI-23-(41).jpg in Resources */,
+				AE5B8B3F170EAB53007441DE /* 17-12-Ugur-HALICI-23-(40).jpg in Resources */,
+				AE5B8B40170EAB53007441DE /* 18-12-Ugur-HALICI-23-(18).jpg in Resources */,
+				AE5B8B41170EAB53007441DE /* 19-12-Ugur-HALICI-06-(28).jpg in Resources */,
+				AE5B8B42170EAB53007441DE /* 20-12-Ugur-HALICI-13-(26).jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,7 @@
 @dynamic photos;
 @dynamic isPurchased;
 
+@synthesize lastScroll;
 + (Gallery*) createGalleryWithName:(NSString*)name
 {
     Gallery* gallery = (Gallery*)[[RMDatabaseManager sharedInstance] createEntity:@"Gallery"];

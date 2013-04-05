@@ -182,12 +182,16 @@ static RMInGameViewController* lastInstance = nil;
     isGameFinished = YES;
     [self.stopWatch stopTimer];
     setCurrentGameState(GAME_STATE_STOPPED);
-    [currentImage.owner setScore:[self.stopWatch getElapsedSeconds] forDifficulty:getCurrentDifficulty()];
+    [[[NSThread alloc] initWithTarget:self selector:@selector(saveScore) object:nil] start];
     
     for(RMCroppedImageView* croppedImage in self.croppedImages){
         [croppedImage removeFromSuperview];
     }
     [self showWinScreen];
+}
+-(void) saveScore{
+    [currentImage.owner setScore:[self.stopWatch getElapsedSeconds] forDifficulty:getCurrentDifficulty()];
+    
 }
 
 - (void) showWinScreen
