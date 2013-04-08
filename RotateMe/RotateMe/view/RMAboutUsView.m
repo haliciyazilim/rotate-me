@@ -36,6 +36,9 @@
     if([[UIScreen mainScreen] bounds].size.height == 568){
         self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"inapp_bg-568h.png"]];
     }
+    else if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
+        self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"inapp_bg_ipad.jpg"]];
+    }
     else{
         self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"inapp_bg.png"]];
     }

@@ -422,14 +422,15 @@ static MKNetworkEngine* networkEngine;
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    if([centerView hitTest:[[touches anyObject] locationInView:centerView] withEvent:event] == centerView && abs(movementAmount) <= 1 ){
-        [self redirectToGamePage];
-        return;
-    }
     if([closeButton hitTest:[[touches anyObject] locationInView:closeButton] withEvent:event] == closeButton && abs(movementAmount) <= 1 ){
         [self closeView];
         return;
     }
+    if([centerView hitTest:[[touches anyObject] locationInView:centerView] withEvent:event] == centerView && abs(movementAmount) <= 1 ){
+        [self redirectToGamePage];
+        return;
+    }
+    
     [self touchesCancelled:touches withEvent:event];
     
 }
