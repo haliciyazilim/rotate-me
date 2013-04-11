@@ -32,6 +32,10 @@
 		415149E716C3F23B003BE22A /* game_bg_ipad@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 415149E516C3F23B003BE22A /* game_bg_ipad@2x.jpg */; };
 		415149EA16C3F257003BE22A /* timer_holder_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 415149E816C3F257003BE22A /* timer_holder_ipad.png */; };
 		415149EB16C3F257003BE22A /* timer_holder_ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 415149E916C3F257003BE22A /* timer_holder_ipad@2x.png */; };
+		41B06BD71716DB90000B26B6 /* AdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B06BD51716DB0E000B26B6 /* AdManager.m */; };
+		41B06BDF1716DBB1000B26B6 /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41B06BDA1716DBB1000B26B6 /* libFlurry.a */; };
+		41B06BE01716DBB1000B26B6 /* libFlurryAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41B06BDE1716DBB1000B26B6 /* libFlurryAds.a */; };
+		41B06BE21716DCB4000B26B6 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41B06BE11716DCB4000B26B6 /* MediaPlayer.framework */; };
 		41B94CC616C2E59500B7C70A /* RMGallerySelectionIPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B94CC516C2E59500B7C70A /* RMGallerySelectionIPadViewController.m */; };
 		41B94CC916C2E6A000B7C70A /* RMPhotoSelectionIPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B94CC816C2E6A000B7C70A /* RMPhotoSelectionIPadViewController.m */; };
 		AE09C30616C23FBC00F634CB /* RMGallerySelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE09C30516C23FBC00F634CB /* RMGallerySelectionViewController.m */; };
@@ -318,6 +322,14 @@
 		415149E516C3F23B003BE22A /* game_bg_ipad@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "game_bg_ipad@2x.jpg"; sourceTree = "<group>"; };
 		415149E816C3F257003BE22A /* timer_holder_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timer_holder_ipad.png; sourceTree = "<group>"; };
 		415149E916C3F257003BE22A /* timer_holder_ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timer_holder_ipad@2x.png"; sourceTree = "<group>"; };
+		41B06BD41716DB0E000B26B6 /* AdManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AdManager.h; path = manager/AdManager.h; sourceTree = "<group>"; };
+		41B06BD51716DB0E000B26B6 /* AdManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AdManager.m; path = manager/AdManager.m; sourceTree = "<group>"; };
+		41B06BD91716DBB1000B26B6 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		41B06BDA1716DBB1000B26B6 /* libFlurry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry.a; sourceTree = "<group>"; };
+		41B06BDC1716DBB1000B26B6 /* FlurryAdDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAdDelegate.h; sourceTree = "<group>"; };
+		41B06BDD1716DBB1000B26B6 /* FlurryAds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAds.h; sourceTree = "<group>"; };
+		41B06BDE1716DBB1000B26B6 /* libFlurryAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurryAds.a; sourceTree = "<group>"; };
+		41B06BE11716DCB4000B26B6 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		41B94CC416C2E59500B7C70A /* RMGallerySelectionIPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMGallerySelectionIPadViewController.h; path = view/RMGallerySelectionIPadViewController.h; sourceTree = "<group>"; };
 		41B94CC516C2E59500B7C70A /* RMGallerySelectionIPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMGallerySelectionIPadViewController.m; path = view/RMGallerySelectionIPadViewController.m; sourceTree = "<group>"; };
 		41B94CC716C2E6A000B7C70A /* RMPhotoSelectionIPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMPhotoSelectionIPadViewController.h; path = view/RMPhotoSelectionIPadViewController.h; sourceTree = "<group>"; };
@@ -626,6 +638,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41B06BE21716DCB4000B26B6 /* MediaPlayer.framework in Frameworks */,
 				AE8B24D017030C2800B4EDE2 /* SystemConfiguration.framework in Frameworks */,
 				AE8B24CE17030C1E00B4EDE2 /* Security.framework in Frameworks */,
 				AE8B24CC17030BEA00B4EDE2 /* CFNetwork.framework in Frameworks */,
@@ -636,6 +649,8 @@
 				AED218C116BA934000271930 /* UIKit.framework in Frameworks */,
 				AED218C316BA934000271930 /* Foundation.framework in Frameworks */,
 				AED218C516BA934000271930 /* CoreGraphics.framework in Frameworks */,
+				41B06BDF1716DBB1000B26B6 /* libFlurry.a in Frameworks */,
+				41B06BE01716DBB1000B26B6 /* libFlurryAds.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,6 +689,25 @@
 			);
 			path = in_app_purchase;
 			sourceTree = "<group>";
+		};
+		41B06BD81716DBB1000B26B6 /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				41B06BD91716DBB1000B26B6 /* Flurry.h */,
+				41B06BDA1716DBB1000B26B6 /* libFlurry.a */,
+			);
+			path = Flurry;
+			sourceTree = SOURCE_ROOT;
+		};
+		41B06BDB1716DBB1000B26B6 /* FlurryAds */ = {
+			isa = PBXGroup;
+			children = (
+				41B06BDC1716DBB1000B26B6 /* FlurryAdDelegate.h */,
+				41B06BDD1716DBB1000B26B6 /* FlurryAds.h */,
+				41B06BDE1716DBB1000B26B6 /* libFlurryAds.a */,
+			);
+			path = FlurryAds;
+			sourceTree = SOURCE_ROOT;
 		};
 		41B94CC316C2E55A00B7C70A /* iPad Views */ = {
 			isa = PBXGroup;
@@ -902,6 +936,8 @@
 		AE7CBED616BFF80E001BAF3D /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				41B06BD41716DB0E000B26B6 /* AdManager.h */,
+				41B06BD51716DB0E000B26B6 /* AdManager.m */,
 				AE7CBED716BFF833001BAF3D /* RMDatabaseManager.h */,
 				AE7CBED816BFF833001BAF3D /* RMDatabaseManager.m */,
 				AEFF1B8016C4E6E400922A25 /* GameCenterManager.h */,
@@ -982,6 +1018,7 @@
 		AED218BF16BA934000271930 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				41B06BE11716DCB4000B26B6 /* MediaPlayer.framework */,
 				AE8B24CF17030C2800B4EDE2 /* SystemConfiguration.framework */,
 				AE8B24CD17030C1D00B4EDE2 /* Security.framework */,
 				AE8B24CB17030BEA00B4EDE2 /* CFNetwork.framework */,
@@ -999,6 +1036,8 @@
 		AED218C616BA934000271930 /* RotateMe */ = {
 			isa = PBXGroup;
 			children = (
+				41B06BD81716DBB1000B26B6 /* Flurry */,
+				41B06BDB1716DBB1000B26B6 /* FlurryAds */,
 				AE53AB99170ACC98007F5B10 /* more games */,
 				AE8B24AF17030BA000B4EDE2 /* MKNetworkKit */,
 				05F6E0C716CBD3BF00543444 /* in_app_purchase */,
@@ -1545,6 +1584,7 @@
 				AE8B24C917030BA000B4EDE2 /* MKNetworkOperation.m in Sources */,
 				AE8B24CA17030BA000B4EDE2 /* Reachability.m in Sources */,
 				AE53ABA8170ACC98007F5B10 /* MoreGamesView.m in Sources */,
+				41B06BD71716DB90000B26B6 /* AdManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1648,6 +1688,11 @@
 				GCC_PREFIX_HEADER = "RotateMe/RotateMe-Prefix.pch";
 				INFOPLIST_FILE = "RotateMe/RotateMe-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Flurry\"",
+					"\"$(SRCROOT)/FlurryAds\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -1664,6 +1709,11 @@
 				GCC_PREFIX_HEADER = "RotateMe/RotateMe-Prefix.pch";
 				INFOPLIST_FILE = "RotateMe/RotateMe-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Flurry\"",
+					"\"$(SRCROOT)/FlurryAds\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
