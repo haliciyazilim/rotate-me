@@ -81,7 +81,6 @@ static RMPhotoSelectionViewController* lastInstance = nil;
     [super viewDidLoad];
     
     touchedPhoto = nil;
-    
     [self setBackground];
     
     self.difficultySelectorView = [[RMDifficultySelectorView alloc] init];

@@ -40,23 +40,8 @@
 }
 - (void)viewDidLoad
 {
+    NSLog(@"entered ViewDidLoad");
     [super viewDidLoad];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(configureViews)
-                                                 name:kPhotoNotificationPhotoCreated
-                                               object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(configureViews)
-                                                 name:kPhotoNotificationPhotoDeleted
-                                               object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(configureViews)
-                                                 name:IAPHelperProductPurchasedNotification
-                                               object:nil];
-    
     [self configureViews];
     [self setBackground];
     isFirstLoad = YES;
@@ -66,13 +51,21 @@
     [self.scrollView setUserInteractionEnabled:YES];
     
     
-//    NSURL* url = [NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id592099228?mt=8&ign-mpt=uo%3D4"];
-//    [[UIApplication sharedApplication] openURL:url];
-    
-//    NSString *appId = @"592099228"; //like 999999999
-//    NSString *link = [@"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=" stringByAppendingString:appId];
-//    
-//    [[UIApplication sharedApplication] openURL: [NSURL URLWithString:link]];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(configureViews)
+                                                 name:kPhotoNotificationPhotoCreated
+                                               object:nil];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(configureViews)
+                                                 name:kPhotoNotificationPhotoDeleted
+                                               object:nil];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(configureViews)
+                                                 name:IAPHelperProductPurchasedNotification
+                                               object:nil];
+
     
     
     
@@ -121,9 +114,10 @@
     return 30.0;
 }
 - (void) configureViews {
+    NSLog(@"entered configureView");
     NSArray* allGaleries = [Gallery allGalleries];
     int index = 0;
-    
+    NSLog(@"allGalleries count: %d", [allGaleries count]);
     
     for(UIView* view in [self.scrollView subviews]){
         if(view.tag == GALLERY_SELECTION_GALLERY_ITEM_TAG){
@@ -132,6 +126,7 @@
     }
     int scrollViewWidth = 0;
     for(Gallery* gallery in allGaleries){
+        NSLog(@"gallery %@ photo count %d", [gallery name], [[gallery photos] count]);
         RMGallerySelectionItemView* galleryItem = [self generateGallerySelectionItemViewWithGallery:gallery animate:YES];
         [self.scrollView addSubview:galleryItem];
         galleryItem.tag = GALLERY_SELECTION_GALLERY_ITEM_TAG;

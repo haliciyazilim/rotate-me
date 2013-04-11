@@ -21,13 +21,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [Flurry setDebugLogEnabled:NO];
-    [Flurry setShowErrorInLogEnabled:NO];
-    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
-    [Flurry startSession:@"77QBWYPCJ2CGW64SPJBX"];
-    [FlurryAds initialize:self.window.rootViewController];
-    
-    
     if([[RMDatabaseManager sharedInstance] isEmpty]){
         [RMBundleInitializer initializeBundle];
     }
@@ -36,7 +29,13 @@
     //GameCenter
     [[GameCenterManager sharedInstance] authenticateLocalUser];
     
-
+    
+    [Flurry setDebugLogEnabled:NO];
+    [Flurry setShowErrorInLogEnabled:NO];
+    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+    [Flurry startSession:@"77QBWYPCJ2CGW64SPJBX"];
+    [FlurryAds initialize:self.window.rootViewController];
+    
     return YES;
 }
 
