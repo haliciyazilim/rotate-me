@@ -33,4 +33,5 @@
 - (void)setThumbnailImage:(RMImage *)_thumbnailImage;
 - (RMImage*) getThumbnailImage;
 - (void) removeFromDatabase;
+- (BOOL) isPlayed;
 @end

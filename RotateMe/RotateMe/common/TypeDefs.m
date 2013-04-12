@@ -60,3 +60,12 @@ GAME_STATE getCurrentGameState(){
 void setCurrentGameState(GAME_STATE state){
     CURRENT_GAME_STATE = state;
 }
+
+
+static APPLICATION_STATE CURRENT_APPLICATION_STATE = APPLICATION_STATE_ACTIVE;
+APPLICATION_STATE getCurrentApplicationState(){
+    return CURRENT_APPLICATION_STATE;
+}
+void setCurrentApplicationState(APPLICATION_STATE state){
+    CURRENT_APPLICATION_STATE = state;
+}

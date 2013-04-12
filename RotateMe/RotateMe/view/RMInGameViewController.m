@@ -124,7 +124,14 @@ static RMInGameViewController* lastInstance = nil;
     }
     [self.stopWatchLabel setFont:[UIFont fontWithName:@"TRMcLean" size:[self timerFontSize]]];
     [self.stopWatchLabel setText:@"00:00"];
-    setCurrentGameState(GAME_STATE_PLAYING);
+    
+    if(getCurrentApplicationState() == APPLICATION_STATE_WILL_RESIGN_ACTIVE){
+        [self pauseGame];
+    }
+    else{
+        setCurrentGameState(GAME_STATE_PLAYING);
+    }
+    
 }
 
 
@@ -301,7 +308,7 @@ static RMInGameViewController* lastInstance = nil;
 
 -(void) restartGame:(UIButton*)button
 {
-//    NSLog(@"I'm here");
+    setCurrentGameState(GAME_STATE_RESTARTING);
     [[AdManager sharedInstance] showAdOnView:self.view
                                    withBlock:^{                                    
                                        [[RMPhotoSelectionViewController lastInstance] darken];

@@ -58,8 +58,12 @@
             [scoreLabel setTextAlignment:NSTextAlignmentLeft];
             [self addSubview:scoreLabel];
         }
+        if([photo isPlayed] == YES){
+            
+        }
         
         [[[NSThread alloc] initWithTarget:self selector:@selector(loadImageForView:) object:[NSArray arrayWithObjects:photo,activityIndicator, nil]] start];
+        
     }
     return self;
 }

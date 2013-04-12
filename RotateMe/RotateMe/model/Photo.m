@@ -71,6 +71,19 @@
     [[RMDatabaseManager sharedInstance] saveContext];
 
 }
+
+- (BOOL) isPlayed
+{
+    if([self getScoreForDifficulty:EASY] != nil)
+        return YES;
+    if([self getScoreForDifficulty:NORMAL] != nil)
+        return YES;
+    if([self getScoreForDifficulty:HARD] != nil)
+        return YES;
+    
+    return NO;
+}
+
 - (Score*) getScoreForDifficulty:(DIFFICULTY)difficulty
 {
     

@@ -143,9 +143,8 @@ static RMPhotoSelectionViewController* lastInstance = nil;
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    
-    
-    setCurrentGameState(GAME_STATE_STOPPED);
+    if(getCurrentGameState() != GAME_STATE_RESTARTING)
+        setCurrentGameState(GAME_STATE_STOPPED);
 }
 
 - (void) refreshPhotos
