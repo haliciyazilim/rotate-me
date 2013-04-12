@@ -124,13 +124,7 @@ static RMInGameViewController* lastInstance = nil;
     }
     [self.stopWatchLabel setFont:[UIFont fontWithName:@"TRMcLean" size:[self timerFontSize]]];
     [self.stopWatchLabel setText:@"00:00"];
-    
-    if(getCurrentApplicationState() == APPLICATION_STATE_WILL_RESIGN_ACTIVE){
-        [self pauseGame];
-    }
-    else{
-        setCurrentGameState(GAME_STATE_PLAYING);
-    }
+
     
 }
 
@@ -153,9 +147,7 @@ static RMInGameViewController* lastInstance = nil;
 -(void)viewDidAppear:(BOOL)animated
 {
     [[RMPhotoSelectionViewController lastInstance] lighten];
-    [self.stopWatch startTimerWithRepeatBlock:^{
-        [self.stopWatchLabel setText:[self.stopWatch toStringWithoutMiliseconds]];
-    }];
+    
 }
 
 - (void) setImage:(RMImage*)image
@@ -255,7 +247,23 @@ static RMInGameViewController* lastInstance = nil;
     }
     self.croppedImages = croppedImages;
     [indicator removeFromSuperview];
+    
+    [self performSelectorOnMainThread:@selector(startTimer) withObject:nil waitUntilDone:NO];
 }
+
+- (void) startTimer
+{
+    [self.stopWatch startTimerWithRepeatBlock:^{
+        [self.stopWatchLabel setText:[self.stopWatch toStringWithoutMiliseconds]];
+    }];
+    if(getCurrentApplicationState() == APPLICATION_STATE_WILL_RESIGN_ACTIVE){
+        [self pauseGame];
+    }
+    else{
+        setCurrentGameState(GAME_STATE_PLAYING);
+    }
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
