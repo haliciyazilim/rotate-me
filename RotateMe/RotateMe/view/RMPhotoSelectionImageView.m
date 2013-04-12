@@ -58,8 +58,9 @@
             [scoreLabel setTextAlignment:NSTextAlignmentLeft];
             [self addSubview:scoreLabel];
         }
-        if([photo isPlayed] == YES){
-            
+        if([photo isPlayed] == NO && [photo.gallery.name isEqualToString:USER_GALLERY_NAME] == NO){
+            UIImageView* maskImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"item_mask.png"]];
+            [self addSubview:maskImageView];
         }
         
         [[[NSThread alloc] initWithTarget:self selector:@selector(loadImageForView:) object:[NSArray arrayWithObjects:photo,activityIndicator, nil]] start];
