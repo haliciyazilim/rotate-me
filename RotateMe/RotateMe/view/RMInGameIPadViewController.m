@@ -71,6 +71,8 @@ static RMInGameIPadViewController* lastInstance = nil;
 }
 - (IBAction)displayMenu:(id)sender
 {
+    [self.stopWatch pauseTimer];
+    setCurrentGameState(GAME_STATE_PAUSED);
     [self.menuButton setEnabled:NO];
     
     UIView* view = [[RMIpadInGameMenuView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width)];

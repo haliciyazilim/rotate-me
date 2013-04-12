@@ -47,15 +47,11 @@
 
 - (void) updateTimer:(NSTimer*)timer
 {
-    if (!isPaused) {
-        
-        double interval = (double)[[NSDate date] timeIntervalSinceDate:startTime];
-        miliseconds = (int)((interval - (int)interval) * 1000);
-        seconds = (int)floor(interval) % 60;
-        minutes = (int)floor(interval) / 60;
-        
-        updateBlock();
-    }
+    double interval = (double)[[NSDate date] timeIntervalSinceDate:startTime];
+    miliseconds = (int)((interval - (int)interval) * 1000);
+    seconds = (int)floor(interval) % 60;
+    minutes = (int)floor(interval) / 60;
+    updateBlock();
 }
 
 -(void)resumeTimer
@@ -123,7 +119,7 @@
 
 - (int) getElapsedSeconds
 {
-    return minutes * 60 + seconds;
+    return minutes * 60 + seconds - totalPausedTimeInterval;
 }
 
 @end
