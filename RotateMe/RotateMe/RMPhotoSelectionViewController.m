@@ -30,6 +30,8 @@
     RMCustomImageView* testImageView;
     BOOL needsRefresh;
     UIPopoverController *popoverController;
+    RMCustomImageView* addFromGallery;
+    RMCustomImageView* addFromCamera;
 }
 
 -(id) init
@@ -147,6 +149,8 @@ static RMPhotoSelectionViewController* lastInstance = nil;
 {
     [currentGallery setLastScroll:self.scrollView.contentOffset.x];
     NSArray* imageViews = [self.scrollView viewsByTag:PHOTO_SELECTION_IMAGEVIEW_TAG];
+    [addFromCamera removeFromSuperview];
+    [addFromGallery removeFromSuperview];
     for(UIImageView* imageView in imageViews ){
         [imageView removeFromSuperview];
     }
@@ -181,6 +185,7 @@ static RMPhotoSelectionViewController* lastInstance = nil;
 
 - (void) printPhotos
 {
+    NSLog(@"print photos");
     int leftMargin = [self leftMargin];
     int topMargin = [self topMargin];
     int rowCount = [self rowCount];
@@ -200,8 +205,12 @@ static RMPhotoSelectionViewController* lastInstance = nil;
     NSMutableArray* subViews = [[NSMutableArray alloc] init];
     [self.scrollView setContentOffset:CGPointMake([currentGallery lastScroll], 0.0)];
     if([currentGallery.name compare:USER_GALLERY_NAME] == 0){
-        RMCustomImageView* addFromGallery = [self addFromGalleryView];
-        RMCustomImageView* addFromCamera = [self addFromCameraView];
+        if (!imagePicker) {
+            imagePicker = [[UIImagePickerController alloc] init];
+            [imagePicker setDelegate:self];
+        }
+        addFromGallery = [self addFromGalleryView];
+        addFromCamera = [self addFromCameraView];
         [subViews addObject:addFromGallery];
         [subViews addObject:addFromCamera];
     }
@@ -263,16 +272,19 @@ static RMPhotoSelectionViewController* lastInstance = nil;
 
 - (RMCustomImageView*) addFromCameraView
 {
-    RMCustomImageView* addFromCamera = [[RMCustomImageView alloc] initWithImage:[self takePhotoImage]];
-    [addFromCamera setUserInteractionEnabled:YES];
-    [addFromCamera setTouchesBegan:^{
+    RMCustomImageView* _addFromCamera = [[RMCustomImageView alloc] initWithImage:[self takePhotoImage]];
+    [_addFromCamera setUserInteractionEnabled:YES];
+    [_addFromCamera setTouchesBegan:^{
+        NSLog(@"I'm here");
         if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+//            [popoverController setContentViewController:nil];
             imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-            [self presentModalViewController:imagePicker animated:YES];
+//            imagePicker set
+            [self presentViewController:imagePicker animated:YES completion:^{}];
         }
     }];
-    [addFromCamera setContentMode:UIViewContentModeCenter];
-    return addFromCamera;
+    [_addFromCamera setContentMode:UIViewContentModeCenter];
+    return _addFromCamera;
 }
 
 - (UIImage*) deletePhotoImage
@@ -291,30 +303,30 @@ static RMPhotoSelectionViewController* lastInstance = nil;
 
 - (RMCustomImageView*) addFromGalleryView
 {
-    RMCustomImageView* addFromGallery = [[RMCustomImageView alloc] initWithImage:[self galleryPhotoImage]];
+    RMCustomImageView* _addFromGallery = [[RMCustomImageView alloc] initWithImage:[self galleryPhotoImage]];
     
-    if (!imagePicker) {
-        imagePicker = [[UIImagePickerController alloc] init];
-        [imagePicker setDelegate:self];
-    }
     
-    [addFromGallery setUserInteractionEnabled:YES];
-    [addFromGallery setContentMode:UIViewContentModeCenter];
+    
+    [_addFromGallery setUserInteractionEnabled:YES];
+    [_addFromGallery setContentMode:UIViewContentModeCenter];
     
     CGRect scrollViewFrame = self.scrollView.frame;
-    CGRect addFromGalleryFrame = addFromGallery.frame;
+    CGRect addFromGalleryFrame = _addFromGallery.frame;
     
-    if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPhone) {
-        if (!popoverController) {
-            popoverController = [[UIPopoverController alloc] initWithContentViewController:imagePicker];
-        }
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+//        if (!popoverController) {
+//            popoverController = [[UIPopoverController alloc] initWithContentViewController:imagePicker];
+//        }
     }
-    [addFromGallery setTouchesBegan:^{
+    [_addFromGallery setTouchesBegan:^{
         imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
         
         if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-            [self presentModalViewController:imagePicker animated:YES];
+            [self presentViewController:imagePicker animated:YES completion:^{}];
         } else {
+            if (!popoverController) {
+                popoverController = [[UIPopoverController alloc] initWithContentViewController:imagePicker];
+            }
             if (![popoverController isPopoverVisible]) {
                 [popoverController presentPopoverFromRect:CGRectMake(scrollViewFrame.origin.x + addFromGalleryFrame.origin.x,
                                                                      scrollViewFrame.origin.y + addFromGalleryFrame.origin.y,
@@ -328,7 +340,7 @@ static RMPhotoSelectionViewController* lastInstance = nil;
             }
         }
     }];
-    return addFromGallery;
+    return _addFromGallery;
 }
 
 - (CGFloat) photoSelectionScoreFontSize
@@ -336,8 +348,10 @@ static RMPhotoSelectionViewController* lastInstance = nil;
     return 14.0;
 }
 
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *) Picker {
-    
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *) Picker
+{
+    [popoverController dismissPopoverAnimated:NO];
+    popoverController = nil;
     [Picker dismissModalViewControllerAnimated:YES];
     [[Picker parentViewController] dismissModalViewControllerAnimated:YES];
 }
