@@ -12,6 +12,8 @@
 #import "RMInGameWinScreenView.h"
 #import "RMInGameMenuView.h"
 #import "AdManager.h"
+#import "Flurry.h"
+#import "RotateMeIAPSpecificValues.h"
 
 
 @interface RMInGameViewController ()
@@ -114,6 +116,10 @@ static RMInGameViewController* lastInstance = nil;
         cols = 8;
     }
     
+    [Flurry logEvent:kFlurryEventGameStarted withParameters:@{
+     @"difficulty" : [NSNumber numberWithInt:getCurrentDifficulty()]
+     }];
+    
     tileSize = [self tileSize];
     photoHolderTopPadding = [self photoHolderTopPadding];
     photoHolderLeftPadding = [self photoHolderLeftPadding];
@@ -198,6 +204,10 @@ static RMInGameViewController* lastInstance = nil;
     [self showWinScreen];
 }
 -(void) saveScore{
+    [Flurry logEvent:kFlurryEventGameSolved withParameters:@{
+        @"time": [NSNumber numberWithInt:[self.stopWatch getElapsedSeconds]],
+        @"difficulty" : [NSNumber numberWithInt:getCurrentDifficulty()]
+     }];
     [currentImage.owner setScore:[self.stopWatch getElapsedSeconds] forDifficulty:getCurrentDifficulty()];
     
 }

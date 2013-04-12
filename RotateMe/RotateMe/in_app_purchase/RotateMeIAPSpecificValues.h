@@ -27,14 +27,11 @@
 
 // Flurry events
 #define kFlurryEventFirstSession @"First Session"
-
 #define kFlurryEventGalleryPurchased @"Gallery Purchased"
 
 #define kFlurryEventGameStarted @"Game Started"
-#define kFlurryEventQuestionSkipped @"Question Skipped"
-#define kFlurryEventQuestionSolved @"Question Solved"
-#define kFlurryEventStatsPressed @"Stats Pressed"
-#define kFlurryEventSettingsPressed @"Settings Pressed"
+#define kFlurryEventGameSolved @"Game Solved"
+
 #define kFlurryEventGameCenterPressed @"Game Center Pressed"
 
 #define kFlurryEventMoreGamesPressed @"More Games Pressed"
