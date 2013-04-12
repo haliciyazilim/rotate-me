@@ -60,7 +60,8 @@
 
 -(void)resumeTimer
 {
-    totalPausedTimeInterval += (double)[[NSDate date] timeIntervalSinceDate:lastPausedTime];
+    if(lastPausedTime != nil)
+        totalPausedTimeInterval += (double)[[NSDate date] timeIntervalSinceDate:lastPausedTime];
     lastPausedTime = nil;
     isPaused = NO;
 }
@@ -91,7 +92,7 @@
 }
 - (NSString *)toString
 {
-    return [RMStopWatch textWithMiliseconds:[self getElapsedMiliseconds]-1000.0*totalPausedTimeInterval];
+    return [RMStopWatch textWithMiliseconds:[self getElapsedMiliseconds]];
 }
 - (NSString*) toStringWithoutMiliseconds
 {
@@ -116,7 +117,7 @@
 
 - (int) getElapsedMiliseconds
 {
-    return minutes * 60 * 1000 + seconds * 1000 + miliseconds;
+    return minutes * 60 * 1000 + seconds * 1000 + miliseconds - totalPausedTimeInterval * 1000;
 }
 
 

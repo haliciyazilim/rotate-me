@@ -47,7 +47,7 @@ void uncaughtExceptionHandler(NSException *exception) {
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     setCurrentApplicationState(APPLICATION_STATE_WILL_RESIGN_ACTIVE);
-    if(getCurrentGameState() == GAME_STATE_PLAYING || getCurrentGameState() == GAME_STATE_RESTARTING)
+    if(getCurrentGameState() == GAME_STATE_PLAYING)
     {
         [[RMInGameViewController lastInstance] pauseGame];
     }
