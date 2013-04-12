@@ -118,13 +118,13 @@
 -(void) showButtons{
     
     UIButton* menuButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [menuButton setTitle:@"Main Menu" forState:UIControlStateNormal];
+    [menuButton setTitle:NSLocalizedString(@"MAIN_MENU", nil) forState:UIControlStateNormal];
     [self stylizeButton:menuButton];
     [menuButton addTarget:inGameViewController action:@selector(returnToMainMenu:) forControlEvents:UIControlEventTouchUpInside];
     [inGameViewController.view addSubview:menuButton];
     
     UIButton* restartButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [restartButton setTitle:@"Restart" forState:UIControlStateNormal];
+    [restartButton setTitle:NSLocalizedString(@"RESTART", nil) forState:UIControlStateNormal];
     [self stylizeButton:restartButton];
     [restartButton addTarget:inGameViewController action:@selector(restartGame:) forControlEvents:UIControlEventTouchUpInside];
     [inGameViewController.view addSubview:restartButton];
