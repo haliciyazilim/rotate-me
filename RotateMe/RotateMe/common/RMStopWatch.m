@@ -91,7 +91,7 @@
 }
 - (NSString *)toString
 {
-    return [RMStopWatch textWithMiliseconds:[self getElapsedMiliseconds]];
+    return [RMStopWatch textWithMiliseconds:[self getElapsedMiliseconds]-1000.0*totalPausedTimeInterval];
 }
 - (NSString*) toStringWithoutMiliseconds
 {
