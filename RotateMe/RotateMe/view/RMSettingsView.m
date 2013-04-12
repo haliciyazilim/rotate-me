@@ -12,6 +12,8 @@
 #import "RotateMeIAPHelper.h"
 #import "RMAboutUsView.h"
 #import "MoreGamesView.h"
+#import "Flurry.h"
+#import "RotateMeIAPSpecificValues.h"
 
 @implementation RMSettingsView
 {
@@ -114,11 +116,13 @@
 
 -(void) openMoreGames
 {
+    [Flurry logEvent:kFlurryEventMoreGamesPressed];
     [self addSubview:[[MoreGamesView alloc] init]];
 }
 
 - (void) openAboutUs
 {
+    [Flurry logEvent:kFlurryEventAboutUsPressed];
     RMAboutUsView* aboutUs = [[RMAboutUsView alloc] init];
     [self addSubview:aboutUs];
 }

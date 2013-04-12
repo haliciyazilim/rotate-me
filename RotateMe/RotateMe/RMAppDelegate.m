@@ -16,6 +16,7 @@
 #import "TypeDefs.h"
 #import "Flurry.h"
 #import "FlurryAds.h"
+#import "RotateMeIAPSpecificValues.h"
 
 @implementation RMAppDelegate
 
@@ -23,12 +24,12 @@
 {
     if([[RMDatabaseManager sharedInstance] isEmpty]){
         [RMBundleInitializer initializeBundle];
+        
+        [Flurry logEvent:kFlurryEventFirstSession timed:YES];
     }
-    
     
     //GameCenter
     [[GameCenterManager sharedInstance] authenticateLocalUser];
-    
     
     [Flurry setDebugLogEnabled:NO];
     [Flurry setShowErrorInLogEnabled:NO];

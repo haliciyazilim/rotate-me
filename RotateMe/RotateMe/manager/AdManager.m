@@ -13,6 +13,12 @@
 #import "FlurryAds.h"
 #import "RotateMeIAPHelper.h"
 
+#define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
+#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
+
 static AdManager *sharedInstance = nil;
 
 @interface AdManager ()
@@ -25,7 +31,7 @@ static AdManager *sharedInstance = nil;
 @implementation AdManager
 
 - (void)fetch {
-    [FlurryAds fetchAdForSpace:@"Rotate Me"
+    [FlurryAds fetchAdForSpace:@"RotateMe"
                          frame:[UIScreen mainScreen].bounds
                           size:FULLSCREEN];
 }
@@ -56,14 +62,22 @@ static AdManager *sharedInstance = nil;
            withBlock:(CallbackBlock)callbackBlock {
     self.callbackBlock = callbackBlock;
 
+    if (SYSTEM_VERSION_LESS_THAN(@"6.0")) {
+        // code here
+        callbackBlock();
+        self.callbackBlock = nil;
+        return;
+    }
+
+    
     if ([[RotateMeIAPHelper sharedInstance] isPro]){
         callbackBlock();
         self.callbackBlock = nil;
     } else {
         if (self.adCountDown == 0) {
-            if ([FlurryAds adReadyForSpace:@"Rotate Me"]) {
+            if ([FlurryAds adReadyForSpace:@"RotateMe"]) {
                 self.adCountDown = arc4random_uniform(kAdRepeatMax - kAdRepeatMin) + kAdRepeatMin - 1;
-                [FlurryAds displayAdForSpace:@"Rotate Me"
+                [FlurryAds displayAdForSpace:@"RotateMe"
                                       onView:view];
                 [FlurryAds setAdDelegate:self];
                 

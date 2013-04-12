@@ -23,3 +23,26 @@
 #define iMiscellaneousGallerySecret @"o_g7>K+v[Lz"
 #define iPatternGallerySecret @"~4J,P|Mr6-2"
 #define iWaterGallerySecret @"Eh]84-><4Oc"
+
+
+// Flurry events
+#define kFlurryEventFirstSession @"First Session"
+
+#define kFlurryEventGalleryPurchased @"Gallery Purchased"
+
+#define kFlurryEventGameStarted @"Game Started"
+#define kFlurryEventQuestionSkipped @"Question Skipped"
+#define kFlurryEventQuestionSolved @"Question Solved"
+#define kFlurryEventStatsPressed @"Stats Pressed"
+#define kFlurryEventSettingsPressed @"Settings Pressed"
+#define kFlurryEventGameCenterPressed @"Game Center Pressed"
+
+#define kFlurryEventMoreGamesPressed @"More Games Pressed"
+#define kFlurryEventAboutUsPressed @"About Us Pressed"
+#define kFlurryEventStatsReset @"Stats Reset"
+
+#define kFlurryEventMoreGameSelected @"More Game Selected"
+
+
+
+

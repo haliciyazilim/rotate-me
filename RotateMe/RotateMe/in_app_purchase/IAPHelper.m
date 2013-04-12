@@ -9,6 +9,7 @@
 #import "IAPHelper.h"
 #import <CommonCrypto/CommonDigest.h>
 #import "RotateMeIAPSpecificValues.h"
+#import "Flurry.h"
 
 #define PAYMENT_ACTIVITY_TAG 145
 
@@ -139,6 +140,11 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
     [[NSNotificationCenter defaultCenter] postNotificationName:IAPHelperProductPurchasedNotification object:productIdentifier userInfo:nil];
     [[NSNotificationCenter defaultCenter] postNotificationName:IAPHelperEnableBuyButtonNotification object:nil userInfo:nil];
+    
+    if (productIdentifier) {
+        [Flurry logEvent:kFlurryEventGalleryPurchased
+          withParameters:@{@"Gallery Identifier": productIdentifier}];
+    }
 }
 - (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response {
     _productsRequest = nil;
