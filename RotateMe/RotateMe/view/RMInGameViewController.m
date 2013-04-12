@@ -11,6 +11,7 @@
 #import "RMImage.h"
 #import "RMInGameWinScreenView.h"
 #import "RMInGameMenuView.h"
+#import "AdManager.h"
 
 
 @interface RMInGameViewController ()
@@ -282,9 +283,11 @@ static RMInGameViewController* lastInstance = nil;
 
 -(void) returnToMainMenu:(UIButton*)button
 {
-    [self dismissViewControllerAnimated:YES completion:^{
+    [[AdManager sharedInstance] showAdOnView:self.view
+                                   withBlock:^{
+                                       [self dismissViewControllerAnimated:YES completion:nil];
+                                   }];
 
-    }];
 }
 
 -(void)resumeGame:(UIButton*)button
@@ -299,10 +302,13 @@ static RMInGameViewController* lastInstance = nil;
 -(void) restartGame:(UIButton*)button
 {
 //    NSLog(@"I'm here");
-    [[RMPhotoSelectionViewController lastInstance] darken];
-    [self dismissViewControllerAnimated:YES completion:^{
-        [[RMPhotoSelectionViewController lastInstance] restart];
-    }];
+    [[AdManager sharedInstance] showAdOnView:self.view
+                                   withBlock:^{                                    
+                                       [[RMPhotoSelectionViewController lastInstance] darken];
+                                       [self dismissViewControllerAnimated:YES completion:^{
+                                           [[RMPhotoSelectionViewController lastInstance] restart];
+                                       }];
+                                   }];
     
 }
 

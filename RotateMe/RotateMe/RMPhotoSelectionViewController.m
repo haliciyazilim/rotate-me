@@ -13,6 +13,7 @@
 #import "Photo.h"
 #import "UIView+Util.h"
 #import "RMPhotoSelectionImageView.h"
+#import "AdManager.h"
 
 @interface RMPhotoSelectionViewController ()
 
@@ -227,7 +228,10 @@ static RMPhotoSelectionViewController* lastInstance = nil;
             if(touchedPhoto == nil){
                 touchedPhoto = blockPhotoView;
                 lastTouchedPhoto = touchedPhoto;
-                [self performSegueWithIdentifier:@"StartGame" sender:self];
+                [[AdManager sharedInstance] showAdOnView:self.view
+                                               withBlock:^{
+                                                   [self performSegueWithIdentifier:@"StartGame" sender:self];
+                                               }];
             }
         }];
         photoView.layer.zPosition = 1;
