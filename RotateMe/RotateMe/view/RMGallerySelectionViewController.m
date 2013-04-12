@@ -40,7 +40,7 @@
 }
 - (void)viewDidLoad
 {
-    NSLog(@"entered ViewDidLoad");
+//    NSLog(@"entered ViewDidLoad");
     [super viewDidLoad];
     [self configureViews];
     [self setBackground];
@@ -114,10 +114,10 @@
     return 30.0;
 }
 - (void) configureViews {
-    NSLog(@"entered configureView");
+//    NSLog(@"entered configureView");
     NSArray* allGaleries = [Gallery allGalleries];
     int index = 0;
-    NSLog(@"allGalleries count: %d", [allGaleries count]);
+//    NSLog(@"allGalleries count: %d", [allGaleries count]);
     
     for(UIView* view in [self.scrollView subviews]){
         if(view.tag == GALLERY_SELECTION_GALLERY_ITEM_TAG){
@@ -126,7 +126,7 @@
     }
     int scrollViewWidth = 0;
     for(Gallery* gallery in allGaleries){
-        NSLog(@"gallery %@ photo count %d", [gallery name], [[gallery photos] count]);
+//        NSLog(@"gallery %@ photo count %d", [gallery name], [[gallery photos] count]);
         RMGallerySelectionItemView* galleryItem = [self generateGallerySelectionItemViewWithGallery:gallery animate:YES];
         [self.scrollView addSubview:galleryItem];
         galleryItem.tag = GALLERY_SELECTION_GALLERY_ITEM_TAG;

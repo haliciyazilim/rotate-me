@@ -62,7 +62,7 @@
     galleryName = NSLocalizedString(gallery.name,nil);
     galleryPhotos = [[NSMutableArray alloc] init];
     NSArray* photos = [gallery allPhotos];
-    NSLog(@"photos count: %d",photos.count);
+//    NSLog(@"photos count: %d",photos.count);
     int length = [photos count] < 3 ? [photos count] : 3;
     for(int i=0;i<length;i++){
         [galleryPhotos addObject:[photos objectAtIndex:i]];

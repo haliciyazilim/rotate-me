@@ -23,7 +23,7 @@ static GameCenterManager *sharedManager = nil;
     if(!_isGameCenterAvailable){
         return;
     }
-    NSLog(@"Authenticating local user...");
+//    NSLog(@"Authenticating local user...");
     if ([GKLocalPlayer localPlayer].authenticated == NO) {
         [[GKLocalPlayer localPlayer] authenticateWithCompletionHandler:nil];
     } else {

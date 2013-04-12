@@ -397,7 +397,7 @@ static MKNetworkEngine* networkEngine;
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
 {
     double executionTime = (double)[[NSDate date] timeIntervalSinceDate:touchStartedTime];
-    NSLog(@"%f", executionTime);
+//    NSLog(@"%f", executionTime);
     
     isTouchDown = NO;
     [centerView.layer setBorderWidth:2.0];

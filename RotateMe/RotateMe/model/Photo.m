@@ -116,7 +116,7 @@
 
     NSError *error;
     if ([[NSFileManager defaultManager] removeItemAtPath:[self getImagePath] error:&error] != YES) {
-        NSLog(@"Unable to delete file: %@", [error localizedDescription]);
+//        NSLog(@"Unable to delete file: %@", [error localizedDescription]);
     }
 
     [[NSNotificationCenter defaultCenter] postNotificationName:kPhotoNotificationPhotoDeleted object:self];

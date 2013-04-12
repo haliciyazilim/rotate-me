@@ -187,7 +187,7 @@ static RMPhotoSelectionViewController* lastInstance = nil;
 
 - (void) printPhotos
 {
-    NSLog(@"print photos");
+//    NSLog(@"print photos");
     int leftMargin = [self leftMargin];
     int topMargin = [self topMargin];
     int rowCount = [self rowCount];
@@ -280,7 +280,7 @@ static RMPhotoSelectionViewController* lastInstance = nil;
     RMCustomImageView* _addFromCamera = [[RMCustomImageView alloc] initWithImage:[self takePhotoImage]];
     [_addFromCamera setUserInteractionEnabled:YES];
     [_addFromCamera setTouchesBegan:^{
-        NSLog(@"I'm here");
+//        NSLog(@"I'm here");
         if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
 //            [popoverController setContentViewController:nil];
             imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
@@ -400,7 +400,7 @@ static RMPhotoSelectionViewController* lastInstance = nil;
     
     UIImage* image = [info objectForKey:UIImagePickerControllerOriginalImage];
     [self createAndSavePhotoFromImage:image];
-    NSLog(@"didFinishPicking");
+//    NSLog(@"didFinishPicking");
     
     [Picker dismissModalViewControllerAnimated:YES];
     
@@ -415,7 +415,7 @@ static RMPhotoSelectionViewController* lastInstance = nil;
 {
     NSError* error;
     NSString* imageName = [NSString stringWithFormat:@"%.0f.jpg",([NSDate timeIntervalSinceReferenceDate]*1000)];
-    NSLog(@"imageName: %@",imageName);
+//    NSLog(@"imageName: %@",imageName);
     NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString *folderPath = [documentsDirectory stringByAppendingPathComponent:USER_GALLERY_NAME];
     
