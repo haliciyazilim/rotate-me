@@ -14,6 +14,8 @@
 #import "RotateMeIAPHelper.h"
 #import "RMInGameViewController.h"
 #import "TypeDefs.h"
+#import "Flurry.h"
+#import "FlurryAds.h"
 
 @implementation RMAppDelegate
 
@@ -27,8 +29,18 @@
     //GameCenter
     [[GameCenterManager sharedInstance] authenticateLocalUser];
     
-
+    
+    [Flurry setDebugLogEnabled:NO];
+    [Flurry setShowErrorInLogEnabled:NO];
+    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+    [Flurry startSession:@"77QBWYPCJ2CGW64SPJBX"];
+    [FlurryAds initialize:self.window.rootViewController];
+    
     return YES;
+}
+
+void uncaughtExceptionHandler(NSException *exception) {
+    [Flurry logError:@"Uncaught" message:@"Crash!" exception:exception];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
