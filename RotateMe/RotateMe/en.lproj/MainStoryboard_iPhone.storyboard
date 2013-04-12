@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Zqc-DW-ibd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Zqc-DW-ibd">
     <dependencies>
         <deployment version="1296" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
@@ -94,7 +94,7 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="galleryNameLabel" destination="RVB-80-f8A" id="s81-oQ-rxf"/>
+                        <outlet property="galleryNameLabel" destination="RVB-80-f8A" id="KkC-6r-lZF"/>
                         <outlet property="scrollView" destination="fvp-Ba-yRh" id="fqi-HI-wM7"/>
                         <segue destination="2" kind="modal" identifier="StartGame" modalTransitionStyle="flipHorizontal" id="mwM-Zr-NC7"/>
                     </connections>
@@ -166,6 +166,33 @@
         <image name="settings_btn.png" width="26" height="26"/>
         <image name="timer_holder.png" width="85" height="37"/>
     </resources>
+    <classes>
+        <class className="RMGallerySelectionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RMGallerySelectionViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="openSettings:"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="RMInGameViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RMInGameViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="displayMenu:"/>
+                <relationship kind="outlet" name="menuButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="photoHolder" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="stopWatchLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timerHolder" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="RMPhotoSelectionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RMPhotoSelectionViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backButtonClicked:"/>
+                <relationship kind="outlet" name="galleryNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

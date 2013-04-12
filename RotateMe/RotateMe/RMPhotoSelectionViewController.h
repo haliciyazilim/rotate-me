@@ -14,12 +14,10 @@
 
 @interface RMPhotoSelectionViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPopoverControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *difficultySegmentedButtons;
 @property (weak, nonatomic) IBOutlet UILabel *galleryNameLabel;
 
 @property RMDifficultySelectorView* difficultySelectorView;
 
-- (IBAction)difficultyChanged:(id)sender;
 
 - (IBAction)backButtonClicked:(id)sender;
 

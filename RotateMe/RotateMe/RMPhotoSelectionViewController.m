@@ -89,7 +89,9 @@ static RMPhotoSelectionViewController* lastInstance = nil;
     self.difficultySelectorView.frame = [self difficultySelectorViewFrame];
     [self.view addSubview:self.difficultySelectorView];
 
-    
+    [self.galleryNameLabel setText:NSLocalizedString(currentGallery.name,nil)];
+
+    [self.galleryNameLabel setFont:[UIFont fontWithName:@"TRMcLeanBold" size:[self galleryNameLabelFontSize]] ];
     
 }
 
@@ -108,6 +110,7 @@ static RMPhotoSelectionViewController* lastInstance = nil;
 -(void)configureView
 {
     [self.galleryNameLabel setText:NSLocalizedString(currentGallery.name,nil)];
+    
     [self.galleryNameLabel setFont:[UIFont fontWithName:@"TRMcLeanBold" size:[self galleryNameLabelFontSize]] ];
     [self printPhotos];
     [self processImageThreads];
@@ -441,37 +444,9 @@ static RMPhotoSelectionViewController* lastInstance = nil;
     
 }
 
-- (IBAction)difficultyChanged:(id)sender {  
-    
-    UISegmentedControl* control = (UISegmentedControl*)sender;
-    if([control selectedSegmentIndex] == 0){
-        setCurrentDifficulty(EASY);
-    }
-    else if ([control selectedSegmentIndex] == 1){
-        setCurrentDifficulty(NORMAL);
-    }
-    else if([control selectedSegmentIndex] == 2){
-        setCurrentDifficulty(HARD);
-    }
-    
-    [self refreshPhotos];
-
-}
-
-//static int __lastScroll = 0;
-//
-//+(int)getLastScroll
-//{
-//    return __lastScroll;
-//}
-//
-//+(void)setLastScroll:(int)scroll{
-//    __lastScroll = scroll;
-//}
-
 
 - (void)viewDidUnload {
-    [self setDifficultySegmentedButtons:nil];
+    [self setGalleryNameLabel:nil];
     [self setGalleryNameLabel:nil];
     [super viewDidUnload];
 }
