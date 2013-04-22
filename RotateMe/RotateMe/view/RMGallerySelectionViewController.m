@@ -186,4 +186,34 @@
     RMSettingsView* settings = [[RMSettingsView alloc] init];
     [self.view addSubview:settings];
 }
+
+- (IBAction)openGameCenter {
+    if(!self.reachability)
+        self.reachability = [Reachability reachabilityForInternetConnection];
+    
+    NetworkStatus netStatus = [self.reachability currentReachabilityStatus];
+    
+    if(netStatus == NotReachable){
+        UIAlertView *noConnection = [[UIAlertView alloc] initWithTitle:@""
+                                                               message:NSLocalizedString(@"CONNECTION_ERROR", nil)
+                                                              delegate:self
+                                                     cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                                     otherButtonTitles:nil,nil];
+        [noConnection show];
+    }
+    else{
+        GKGameCenterViewController *gameCenterController = [[GKGameCenterViewController alloc] init];
+        if (gameCenterController != nil){
+            gameCenterController.gameCenterDelegate = self;
+            [self presentViewController:gameCenterController animated:YES completion:nil];
+        }
+    }
+
+}
+
+- (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController
+{
+    [gameCenterViewController dismissViewControllerAnimated:YES completion:nil];
+    
+}
 @end

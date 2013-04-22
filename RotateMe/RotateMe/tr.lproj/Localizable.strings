@@ -41,3 +41,5 @@
 "RESET_SCORES_CLEANED" = "Skorlar Temizlendi";
 "CANCEL" = "İptal";
 "SURE" = "Eminim";
+
+"CONNECTION_ERROR" = "Bağlantı hatası oluştu. Lütfen daha sonra tekrar deneyin.";

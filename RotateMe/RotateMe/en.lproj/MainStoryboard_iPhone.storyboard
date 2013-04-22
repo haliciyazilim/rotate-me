@@ -22,7 +22,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kzj-is-DBi">
-                                <rect key="frame" x="475" y="6" width="73" height="44"/>
+                                <rect key="frame" x="498" y="6" width="50" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="settings_btn.png">
@@ -34,6 +34,21 @@
                                 </state>
                                 <connections>
                                     <action selector="openSettings:" destination="Zqc-DW-ibd" eventType="touchUpInside" id="qwX-oj-lSZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3Le-av-Tes">
+                                <rect key="frame" x="444" y="6" width="50" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="gamecenter_btn.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openGameCenter" destination="Zqc-DW-ibd" eventType="touchUpInside" id="3YV-P8-693"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -160,39 +175,13 @@
     </scenes>
     <resources>
         <image name="back_button.png" width="26" height="26"/>
+        <image name="gamecenter_btn.png" width="26" height="26"/>
         <image name="menu_btn.png" width="39" height="42"/>
         <image name="photo_holder.png" width="374" height="284"/>
         <image name="rotate_me_logo.png" width="201" height="35"/>
         <image name="settings_btn.png" width="26" height="26"/>
         <image name="timer_holder.png" width="85" height="37"/>
     </resources>
-    <classes>
-        <class className="RMGallerySelectionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RMGallerySelectionViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="openSettings:"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-            </relationships>
-        </class>
-        <class className="RMInGameViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RMInGameViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="displayMenu:"/>
-                <relationship kind="outlet" name="menuButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="photoHolder" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="stopWatchLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="timerHolder" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="RMPhotoSelectionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RMPhotoSelectionViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backButtonClicked:"/>
-                <relationship kind="outlet" name="galleryNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GameKit/GameKit.h>
+#import "Reachability.h"
 
-@interface RMGallerySelectionViewController : UIViewController
+@interface RMGallerySelectionViewController : UIViewController <GKGameCenterControllerDelegate>
+
+@property (strong, nonatomic) Reachability *reachability;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
 - (IBAction)openSettings:(id)sender;
+- (IBAction)openGameCenter;
 - (void) configureViews;
 @end

@@ -296,6 +296,10 @@
 		AEF1766816E8E00E0027A8CB /* photo_holder_normal_ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEF1766616E8E00E0027A8CB /* photo_holder_normal_ipad@2x.png */; };
 		AEFF1B8216C4E6E400922A25 /* GameCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFF1B8116C4E6E400922A25 /* GameCenterManager.m */; };
 		AEFF1B8516C4E7FC00922A25 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEFF1B8416C4E7FC00922A25 /* GameKit.framework */; };
+		B86A891C17255E7B0027FC47 /* gamecenter_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = B86A891817255E7B0027FC47 /* gamecenter_btn.png */; };
+		B86A891D17255E7B0027FC47 /* gamecenter_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B86A891917255E7B0027FC47 /* gamecenter_btn@2x.png */; };
+		B86A891E17255E7B0027FC47 /* gamecenter_btn@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B86A891A17255E7B0027FC47 /* gamecenter_btn@2x~ipad.png */; };
+		B86A891F17255E7B0027FC47 /* gamecenter_btn~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B86A891B17255E7B0027FC47 /* gamecenter_btn~ipad.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -646,6 +650,10 @@
 		AEFF1B8016C4E6E400922A25 /* GameCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameCenterManager.h; path = manager/GameCenterManager.h; sourceTree = "<group>"; };
 		AEFF1B8116C4E6E400922A25 /* GameCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameCenterManager.m; path = manager/GameCenterManager.m; sourceTree = "<group>"; };
 		AEFF1B8416C4E7FC00922A25 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		B86A891817255E7B0027FC47 /* gamecenter_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gamecenter_btn.png; sourceTree = "<group>"; };
+		B86A891917255E7B0027FC47 /* gamecenter_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gamecenter_btn@2x.png"; sourceTree = "<group>"; };
+		B86A891A17255E7B0027FC47 /* gamecenter_btn@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gamecenter_btn@2x~ipad.png"; sourceTree = "<group>"; };
+		B86A891B17255E7B0027FC47 /* gamecenter_btn~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gamecenter_btn~ipad.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1118,6 +1126,7 @@
 		AED218EA16BA9DFD00271930 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B86A891717255E7B0027FC47 /* gamecenter */,
 				AE4530B6171853AD000E31A4 /* Default-568h@2x.png */,
 				AE4530B7171853AD000E31A4 /* Default-Landscape.png */,
 				AE4530B8171853AD000E31A4 /* Default-Landscape@2x.png */,
@@ -1274,6 +1283,18 @@
 				AEF1765416E88A260027A8CB /* level_03_selected_ipad@2x.png */,
 			);
 			path = "difficulty icons";
+			sourceTree = "<group>";
+		};
+		B86A891717255E7B0027FC47 /* gamecenter */ = {
+			isa = PBXGroup;
+			children = (
+				B86A891817255E7B0027FC47 /* gamecenter_btn.png */,
+				B86A891917255E7B0027FC47 /* gamecenter_btn@2x.png */,
+				B86A891A17255E7B0027FC47 /* gamecenter_btn@2x~ipad.png */,
+				B86A891B17255E7B0027FC47 /* gamecenter_btn~ipad.png */,
+			);
+			name = gamecenter;
+			path = images/gamecenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1558,6 +1579,10 @@
 				AE4530BD171853AE000E31A4 /* Default-Landscape@2x.png in Resources */,
 				AE4530BE171853AE000E31A4 /* Default.png in Resources */,
 				AE4530BF171853AE000E31A4 /* Default@2x.png in Resources */,
+				B86A891C17255E7B0027FC47 /* gamecenter_btn.png in Resources */,
+				B86A891D17255E7B0027FC47 /* gamecenter_btn@2x.png in Resources */,
+				B86A891E17255E7B0027FC47 /* gamecenter_btn@2x~ipad.png in Resources */,
+				B86A891F17255E7B0027FC47 /* gamecenter_btn~ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

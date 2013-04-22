@@ -40,3 +40,4 @@
 "CANCEL" = "Cancel";
 "SURE" = "Sure";
 
+"CONNECTION_ERROR" = "There seems to be a connection error. Please try again later.";

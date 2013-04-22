@@ -11,5 +11,6 @@
 
 @interface RMGallerySelectionIPadViewController : RMGallerySelectionViewController
 
+- (IBAction)openGameCenter;
 
 @end
