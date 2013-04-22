@@ -41,3 +41,9 @@
 "SURE" = "Sure";
 
 "CONNECTION_ERROR" = "There seems to be a connection error. Please try again later.";
+
+//About Us
+"ABOUT" = "ABOUT";
+"PROGRAMMING" = "PROGRAMMING";
+"ART" = "ART";
+"PHOTOGRAPHY" = "FOTOGRAPHY";
