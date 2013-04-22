@@ -51,11 +51,13 @@
     miliseconds = (int)((interval - (int)interval) * 1000);
     seconds = (int)floor(interval) % 60;
     minutes = (int)floor(interval) / 60;
+//    NSLog(@"update timer interval: %f",interval);
     updateBlock();
 }
 
 -(void)resumeTimer
 {
+//    NSLog(@"resume timer %@",lastPausedTime);
     if(lastPausedTime != nil)
         totalPausedTimeInterval += (double)[[NSDate date] timeIntervalSinceDate:lastPausedTime];
     lastPausedTime = nil;
@@ -64,6 +66,7 @@
 
 -(void) pauseTimer
 {
+//    NSLog(@"pause timer");
     isPaused = YES;
     if (!lastPausedTime) {
         lastPausedTime = [NSDate date];

@@ -146,7 +146,10 @@
     UIButton *closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [closeButton setFrame:CGRectMake(394.0, 0.0, 42.0, 42.0)];
     UIImageView *closeImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"delete_photo_btn.png"]];
-    [closeImage setFrame:CGRectMake(10.0, 10.0, 21.0, 21.0)];
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
+        closeImage.image = [UIImage imageNamed:@"delete_photo_btn_ipad.png"];
+    }
+    [closeImage setFrame:CGRectMake(10.0, 10.0, closeImage.image.size.width, closeImage.image.size.height)];
     [closeButton addTarget:self action:@selector(closeStore) forControlEvents:UIControlEventTouchUpInside];
     [closeButton addSubview:closeImage];
     
