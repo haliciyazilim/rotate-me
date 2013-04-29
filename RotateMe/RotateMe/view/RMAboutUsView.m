@@ -88,7 +88,7 @@
     credits=[[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, winWidth, winHeight-60)];
     [credits setBackgroundColor:[UIColor clearColor]];
     //    [credits setUserInteractionEnabled:NO];
-    [credits setContentSize:CGSizeMake(winWidth-40, 700)];
+    [credits setContentSize:CGSizeMake(winWidth-40, 700+110)];
     [credits setShowsHorizontalScrollIndicator:NO];
     [credits setShowsVerticalScrollIndicator:NO];
     
@@ -163,8 +163,29 @@
     [cArtName setNumberOfLines:2];
     [cArtName setText:@"Ebuzer Egemen DURSUN"];
     
+    // Photography
+    UILabel * cPhotography=[[UILabel alloc] initWithFrame:CGRectMake(0.0, 450, mask.frame.size.width, 40.0)];
+    [cPhotography setFont:[UIFont fontWithName:fontHeader size:fontSizeL]];
+    [cPhotography setTextColor:color];
+    [cPhotography setTextAlignment:NSTextAlignmentCenter];
+    [cPhotography setBackgroundColor:[UIColor clearColor]];
+    [cPhotography setText:NSLocalizedString(@"PHOTOGRAPHY", nil)];
+    
+    // Names
+    NSArray * photographyNames=[[NSArray alloc] initWithObjects:@"Uğur HALICI",@"Eren HALICI", nil];
+    for(int i=0; i<photographyNames.count;i++){
+        UILabel * cName=[[UILabel alloc] initWithFrame:CGRectMake(0.0, 480+i*30, mask.frame.size.width, 40.0)];
+        [cName setFont:[UIFont fontWithName:@"TRMcLean" size:fontSizeM]];
+        [cName setTextColor:color];
+        [cName setTextAlignment:NSTextAlignmentCenter];
+        [cName setBackgroundColor:[UIColor clearColor]];
+        [cName setNumberOfLines:2];
+        [cName setText:photographyNames[i]];
+        [credits addSubview:cName];
+    }
+    
     // Copyright
-    UILabel * cCRight=[[UILabel alloc] initWithFrame:CGRectMake(0.0, 600, mask.frame.size.width, 40.0)];
+    UILabel * cCRight=[[UILabel alloc] initWithFrame:CGRectMake(0.0, 600+110, mask.frame.size.width, 40.0)];
     [cCRight setFont:[UIFont fontWithName:font size:fontSizeL]];
     [cCRight setTextColor:color];
     [cCRight setTextAlignment:NSTextAlignmentCenter];
@@ -172,7 +193,7 @@
     [cCRight setText:@"Copyright © 2013"];
     
     // BrainQuire
-    UILabel * cBrainQuire=[[UILabel alloc] initWithFrame:CGRectMake(0.0, 630, mask.frame.size.width, 40.0)];
+    UILabel * cBrainQuire=[[UILabel alloc] initWithFrame:CGRectMake(0.0, 630+110, mask.frame.size.width, 40.0)];
     [cBrainQuire setFont:[UIFont fontWithName:font size:fontSizeL]];
     [cBrainQuire setTextColor:color];
     [cBrainQuire setTextAlignment:NSTextAlignmentCenter];
@@ -185,6 +206,7 @@
     [credits addSubview:cProgramming];
     [credits addSubview:cArt];
     [credits addSubview:cArtName];
+    [credits addSubview:cPhotography];
     [credits addSubview:cCRight];
     [credits addSubview:cBrainQuire];
     [mask addSubview:credits];
@@ -202,7 +224,7 @@
     [UIScrollView setAnimationDuration:30.0f];
     [UIScrollView setAnimationCurve:UIViewAnimationCurveLinear];
     [credits setDelegate:self];
-    [credits setContentOffset:CGPointMake(0, 700-credits.frame.size.height)];
+    [credits setContentOffset:CGPointMake(0, 700+110-credits.frame.size.height)];
     [UIScrollView commitAnimations];
     didScrolled=0;
     
@@ -223,7 +245,7 @@
     float timer=[stopWatch getElapsedMiliseconds]/1000.0;
     //    NSLog(@"Touch detected - scrollViewTap: %f",timer);
     [credits.layer removeAllAnimations];
-    [credits setContentOffset:CGPointMake(0, (700.0-credits.frame.size.height)*timer/30.0)];
+    [credits setContentOffset:CGPointMake(0, (700.0+110-credits.frame.size.height)*timer/30.0)];
     
 }
 

@@ -43,3 +43,9 @@
 "SURE" = "Eminim";
 
 "CONNECTION_ERROR" = "Bağlantı hatası oluştu. Lütfen daha sonra tekrar deneyin.";
+
+//About Us
+"ABOUT" = "HAKKIMIZDA";
+"PROGRAMMING"="PROGRAMLAMA";
+"ART"="GÖRSEL ARAYÜZ TASARIM";
+"PHOTOGRAPHY" = "FOTOĞRAFLAR";
