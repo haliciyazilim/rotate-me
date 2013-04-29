@@ -33,6 +33,7 @@
     UIPopoverController *popoverController;
     RMCustomImageView* addFromGallery;
     RMCustomImageView* addFromCamera;
+    BOOL isViewAppeared;
 }
 
 -(id) init
@@ -93,7 +94,7 @@ static RMPhotoSelectionViewController* lastInstance = nil;
     [self.galleryNameLabel setText:NSLocalizedString(currentGallery.name,nil)];
 
     [self.galleryNameLabel setFont:[UIFont fontWithName:@"TRMcLeanBold" size:[self galleryNameLabelFontSize]] ];
-    
+    isViewAppeared = NO;
 }
 
 - (void) setGallery:(Gallery*)gallery
@@ -101,7 +102,9 @@ static RMPhotoSelectionViewController* lastInstance = nil;
     if(currentGallery != gallery){
         currentGallery = gallery;
         photos = nil;
-        [self configureView];
+        if(isViewAppeared == YES)
+            [self configureView];
+    
     }
 }
 -(CGFloat) galleryNameLabelFontSize
@@ -124,6 +127,7 @@ static RMPhotoSelectionViewController* lastInstance = nil;
 
 - (void) viewDidAppear:(BOOL)animated
 {
+    isViewAppeared = YES;
     if(imageThreads == nil){
         imageThreads = [[NSMutableArray alloc] init];
         [self configureView];
